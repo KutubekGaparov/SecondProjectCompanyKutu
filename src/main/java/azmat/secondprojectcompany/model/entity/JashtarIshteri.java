@@ -6,13 +6,12 @@ import lombok.Setter;
 
 import javax.persistence.*;
 
+@Entity
+@Table(name = "jashtar")
+@RequiredArgsConstructor
 @Getter
 @Setter
-@RequiredArgsConstructor
-@Entity
-@Table(name = "okmot")
-public class AiylOkmot {
-
+public class JashtarIshteri {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "hibernate_gen")
     @SequenceGenerator(name = "hibernate_gen", sequenceName = "hibernate_seq", allocationSize = 1)
