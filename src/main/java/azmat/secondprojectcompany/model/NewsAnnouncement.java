@@ -21,6 +21,6 @@ public class NewsAnnouncement {
     @Column(name = "id",nullable = false)
     private Long id;
 
-    @OneToOne
+    @ManyToOne
     private AiylCharba aiylCharba;
 }
