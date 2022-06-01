@@ -1,5 +1,6 @@
 package azmat.secondprojectcompany.model;
 
+import azmat.secondprojectcompany.model.entity.AiylCharba;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
@@ -20,4 +21,6 @@ public class NewsAnnouncement {
     @Column(name = "id",nullable = false)
     private Long id;
 
+    @OneToOne
+    private AiylCharba aiylCharba;
 }
