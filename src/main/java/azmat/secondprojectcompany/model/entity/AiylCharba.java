@@ -24,27 +24,27 @@ public class AiylCharba {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL,mappedBy = "aiylCharba")
     private List<ACEvent> acEvent;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL,mappedBy = "aiylCharba")
     private AnimalHusbandry animalHusbandry;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL,mappedBy = "aiylCharba")
     private GrainGrowing grainGrowing;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL,mappedBy = "aiylCharba")
     private Laws laws;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL,mappedBy = "aiylCharba")
     private Pasture pasture;
 
-    @OneToMany
+    @OneToMany(mappedBy = "aiylCharba")
     private List<Tips> tips;
 
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL,mappedBy = "aiylCharba")
     private List<NewsAnnouncement> newsAnnouncement;
 
-    @OneToMany
+    @OneToMany()
     private List<Gallery> gallery;
 }
