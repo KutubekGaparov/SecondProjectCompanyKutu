@@ -1,5 +1,6 @@
 package azmat.secondprojectcompany.model.entity.aiylCharba;
 
+import azmat.secondprojectcompany.model.entity.AiylCharba;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
@@ -19,5 +20,9 @@ public class ACEvent {
     @Column(name = "id",nullable = false)
     private Long id;
 
+    private String text;
+
+    @ManyToOne
+    private AiylCharba aiylCharba;
 
 }
