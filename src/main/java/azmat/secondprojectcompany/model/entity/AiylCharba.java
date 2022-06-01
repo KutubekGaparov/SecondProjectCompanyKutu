@@ -6,10 +6,7 @@ import azmat.secondprojectcompany.model.entity.aiylCharba.*;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
-import org.attoparser.dom.Text;
-
 import javax.persistence.*;
-import javax.swing.*;
 import java.util.List;
 
 @Entity
