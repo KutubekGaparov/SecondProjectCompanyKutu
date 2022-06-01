@@ -18,4 +18,5 @@ public class Tazalyk {
     @SequenceGenerator(name = "hibernate_gen", sequenceName = "hibernate_seq", allocationSize = 1)
     @Column(name = "id", nullable = false)
     private Long id;
+
 }

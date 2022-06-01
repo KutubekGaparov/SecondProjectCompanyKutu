@@ -1,4 +1,4 @@
-package azmat.secondprojectcompany.model.entity;
+package azmat.secondprojectcompany.model.entity.din;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
@@ -7,12 +7,13 @@ import lombok.Setter;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "charba")
+@Table(name = "ramazan")
 @RequiredArgsConstructor
 @Getter
 @Setter
-public class AiylCharba {
-    
+
+public class Ait {
+
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "hibernate_gen")
     @SequenceGenerator(name = "hibernate_gen", sequenceName = "hibernate_seq", allocationSize = 1)

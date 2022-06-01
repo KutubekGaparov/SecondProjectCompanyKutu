@@ -12,5 +12,4 @@ public class SecondProjectCompanyApplication {
 
         System.out.println("Aza bratan");
     }
-
 }
