@@ -1,5 +1,6 @@
 package azmat.secondprojectcompany.model;
 
+import azmat.secondprojectcompany.model.entity.BashkyBet;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
@@ -27,4 +28,7 @@ public class Kyzmatkerler {
     private String positions;
     private String email;
     private int phone;
+
+    @ManyToOne
+    private BashkyBet bashkyBet;
 }
