@@ -1,5 +1,6 @@
 package azmat.secondprojectcompany.model.entity.din;
 
+import azmat.secondprojectcompany.model.entity.DinIshteri;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
@@ -28,4 +29,7 @@ public class Mechitter {
     private String address;
     private int phone;
     private String email;
+
+    @ManyToOne
+    private DinIshteri dinIshteri;
 }
