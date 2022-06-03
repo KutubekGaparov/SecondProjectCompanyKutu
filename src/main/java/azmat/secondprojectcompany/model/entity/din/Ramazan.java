@@ -1,5 +1,6 @@
 package azmat.secondprojectcompany.model.entity.din;
 
+import azmat.secondprojectcompany.model.entity.DinIshteri;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
@@ -19,6 +20,8 @@ public class Ramazan {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    private String regulations;
-    private String benefit;
+    private String text;
+
+    @OneToOne
+    private DinIshteri dinIshteri;
 }
