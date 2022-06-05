@@ -1,5 +1,6 @@
 package azmat.secondprojectcompany.model.entity.din;
 
+import azmat.secondprojectcompany.model.FileInformation.Gallery;
 import azmat.secondprojectcompany.model.entity.DinIshteri;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
@@ -11,8 +12,7 @@ import java.time.LocalDate;
 @Entity
 @Table(name = "religion_school")
 @RequiredArgsConstructor
-@Getter
-@Setter
+@Getter @Setter
 public class ReligionSchool {
 
     @Id
@@ -30,4 +30,7 @@ public class ReligionSchool {
 
     @ManyToOne
     private DinIshteri dinIshteri;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    private Gallery gallery;
 }

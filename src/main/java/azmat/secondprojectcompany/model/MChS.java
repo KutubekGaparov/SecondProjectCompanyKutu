@@ -1,27 +1,31 @@
-package azmat.secondprojectcompany.model.entity;
+package azmat.secondprojectcompany.model;
 
-import azmat.secondprojectcompany.model.Kyzmatkerler;
+import azmat.secondprojectcompany.model.FileInformation.Gallery;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.List;
+import java.time.LocalDate;
 
 @Entity
-@Table(name = "bashky")
+@Table(name = "mchs")
 @RequiredArgsConstructor
 @Getter
 @Setter
+public class MChS {
 
-public class BashkyBet {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "hibernate_gen")
     @SequenceGenerator(name = "hibernate_gen", sequenceName = "hibernate_seq", allocationSize = 1)
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @OneToMany
-    private List<Kyzmatkerler> kyzmatkerler;
+    private String fullName;
+    private LocalDate birthday;
+    private String email;
+    private String phoneNumber;
 
+    @OneToMany
+    private Gallery gallery;
 }
