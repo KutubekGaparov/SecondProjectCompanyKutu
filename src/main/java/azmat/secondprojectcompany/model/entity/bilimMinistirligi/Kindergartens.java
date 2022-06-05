@@ -1,5 +1,6 @@
 package azmat.secondprojectcompany.model.entity.bilimMinistirligi;
 
+import azmat.secondprojectcompany.model.entity.BilimBeruu;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
@@ -20,4 +21,7 @@ public class Kindergartens {
     @SequenceGenerator(name = "hibernate_gen",sequenceName = "hibernate_seq",allocationSize = 1)
     @Column(name = "id",nullable = false)
     private Long id;
+
+    @ManyToOne
+    private BilimBeruu bilimBeruu;
 }
