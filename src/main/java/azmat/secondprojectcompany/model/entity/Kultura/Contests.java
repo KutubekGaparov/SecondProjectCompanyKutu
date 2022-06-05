@@ -1,5 +1,6 @@
 package azmat.secondprojectcompany.model.entity.Kultura;
 
+import azmat.secondprojectcompany.model.FileInformation.Gallery;
 import azmat.secondprojectcompany.model.entity.Madaniat;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
@@ -23,6 +24,9 @@ public class Contests {
     @Column(length = 1000000)
     private String text;
 
-    @OneToOne
+    @ManyToOne
     private Madaniat madaniat;
+
+    @OneToOne
+    private Gallery gallery;
 }

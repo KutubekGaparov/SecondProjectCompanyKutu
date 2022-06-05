@@ -1,11 +1,13 @@
 package azmat.secondprojectcompany.model;
 
+import azmat.secondprojectcompany.model.FileInformation.Gallery;
 import azmat.secondprojectcompany.model.entity.AiylCharba;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Getter
@@ -23,4 +25,8 @@ public class NewsAnnouncement {
 
     @ManyToOne
     private AiylCharba aiylCharba;
+
+    @OneToMany
+    private List<Gallery> gallery;
+
 }

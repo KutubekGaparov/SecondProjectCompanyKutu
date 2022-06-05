@@ -1,5 +1,6 @@
 package azmat.secondprojectcompany.model.entity.aiylCharba;
 
+import azmat.secondprojectcompany.model.FileInformation.Gallery;
 import azmat.secondprojectcompany.model.entity.AiylCharba;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
@@ -24,4 +25,7 @@ public class Tips {
 
     @ManyToOne
     private AiylCharba aiylCharba;
+
+    @OneToOne
+    private Gallery gallery;
 }

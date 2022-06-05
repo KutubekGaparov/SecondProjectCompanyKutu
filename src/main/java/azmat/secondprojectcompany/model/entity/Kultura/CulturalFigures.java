@@ -1,5 +1,6 @@
 package azmat.secondprojectcompany.model.entity.Kultura;
 
+import azmat.secondprojectcompany.model.FileInformation.Gallery;
 import azmat.secondprojectcompany.model.entity.Madaniat;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
@@ -26,4 +27,6 @@ public class CulturalFigures {
     @ManyToOne
     private Madaniat madaniat ;
 
+    @OneToOne
+    private Gallery gallery;
 }

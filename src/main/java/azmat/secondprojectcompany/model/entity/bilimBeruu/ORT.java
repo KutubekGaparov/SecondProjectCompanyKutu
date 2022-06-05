@@ -1,6 +1,7 @@
-package azmat.secondprojectcompany.model.entity.Kultura;
+package azmat.secondprojectcompany.model.entity.bilimBeruu;
 
-import azmat.secondprojectcompany.model.entity.Madaniat;
+import azmat.secondprojectcompany.model.FileInformation.Gallery;
+import azmat.secondprojectcompany.model.entity.BilimBeruu;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
@@ -11,8 +12,10 @@ import javax.persistence.*;
 @Getter
 @Setter
 @RequiredArgsConstructor
-@Table(name = "sentence")
-public class Sentence {
+@Table(name = "ort")
+
+public class ORT {
+
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE,
             generator ="hibernate_gen" )
@@ -23,5 +26,10 @@ public class Sentence {
     private String text;
 
     @OneToOne
-    private Madaniat madaniat;
+    private BilimBeruu bilimBeruu;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    private Gallery gallery;
+
+
 }

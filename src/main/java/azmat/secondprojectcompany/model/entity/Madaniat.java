@@ -21,8 +21,8 @@ public class Madaniat {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @OneToOne(cascade = CascadeType.ALL,mappedBy = "madaniat")
-    private Contests contests;
+    @OneToMany(cascade = CascadeType.ALL,mappedBy = "madaniat")
+    private List<Contests> contests;
 
     @OneToMany(cascade = CascadeType.ALL,mappedBy = "madaniat")
     private List<CulturalFigures> culturalFigures;
@@ -30,13 +30,11 @@ public class Madaniat {
     @OneToOne(cascade = CascadeType.ALL,mappedBy = "madaniat")
     private CultureEvents cultureEvents;
 
-    @OneToOne(cascade = CascadeType.ALL,mappedBy = "madaniat")
-    private HousesOfCulture housesOfCulture;
+    @OneToMany(cascade = CascadeType.ALL,mappedBy = "madaniat")
+    private List<HousesOfCulture> housesOfCulture;
 
-    @OneToOne(cascade = CascadeType.ALL,mappedBy = "madaniat")
-    private Museums museums;
+    @OneToMany(cascade = CascadeType.ALL,mappedBy = "madaniat")
+    private List<Museums> museums;
 
-    @OneToOne(cascade = CascadeType.ALL, mappedBy = "madaniat")
-    private Sentence sentence;
 
 }

@@ -1,8 +1,6 @@
 package azmat.secondprojectcompany.model.entity;
 
-import azmat.secondprojectcompany.model.entity.bilimMinistirligi.Circles;
-import azmat.secondprojectcompany.model.entity.bilimMinistirligi.DrivingSchool;
-import azmat.secondprojectcompany.model.entity.bilimMinistirligi.Kindergartens;
+import azmat.secondprojectcompany.model.entity.bilimBeruu.*;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
@@ -29,8 +27,21 @@ public class BilimBeruu {
     @OneToMany(mappedBy = "bilimBeruu",cascade = CascadeType.ALL)
     private List<DrivingSchool> drivingSchool;
 
-    @OneToMany(mappedBy = "bulimBeruu",cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "bilimBeruu",cascade = CascadeType.ALL)
     private List<Kindergartens> kindergartens;
+
+    @OneToMany(mappedBy = "bilimBeruu",cascade = CascadeType.ALL)
+    private List<MOEEvent> moeEvents;
+
+    @OneToMany(mappedBy = "bilimBeruu",cascade = CascadeType.ALL)
+    private List<Olympians> olympians;
+
+  @OneToOne(mappedBy = "bilimBeruu",cascade = CascadeType.ALL)
+    private ORT orts;
+
+  @OneToMany(mappedBy = "bilimBeruu",cascade = CascadeType.ALL)
+    private List<Schools> schools;
+
 
 
 

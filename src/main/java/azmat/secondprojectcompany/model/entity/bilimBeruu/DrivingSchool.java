@@ -1,5 +1,6 @@
-package azmat.secondprojectcompany.model.entity.bilimMinistirligi;
+package azmat.secondprojectcompany.model.entity.bilimBeruu;
 
+import azmat.secondprojectcompany.model.FileInformation.Gallery;
 import azmat.secondprojectcompany.model.entity.BilimBeruu;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
@@ -11,9 +12,8 @@ import javax.persistence.*;
 @Getter
 @Setter
 @RequiredArgsConstructor
-@Table(name = "kindergartens")
-
-public class Kindergartens {
+@Table(name = "drivingSchool")
+public class DrivingSchool {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE,
@@ -22,6 +22,15 @@ public class Kindergartens {
     @Column(name = "id",nullable = false)
     private Long id;
 
+    private String director;
+    private String phoneNumber;
+    private String drivingCourseName;
+
     @ManyToOne
     private BilimBeruu bilimBeruu;
+
+
+    @OneToOne(cascade = CascadeType.ALL)
+    private Gallery gallery;
+
 }

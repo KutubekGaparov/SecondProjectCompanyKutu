@@ -1,5 +1,7 @@
-package azmat.secondprojectcompany.model.entity.bilimMinistirligi;
+package azmat.secondprojectcompany.model.entity.bilimBeruu;
 
+import azmat.secondprojectcompany.model.FileInformation.Gallery;
+import azmat.secondprojectcompany.model.entity.BilimBeruu;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
@@ -10,9 +12,9 @@ import javax.persistence.*;
 @Getter
 @Setter
 @RequiredArgsConstructor
-@Table(name = "schools")
+@Table(name = "kindergartens")
 
-public class Schools {
+public class Kindergartens {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE,
@@ -20,4 +22,12 @@ public class Schools {
     @SequenceGenerator(name = "hibernate_gen",sequenceName = "hibernate_seq",allocationSize = 1)
     @Column(name = "id",nullable = false)
     private Long id;
+
+    @ManyToOne
+    private BilimBeruu bilimBeruu;
+
+
+    @OneToOne(cascade = CascadeType.ALL)
+    private Gallery gallery;
+
 }
