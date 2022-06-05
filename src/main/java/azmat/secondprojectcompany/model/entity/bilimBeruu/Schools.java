@@ -1,5 +1,6 @@
-package azmat.secondprojectcompany.model.entity.bilimMinistirligi;
+package azmat.secondprojectcompany.model.entity.bilimBeruu;
 
+import azmat.secondprojectcompany.model.FileInformation.Gallery;
 import azmat.secondprojectcompany.model.entity.BilimBeruu;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
@@ -7,15 +8,14 @@ import lombok.Setter;
 
 import javax.persistence.*;
 
-import static javax.persistence.CascadeType.REFRESH;
-
 @Entity
 @Getter
 @Setter
 @RequiredArgsConstructor
-@Table(name = "circles")
+@Table(name = "schools")
 
-public class Circles {
+public class Schools {
+
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE,
             generator ="hibernate_gen" )
@@ -23,12 +23,17 @@ public class Circles {
     @Column(name = "id",nullable = false)
     private Long id;
 
-    private String courseName;
-    private String courseTeacher;
-    private String info;
+    private String schoolName;
+    private String directorFullName;
+    private String address;
     private String phoneNumber;
+
+    private String text;
 
     @ManyToOne
     private BilimBeruu bilimBeruu;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    private Gallery gallery;
 
 }

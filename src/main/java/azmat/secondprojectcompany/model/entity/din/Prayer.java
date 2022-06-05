@@ -1,5 +1,6 @@
 package azmat.secondprojectcompany.model.entity.din;
 
+import azmat.secondprojectcompany.model.FileInformation.Gallery;
 import azmat.secondprojectcompany.model.entity.DinIshteri;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
@@ -19,10 +20,12 @@ public class Prayer {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    private String prayerName;
-    private int timePrayer;
-    private String ablution;
+    private String text;
 
-    @ManyToOne
+    @OneToOne
     private DinIshteri dinIshteri;
+
+    @OneToOne
+    private Gallery gallery;
+
 }

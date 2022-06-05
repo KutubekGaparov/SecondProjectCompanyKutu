@@ -1,11 +1,13 @@
 package azmat.secondprojectcompany.model.entity.din;
 
+import azmat.secondprojectcompany.model.FileInformation.Gallery;
 import azmat.secondprojectcompany.model.entity.DinIshteri;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "ramazan")
@@ -27,5 +29,8 @@ public class Ait {
 
     @OneToOne
     private DinIshteri dinIshteri;
+
+    @OneToMany
+    private List<Gallery> gallery;
 
 }

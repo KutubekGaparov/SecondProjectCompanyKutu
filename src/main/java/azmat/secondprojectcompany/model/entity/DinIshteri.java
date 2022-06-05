@@ -35,8 +35,8 @@ public class DinIshteri {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "dinIshteri")
     private List<Mechitter> mechitter;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "dinIshteri")
-    private List<Prayer> prayer;
+    @OneToOne(cascade = CascadeType.ALL, mappedBy = "dinIshteri")
+    private Prayer prayer;
 
     @OneToOne(cascade = CascadeType.ALL, mappedBy = "dinIshteri")
     private Ramazan ramazan;

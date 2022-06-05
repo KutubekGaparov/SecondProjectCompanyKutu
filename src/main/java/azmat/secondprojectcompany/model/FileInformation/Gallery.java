@@ -1,6 +1,5 @@
 package azmat.secondprojectcompany.model.FileInformation;
 
-import azmat.secondprojectcompany.model.entity.AiylCharba;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
@@ -20,6 +19,13 @@ public class Gallery {
     @Column(name = "id",nullable = false)
     private Long id;
 
-    @ManyToOne
-    private AiylCharba aiylCharba;
+    private String firstPhoto;
+    private String secondPhoto;
+    private String thirdPhoto;
+    private String file;
+
+    private String keyOfFirstPhoto;
+    private String keyOfSecondPhoto;
+    private String keyOfThirdPhoto;
+    private String KeyOfFile;
 }

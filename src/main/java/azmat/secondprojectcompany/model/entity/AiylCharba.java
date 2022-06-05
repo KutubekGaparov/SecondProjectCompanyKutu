@@ -44,6 +44,4 @@ public class AiylCharba {
     @OneToMany(cascade = CascadeType.ALL,mappedBy = "aiylCharba")
     private List<NewsAnnouncement> newsAnnouncement;
 
-    @OneToMany()
-    private List<Gallery> gallery;
 }

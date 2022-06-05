@@ -1,11 +1,13 @@
 package azmat.secondprojectcompany.model.entity.aiylCharba;
 
+import azmat.secondprojectcompany.model.FileInformation.Gallery;
 import azmat.secondprojectcompany.model.entity.AiylCharba;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Getter
@@ -26,5 +28,8 @@ public class GrainGrowing {
 
     @OneToOne
     private AiylCharba aiylCharba;
+
+    @OneToMany
+    private List<Gallery> gallery;
 
 }

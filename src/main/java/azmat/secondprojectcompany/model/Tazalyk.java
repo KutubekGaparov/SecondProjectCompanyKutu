@@ -1,11 +1,13 @@
-package azmat.secondprojectcompany.model.entity;
+package azmat.secondprojectcompany.model;
 
+import azmat.secondprojectcompany.model.FileInformation.Gallery;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 @Table(name = "tazalyk")
@@ -24,5 +26,8 @@ public class Tazalyk {
     private LocalDate birthday;
     private String email;
     private String phoneNumber;
+
+    @OneToMany
+    private List<Gallery> gallery;
 
 }
