@@ -9,7 +9,6 @@ import lombok.Setter;
 
 
 import javax.persistence.*;
-import javax.swing.*;
 import java.util.List;
 
 @Entity
