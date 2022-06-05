@@ -30,6 +30,8 @@ public class SecondProjectCompanyApplication {
         System.out.println("Hello world");
 
         System.out.println("Aza bratan");
+
+        System.out.println("Aza");
     }
 
 //    @PostConstruct
