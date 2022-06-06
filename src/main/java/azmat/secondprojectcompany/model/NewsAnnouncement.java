@@ -23,8 +23,7 @@ public class NewsAnnouncement {
     @Column(name = "id",nullable = false)
     private Long id;
 
-    @ManyToOne
-    private AiylCharba aiylCharba;
+    private String text;
 
     @OneToMany
     private List<Gallery> gallery;
