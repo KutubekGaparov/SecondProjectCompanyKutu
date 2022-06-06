@@ -7,6 +7,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 @Table(name = "mchs")
@@ -27,5 +28,5 @@ public class MChS {
     private String phoneNumber;
 
     @OneToMany
-    private Gallery gallery;
+    private List<Gallery> gallery;
 }
