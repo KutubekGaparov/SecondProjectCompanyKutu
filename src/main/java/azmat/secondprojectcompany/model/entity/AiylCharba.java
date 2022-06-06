@@ -1,15 +1,12 @@
 package azmat.secondprojectcompany.model.entity;
 
-import azmat.secondprojectcompany.model.FileInformation.Gallery;
 import azmat.secondprojectcompany.model.NewsAnnouncement;
 import azmat.secondprojectcompany.model.entity.aiylCharba.*;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
-
 import javax.persistence.*;
-import javax.swing.*;
 import java.util.List;
 
 @Entity
