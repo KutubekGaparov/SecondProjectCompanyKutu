@@ -1,4 +1,8 @@
 package azmat.secondprojectcompany.db.servise.bilimBeruu.impl;
 
-public class BilimBeruuServiceImpl {
+import azmat.secondprojectcompany.db.servise.bilimBeruu.BilimBeruuService;
+import org.springframework.stereotype.Service;
+
+@Service
+public class BilimBeruuServiceImpl implements BilimBeruuService {
 }
