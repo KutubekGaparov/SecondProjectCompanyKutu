@@ -26,6 +26,7 @@ public class Ait {
     @Column(length = 1000000)
     private String text;
 
+
     @OneToOne
     private DinIshteri dinIshteri;
 
