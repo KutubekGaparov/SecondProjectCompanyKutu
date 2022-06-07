@@ -2,6 +2,7 @@ package azmat.secondprojectcompany.api;
 
 import azmat.secondprojectcompany.db.servise.aiylCharba.*;
 import azmat.secondprojectcompany.model.entity.aiylCharba.ACEvent;
+import azmat.secondprojectcompany.model.entity.aiylCharba.AnimalHusbandry;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
@@ -18,11 +19,18 @@ import java.util.List;
 public class AiylCharbaApi {
 
     private ACEventService acEventService;
+    private AnimalHisbandryService animalHisbandryService;
 
     @Operation(summary = "Get")
     @PostMapping("/getAll")
     public List<ACEvent> getAll() {
         return acEventService.getAll();
     }
+
+//    @Operation(summary = "Get")
+//    @PostMapping("/getAll")
+//    public List<AnimalHusbandry> ad() {
+//        return animalHisbandryService.getAll();
+//    }
 
 }
