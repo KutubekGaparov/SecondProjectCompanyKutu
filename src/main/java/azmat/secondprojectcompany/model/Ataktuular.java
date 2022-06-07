@@ -22,7 +22,6 @@ public class Ataktuular {
     private Long id;
     private String info;
 
-    @OneToMany
-    private List<Gallery> gallery;
-
+    @OneToOne
+    private Gallery gallery;
 }

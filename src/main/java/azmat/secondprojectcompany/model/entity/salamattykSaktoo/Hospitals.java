@@ -1,7 +1,6 @@
 package azmat.secondprojectcompany.model.entity.salamattykSaktoo;
 
 import azmat.secondprojectcompany.model.FileInformation.Gallery;
-import azmat.secondprojectcompany.model.entity.SalamattyktySaktoo;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
@@ -28,9 +27,6 @@ public class Hospitals {
     private String  address;
     private String phoneNumber;
     private String email;
-
-    @ManyToOne
-    private SalamattyktySaktoo salamattyktySaktoo;
 
     @OneToOne
     private Gallery gallery;

@@ -1,7 +1,6 @@
 package azmat.secondprojectcompany.model.entity.aiylCharba;
 
 import azmat.secondprojectcompany.model.FileInformation.Gallery;
-import azmat.secondprojectcompany.model.entity.AiylCharba;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
@@ -27,9 +26,6 @@ public class GrainGrowing {
     private String directorFullName;
 
     @OneToOne
-    private AiylCharba aiylCharba;
-
-    @OneToMany
-    private List<Gallery> gallery;
+    private Gallery gallery;
 
 }

@@ -27,7 +27,6 @@ public class Tazalyk {
     private String email;
     private String phoneNumber;
 
-    @OneToMany
-    private List<Gallery> gallery;
-
+    @OneToOne
+    private Gallery gallery;
 }

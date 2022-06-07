@@ -1,7 +1,6 @@
 package azmat.secondprojectcompany.model.entity.bilimBeruu;
 
 import azmat.secondprojectcompany.model.FileInformation.Gallery;
-import azmat.secondprojectcompany.model.entity.BilimBeruu;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
@@ -26,10 +25,6 @@ public class Circles {
     private String courseTeacher;
     private String info;
     private String phoneNumber;
-
-    @ManyToOne
-    private BilimBeruu bilimBeruu;
-
 
     @OneToOne(cascade = CascadeType.ALL)
     private Gallery gallery;

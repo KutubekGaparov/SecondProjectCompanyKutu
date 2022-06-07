@@ -1,13 +1,15 @@
 package azmat.secondprojectcompany.api;
 
-import azmat.secondprojectcompany.db.servise.aiylCharba.AiylCharbaService;
+import azmat.secondprojectcompany.db.servise.aiylCharba.*;
+import azmat.secondprojectcompany.model.entity.aiylCharba.ACEvent;
+import azmat.secondprojectcompany.model.entity.aiylCharba.AnimalHusbandry;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @CrossOrigin(origins = "*", maxAge = 3600)
@@ -16,12 +18,19 @@ import org.springframework.web.bind.annotation.RestController;
 @Tag(name = "AiylCharba", description = "crud operations")
 public class AiylCharbaApi {
 
-    private final AiylCharbaService aiylCharbaService;
+    private ACEventService acEventService;
+    private AnimalHisbandryService animalHisbandryService;
 
     @Operation(summary = "Get")
-    @GetMapping("/save")
-    public String get() {
-        return "aiylCharbaService.save()";
+    @PostMapping("/getAll")
+    public List<ACEvent> getAll() {
+        return acEventService.getAll();
     }
+
+//    @Operation(summary = "Get")
+//    @PostMapping("/getAll")
+//    public List<AnimalHusbandry> ad() {
+//        return animalHisbandryService.getAll();
+//    }
 
 }

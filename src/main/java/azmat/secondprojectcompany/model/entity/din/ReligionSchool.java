@@ -1,7 +1,6 @@
 package azmat.secondprojectcompany.model.entity.din;
 
 import azmat.secondprojectcompany.model.FileInformation.Gallery;
-import azmat.secondprojectcompany.model.entity.DinIshteri;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
@@ -27,9 +26,6 @@ public class ReligionSchool {
     private String address;
     private int phone;
     private String email;
-
-    @ManyToOne
-    private DinIshteri dinIshteri;
 
     @OneToOne(cascade = CascadeType.ALL)
     private Gallery gallery;

@@ -1,7 +1,6 @@
 package azmat.secondprojectcompany.model.entity.din;
 
 import azmat.secondprojectcompany.model.FileInformation.Gallery;
-import azmat.secondprojectcompany.model.entity.DinIshteri;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
@@ -27,11 +26,6 @@ public class Hadj {
 
     private String text;
 
-    @ManyToOne
-    private DinIshteri dinIshteri;
-
-    @OneToMany
-    private List<Gallery> gallery;
-
-
+    @OneToOne
+    private Gallery gallery;
 }
