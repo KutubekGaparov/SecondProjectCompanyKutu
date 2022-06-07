@@ -1,7 +1,6 @@
 package azmat.secondprojectcompany.model.entity.din;
 
 import azmat.secondprojectcompany.model.FileInformation.Gallery;
-import azmat.secondprojectcompany.model.entity.DinIshteri;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
@@ -26,11 +25,7 @@ public class Ait {
     @Column(length = 1000000)
     private String text;
 
-
     @OneToOne
-    private DinIshteri dinIshteri;
-
-    @OneToMany
-    private List<Gallery> gallery;
+    private Gallery gallery;
 
 }

@@ -28,13 +28,9 @@ public class SecondProjectCompanyApplication {
     public static void main(String[] args) {
         SpringApplication.run(SecondProjectCompanyApplication.class, args);
         System.out.println("Hello world");
-
-        System.out.println("Aza bratan");
-
-        System.out.println("Aza");
     }
 
-//    @PostConstruct
+    @PostConstruct
     public void init() {
         Role client = new Role();
         client.setId(1L);

@@ -1,7 +1,6 @@
 package azmat.secondprojectcompany.model.entity.Kultura;
 
 import azmat.secondprojectcompany.model.FileInformation.Gallery;
-import azmat.secondprojectcompany.model.entity.Madaniat;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
@@ -25,8 +24,5 @@ public class CultureEvents {
     private String text;
 
     @OneToOne
-    private Madaniat madaniat;
-
-    @OneToMany
-    private List<Gallery> gallery;
+    private Gallery gallery;
 }

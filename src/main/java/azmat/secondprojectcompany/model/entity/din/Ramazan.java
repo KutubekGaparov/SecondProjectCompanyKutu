@@ -1,7 +1,6 @@
 package azmat.secondprojectcompany.model.entity.din;
 
 import azmat.secondprojectcompany.model.FileInformation.Gallery;
-import azmat.secondprojectcompany.model.entity.DinIshteri;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
@@ -22,9 +21,6 @@ public class Ramazan {
     private Long id;
 
     private String text;
-
-    @OneToOne
-    private DinIshteri dinIshteri;
 
     @OneToOne(cascade = CascadeType.ALL)
     private Gallery gallery;

@@ -1,7 +1,6 @@
 package azmat.secondprojectcompany.model;
 
 import azmat.secondprojectcompany.model.FileInformation.Gallery;
-import azmat.secondprojectcompany.model.entity.AiylCharba;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
@@ -25,7 +24,6 @@ public class NewsAnnouncement {
 
     private String text;
 
-    @OneToMany
-    private List<Gallery> gallery;
-
+    @OneToOne
+    private Gallery gallery;
 }

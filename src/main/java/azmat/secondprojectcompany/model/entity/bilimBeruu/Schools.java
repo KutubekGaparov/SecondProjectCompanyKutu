@@ -1,7 +1,6 @@
 package azmat.secondprojectcompany.model.entity.bilimBeruu;
 
 import azmat.secondprojectcompany.model.FileInformation.Gallery;
-import azmat.secondprojectcompany.model.entity.BilimBeruu;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
@@ -29,9 +28,6 @@ public class Schools {
     private String phoneNumber;
 
     private String text;
-
-    @ManyToOne
-    private BilimBeruu bilimBeruu;
 
     @OneToOne(cascade = CascadeType.ALL)
     private Gallery gallery;

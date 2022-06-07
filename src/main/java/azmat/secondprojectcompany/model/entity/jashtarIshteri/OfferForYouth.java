@@ -1,6 +1,6 @@
 package azmat.secondprojectcompany.model.entity.jashtarIshteri;
 
-import azmat.secondprojectcompany.model.entity.JashtarIshteri;
+import azmat.secondprojectcompany.model.FileInformation.Gallery;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
@@ -22,6 +22,6 @@ public class OfferForYouth {
 
     private String offer;
 
-    @ManyToOne
-    private JashtarIshteri jashtarIshteri;
+    @OneToOne
+    private Gallery gallery;
 }
