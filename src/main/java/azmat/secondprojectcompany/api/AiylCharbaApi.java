@@ -2,11 +2,9 @@ package azmat.secondprojectcompany.api;
 
 import azmat.secondprojectcompany.db.servise.aiylCharba.*;
 import azmat.secondprojectcompany.model.entity.aiylCharba.ACEvent;
-import azmat.secondprojectcompany.model.entity.aiylCharba.AnimalHusbandry;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -19,7 +17,7 @@ import java.util.List;
 public class AiylCharbaApi {
 
     private ACEventService acEventService;
-    private AnimalHisbandryService animalHisbandryService;
+    private AnimalHusbandryService animalHisbandryService;
 
     @Operation(summary = "Get")
     @PostMapping("/getAll")

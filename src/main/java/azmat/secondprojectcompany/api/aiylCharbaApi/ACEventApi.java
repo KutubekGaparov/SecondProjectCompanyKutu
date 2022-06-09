@@ -1,4 +1,4 @@
-package azmat.secondprojectcompany.api.aiylCharba;
+package azmat.secondprojectcompany.api.aiylCharbaApi;
 
 import azmat.secondprojectcompany.db.servise.aiylCharba.ACEventService;
 import azmat.secondprojectcompany.model.entity.aiylCharba.ACEvent;
