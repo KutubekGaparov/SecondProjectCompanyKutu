@@ -13,13 +13,14 @@ import javax.persistence.*;
 @Getter
 @Setter
 public class Ramazan {
-
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "hibernate_gen")
-    @SequenceGenerator(name = "hibernate_gen", sequenceName = "hibernate_seq", allocationSize = 1)
-    @Column(name = "id", nullable = false)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE,
+            generator = "ramazan_seq")
+    @SequenceGenerator(name = "ramazan_seq",
+            sequenceName = "SEQ_RAMAZAN", allocationSize = 1)
+    @Column(updatable = false, nullable = false)
     private Long id;
-
+    @Column(length = 10000000)
     private String text;
 
     @OneToOne(cascade = CascadeType.ALL)

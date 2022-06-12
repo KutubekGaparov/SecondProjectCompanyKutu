@@ -16,14 +16,16 @@ import java.util.List;
 public class Hadj {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "hibernate_gen")
-    @SequenceGenerator(name = "hibernate_gen", sequenceName = "hibernate_seq", allocationSize = 1)
-    @Column(name = "id", nullable = false)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE,
+            generator = "hadj_seq")
+    @SequenceGenerator(name = "hadj_seq",
+            sequenceName = "SEQ_HADJ", allocationSize = 1)
+    @Column(updatable = false, nullable = false)
     private Long id;
 
 
     private String fullName;
-
+    @Column(length = 10000000)
     private String text;
 
     @OneToOne

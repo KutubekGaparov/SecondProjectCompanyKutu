@@ -3,6 +3,8 @@ package azmat.secondprojectcompany.db.servise.salamattykdySaktoo;
 import azmat.secondprojectcompany.model.entity.salamattykSaktoo.Hospitals;
 import org.springframework.http.ResponseEntity;
 
+import java.util.List;
+
 public interface HospitalsService {
     Hospitals saveHospitals(Hospitals hospitals);
 
@@ -10,4 +12,5 @@ public interface HospitalsService {
 
     ResponseEntity<?> deleteById(Long id);
 
+    List<Hospitals> getAll();
 }

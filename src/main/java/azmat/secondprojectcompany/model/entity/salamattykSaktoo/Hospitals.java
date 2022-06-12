@@ -17,9 +17,10 @@ public class Hospitals {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE,
-            generator ="hibernate_gen" )
-    @SequenceGenerator(name = "hibernate_gen",sequenceName = "hibernate_seq",allocationSize = 1)
-    @Column(name = "id",nullable = false)
+            generator = "hospitals_seq")
+    @SequenceGenerator(name = "hospitals_seq",
+            sequenceName = "SEQ_HOSPITALS", allocationSize = 1)
+    @Column(updatable = false, nullable = false)
     private Long id;
 
     private String hospitalName;

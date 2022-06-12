@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @CrossOrigin(origins = "*", maxAge = 3600)
-@RequestMapping("/api")
+@RequestMapping("/api/din/dEvent")
 @AllArgsConstructor
 @PreAuthorize("hasAnyRole('ROLE_ADMIN')")
 @Tag(name = "Din", description = "crud operations")

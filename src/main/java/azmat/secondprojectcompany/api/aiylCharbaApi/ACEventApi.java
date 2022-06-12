@@ -11,11 +11,12 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @CrossOrigin(origins = "*", maxAge = 3600)
-@RequestMapping("/api")
+@RequestMapping("/api/agriculture/acEvent")
 @AllArgsConstructor
-@PreAuthorize("hasAnyRole('ROLE_ADMIN')")
+//@PreAuthorize("hasAnyRole('ROLE_ADMIN')")
 @Tag(name = "AiylCharba", description = "crud operations")
 public class ACEventApi {
+
     private ACEventService acEventService;
 
     @Operation(summary = "Save ACEvent by id ")

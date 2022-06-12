@@ -17,11 +17,12 @@ public class ORT {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE,
-            generator ="hibernate_gen" )
-    @SequenceGenerator(name = "hibernate_gen",sequenceName = "hibernate_seq",allocationSize = 1)
-    @Column(name = "id",nullable = false)
+            generator = "ort_seq")
+    @SequenceGenerator(name = "ort_seq",
+            sequenceName = "SEQ_ORT", allocationSize = 1)
+    @Column(updatable = false, nullable = false)
     private Long id;
-
+    @Column(length = 10000000)
     private String text;
 
     @OneToOne(cascade = CascadeType.ALL)

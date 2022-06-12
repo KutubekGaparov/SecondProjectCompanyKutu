@@ -17,15 +17,17 @@ import java.util.List;
 public class MChS {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "hibernate_gen")
-    @SequenceGenerator(name = "hibernate_gen", sequenceName = "hibernate_seq", allocationSize = 1)
-    @Column(name = "id", nullable = false)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE,
+            generator = "mch_seq")
+    @SequenceGenerator(name = "mch_seq",
+            sequenceName = "SEQ_MCH", allocationSize = 1)
+    @Column(updatable = false, nullable = false)
     private Long id;
 
     private String fullName;
-    private LocalDate birthday;
+    private LocalDate birthDay;
     private String email;
-    private String phoneNumber;
+    private String phone;
 
     @OneToOne
     private Gallery gallery;

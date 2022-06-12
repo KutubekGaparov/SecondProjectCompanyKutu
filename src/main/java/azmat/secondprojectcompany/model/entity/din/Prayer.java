@@ -14,11 +14,13 @@ import javax.persistence.*;
 @Setter
 public class Prayer {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "hibernate_gen")
-    @SequenceGenerator(name = "hibernate_gen", sequenceName = "hibernate_seq", allocationSize = 1)
-    @Column(name = "id", nullable = false)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE,
+            generator = "prayer_seq")
+    @SequenceGenerator(name = "prayer_seq",
+            sequenceName = "SEQ_PRAYER", allocationSize = 1)
+    @Column(updatable = false, nullable = false)
     private Long id;
-
+    @Column(length = 10000000)
     private String text;
 
     @OneToOne

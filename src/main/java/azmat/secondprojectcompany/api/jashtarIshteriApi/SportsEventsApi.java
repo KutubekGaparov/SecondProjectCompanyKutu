@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @CrossOrigin(origins = "*", maxAge = 3600)
-@RequestMapping("/api")
+@RequestMapping("/api/youthAffairs/sports")
 @AllArgsConstructor
 @PreAuthorize("hasAnyRole('ROLE_ADMIN')")
 @Tag(name = "JashtarIshteri", description = "crud operations")

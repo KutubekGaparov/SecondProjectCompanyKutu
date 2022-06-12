@@ -17,16 +17,17 @@ public class Schools {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE,
-            generator ="hibernate_gen" )
-    @SequenceGenerator(name = "hibernate_gen",sequenceName = "hibernate_seq",allocationSize = 1)
-    @Column(name = "id",nullable = false)
+            generator = "school_seq")
+    @SequenceGenerator(name = "school_seq",
+            sequenceName = "SEQ_SCHOOL", allocationSize = 1)
+    @Column(updatable = false, nullable = false)
     private Long id;
 
     private String schoolName;
     private String directorFullName;
     private String address;
     private String phoneNumber;
-
+    @Column(length = 10000000)
     private String text;
 
     @OneToOne(cascade = CascadeType.ALL)

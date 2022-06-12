@@ -16,10 +16,13 @@ import java.util.List;
 public class Ataktuular {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "hibernate_gen")
-    @SequenceGenerator(name = "hibernate_gen", sequenceName = "hibernate_seq", allocationSize = 1)
-    @Column(name = "id", nullable = false)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE,
+            generator = "at_seq")
+    @SequenceGenerator(name = "at_seq",
+            sequenceName = "SEQ_AT", allocationSize = 1)
+    @Column(updatable = false, nullable = false)
     private Long id;
+    @Column(length = 10000000)
     private String info;
 
     @OneToOne

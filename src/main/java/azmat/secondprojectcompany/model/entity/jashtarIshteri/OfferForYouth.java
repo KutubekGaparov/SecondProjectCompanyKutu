@@ -15,11 +15,12 @@ import javax.persistence.*;
 public class OfferForYouth {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE,
-            generator ="hibernate_gen" )
-    @SequenceGenerator(name = "hibernate_gen",sequenceName = "hibernate_seq",allocationSize = 1)
-    @Column(name = "id",nullable = false)
+            generator = "off_seq")
+    @SequenceGenerator(name = "off_seq",
+            sequenceName = "SEQ_OFF", allocationSize = 1)
+    @Column(updatable = false, nullable = false)
     private Long id;
-
+    @Column(length = 10000000)
     private String offer;
 
     @OneToOne

@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @CrossOrigin(origins = "*", maxAge = 3600)
-@RequestMapping("/api")
+@RequestMapping("/api/healthcare/medicalCenter")
 @AllArgsConstructor
 @PreAuthorize("hasAnyRole('ROLE_ADMIN')")
 @Tag(name = "SalamattykSaktoo", description = "crud operations")
