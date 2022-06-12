@@ -22,6 +22,7 @@ public class CulturalFigures {
     private Long id;
 
     private String fullName;
+    @Column(length = 10000000)
     private String text;
 
     @OneToOne

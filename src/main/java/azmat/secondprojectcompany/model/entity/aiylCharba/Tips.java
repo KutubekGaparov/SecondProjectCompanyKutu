@@ -20,7 +20,7 @@ public class Tips {
             sequenceName = "SEQ_TIPS", allocationSize = 1)
     @Column(updatable = false, nullable = false)
     private Long id;
-
+    @Column(length = 10000000)
     private String text;
 
     @OneToOne

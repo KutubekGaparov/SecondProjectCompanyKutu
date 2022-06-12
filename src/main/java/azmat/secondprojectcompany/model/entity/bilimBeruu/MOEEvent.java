@@ -21,6 +21,7 @@ public class MOEEvent {
             sequenceName = "SEQ_EVENTS", allocationSize = 1)
     @Column(updatable = false, nullable = false)
     private Long id;
+    @Column(length = 10000000)
     private String text;
 
     @OneToOne(cascade = CascadeType.ALL)
