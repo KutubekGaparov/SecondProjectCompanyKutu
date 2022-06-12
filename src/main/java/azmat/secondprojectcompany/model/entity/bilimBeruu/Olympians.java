@@ -14,12 +14,12 @@ import javax.persistence.*;
 @Table(name = "olympians")
 
 public class Olympians {
-
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE,
-            generator ="hibernate_gen" )
-    @SequenceGenerator(name = "hibernate_gen",sequenceName = "hibernate_seq",allocationSize = 1)
-    @Column(name = "id",nullable = false)
+            generator = "olympians_seq")
+    @SequenceGenerator(name = "olympians_seq",
+            sequenceName = "SEQ_OLYMPIANS", allocationSize = 1)
+    @Column(updatable = false, nullable = false)
     private Long id;
     private String text;
 

@@ -16,9 +16,10 @@ public class DrivingSchool {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE,
-            generator ="hibernate_gen" )
-    @SequenceGenerator(name = "hibernate_gen",sequenceName = "hibernate_seq",allocationSize = 1)
-    @Column(name = "id",nullable = false)
+            generator = "driving_seq")
+    @SequenceGenerator(name = "driving_seq",
+            sequenceName = "DRIVING_USE", allocationSize = 1)
+    @Column(updatable = false, nullable = false)
     private Long id;
 
     private String director;

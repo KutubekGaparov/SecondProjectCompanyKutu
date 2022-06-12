@@ -16,9 +16,11 @@ import java.util.List;
 public class Ethics {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "hibernate_gen")
-    @SequenceGenerator(name = "hibernate_gen", sequenceName = "hibernate_seq", allocationSize = 1)
-    @Column(name = "id", nullable = false)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE,
+            generator = "ethics_seq")
+    @SequenceGenerator(name = "ethics_seq",
+            sequenceName = "SEQ_ETHICS", allocationSize = 1)
+    @Column(updatable = false, nullable = false)
     private Long id;
 
     private String text;

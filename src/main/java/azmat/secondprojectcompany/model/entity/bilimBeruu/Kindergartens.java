@@ -17,10 +17,20 @@ public class Kindergartens {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE,
-            generator ="hibernate_gen" )
-    @SequenceGenerator(name = "hibernate_gen",sequenceName = "hibernate_seq",allocationSize = 1)
-    @Column(name = "id",nullable = false)
+            generator = "kinder_seq")
+    @SequenceGenerator(name = "kinder_seq",
+            sequenceName = "SEQ_KINDER", allocationSize = 1)
+    @Column(updatable = false, nullable = false)
     private Long id;
+    private String kindergartensName;
+    private String directorFullName;
+    private String countKindergartens;
+    private String language;
+    private String address;
+    private String email;
+    private String phoneNumber;
+
+
 
     @OneToOne(cascade = CascadeType.ALL)
     private Gallery gallery;

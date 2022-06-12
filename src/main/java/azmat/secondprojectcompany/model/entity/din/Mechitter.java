@@ -17,9 +17,11 @@ import java.util.List;
 public class Mechitter {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "hibernate_gen")
-    @SequenceGenerator(name = "hibernate_gen", sequenceName = "hibernate_seq", allocationSize = 1)
-    @Column(name = "id", nullable = false)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE,
+            generator = "mechitter_seq")
+    @SequenceGenerator(name = "mechitter_seq",
+            sequenceName = "SEQ_MECHITTER", allocationSize = 1)
+    @Column(updatable = false, nullable = false)
     private Long id;
 
     private String mosqueName;
@@ -28,7 +30,7 @@ public class Mechitter {
     private LocalDate birthDay;
     private String positions;
     private String address;
-    private int phone;
+    private String phone;
     private String email;
 
     @OneToOne
