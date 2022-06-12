@@ -1,0 +1,18 @@
+app:
+    jwtExpirationMs: 84600000
+    jwtSecret: SecretKey
+server:
+    error:
+        include-binding-errors: always
+        include-message: always
+    port: 9000
+spring:
+    datasource:
+        password: 54321
+        url: jdbc:postgresql://localhost:5432/mady
+        username: postgres
+    jpa:
+        database-platform: org.hibernate.dialect.PostgreSQL10Dialect
+        hibernate:
+            ddl-auto: create
+        show-sql: true
