@@ -27,7 +27,7 @@ public class Schools {
     private String directorFullName;
     private String address;
     private String phoneNumber;
-
+    @Column(length = 10000000)
     private String text;
 
     @OneToOne(cascade = CascadeType.ALL)

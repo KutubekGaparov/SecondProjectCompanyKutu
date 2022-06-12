@@ -25,7 +25,7 @@ public class Hadj {
 
 
     private String fullName;
-
+    @Column(length = 10000000)
     private String text;
 
     @OneToOne
