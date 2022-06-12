@@ -15,9 +15,10 @@ import javax.persistence.*;
 public class Contests {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE,
-            generator ="hibernate_gen" )
-    @SequenceGenerator(name = "hibernate_gen",sequenceName = "hibernate_seq",allocationSize = 1)
-    @Column(name = "id",nullable = false)
+            generator = "contests_seq")
+    @SequenceGenerator(name = "contests_seq",
+            sequenceName = "SEQ_CONTESTS", allocationSize = 1)
+    @Column(updatable = false, nullable = false)
     private Long id;
 
     @Column(length = 1000000)

@@ -1,24 +1,21 @@
 package azmat.secondprojectcompany.model.entity.aiylCharba;
 
-import azmat.secondprojectcompany.model.FileInformation.Gallery;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
-
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
-@Getter
-@Setter
+@Getter @Setter
 @RequiredArgsConstructor
 @Table(name = "acEvent")
 public class ACEvent {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE,
-            generator ="hibernate_gen" )
-    @SequenceGenerator(name = "hibernate_gen",sequenceName = "hibernate_seq",allocationSize = 1)
-    @Column(name = "id",nullable = false)
+            generator = "asEvent_seq")
+    @SequenceGenerator(name = "asEvent_seq",
+            sequenceName = "SEQ_ASEVENT", allocationSize = 1)
+    @Column(updatable = false, nullable = false)
     private Long id;
 
     private String text;

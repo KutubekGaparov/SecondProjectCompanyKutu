@@ -7,6 +7,7 @@ import azmat.secondprojectcompany.model.entity.aiylCharba.ACEvent;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -22,16 +23,17 @@ public class ACEventServiceImpl implements ACEventService {
     }
 
     @Override
+    @Transactional
     public ACEvent update(ACEvent acEvent,Long id) {
         ACEvent acEvent1 = acEventRepository.findById(id).orElseThrow(() ->
                 new BadRequestException(String.format("User with id %s has not been found", id)));
 
-        String oldText = acEvent.getText();
-        String newText = acEvent1.getText();
+        String oldText = acEvent1.getText();
+        String newText = acEvent.getText();
         if (!oldText.equals(newText)) {
             acEvent1.setText(newText);
         }
-        return acEvent;
+        return acEvent1;
     }
 
     @Override

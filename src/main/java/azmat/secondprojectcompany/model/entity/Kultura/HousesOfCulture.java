@@ -16,9 +16,10 @@ import java.util.List;
 public class HousesOfCulture {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE,
-            generator ="hibernate_gen" )
-    @SequenceGenerator(name = "hibernate_gen",sequenceName = "hibernate_seq",allocationSize = 1)
-    @Column(name = "id",nullable = false)
+            generator = "houses_seq")
+    @SequenceGenerator(name = "houses_seq",
+            sequenceName = "SEQ_HOUSES", allocationSize = 1)
+    @Column(updatable = false, nullable = false)
     private Long id;
 
     private String text;

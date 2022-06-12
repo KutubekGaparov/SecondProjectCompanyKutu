@@ -1,36 +1,61 @@
 package azmat.secondprojectcompany.api;
 
 import azmat.secondprojectcompany.db.servise.aiylCharba.*;
-import azmat.secondprojectcompany.model.entity.aiylCharba.ACEvent;
-import azmat.secondprojectcompany.model.entity.aiylCharba.AnimalHusbandry;
+import azmat.secondprojectcompany.model.entity.aiylCharba.*;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @CrossOrigin(origins = "*", maxAge = 3600)
-@RequestMapping("/api")
+@RequestMapping("/api/agriculture")
 @AllArgsConstructor
-@Tag(name = "AiylCharba", description = "crud operations")
+@Tag(name = "AiylCharba GetApi")
 public class AiylCharbaApi {
 
     private ACEventService acEventService;
-    private AnimalHisbandryService animalHisbandryService;
+    private AnimalHusbandryService animalHusbandryService;
+    private GrainGrowingService grainGrowingService;
+    private LawsService lawsService;
+    private PastureServise pastureServise;
+    private TipsService tipsService;
 
-    @Operation(summary = "Get")
-    @PostMapping("/getAll")
-    public List<ACEvent> getAll() {
+    @Operation(summary = "Get all ACEvent")
+    @GetMapping("/acEvent")
+    public List<ACEvent> getAllAcEvent() {
         return acEventService.getAll();
     }
 
-//    @Operation(summary = "Get")
-//    @PostMapping("/getAll")
-//    public List<AnimalHusbandry> ad() {
-//        return animalHisbandryService.getAll();
-//    }
+    @Operation(summary = "Get all animal husbandry")
+    @GetMapping("/animalHusbandry")
+    public List<AnimalHusbandry> getAll() {
+        return animalHusbandryService.getAll();
+    }
 
+    @Operation(summary = "Get all grainGrowing")
+    @GetMapping("/grainGrowing")
+    public List<GrainGrowing> getAllGrainGrowing() {
+        return grainGrowingService.getAll();
+    }
+
+    @Operation(summary = "Get all grainGrowing")
+    @GetMapping("/laws")
+    public List<Laws> getAllLaws() {
+        return lawsService.getAll();
+    }
+
+    @Operation(summary = "Get all grainGrowing")
+    @GetMapping("/pasture")
+    public List<Pasture> getAllPasture(){
+        return pastureServise.getAll();
+    }
+
+    @Operation(summary = "Get all grainGrowing")
+    @GetMapping("/tips")
+    public List<Tips> getAllTips() {
+        return tipsService.getAll();
+    }
 }

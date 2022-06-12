@@ -16,9 +16,10 @@ import java.util.List;
 public class GrainGrowing {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE,
-            generator ="hibernate_gen" )
-    @SequenceGenerator(name = "hibernate_gen",sequenceName = "hibernate_seq",allocationSize = 1)
-    @Column(name = "id",nullable = false)
+            generator = "grain_seq")
+    @SequenceGenerator(name = "grain_seq",
+            sequenceName = "SEQ_GRAIN", allocationSize = 1)
+    @Column(updatable = false, nullable = false)
     private Long id;
 
     private String text;

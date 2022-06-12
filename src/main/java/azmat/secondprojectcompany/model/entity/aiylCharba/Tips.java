@@ -15,9 +15,10 @@ import javax.persistence.*;
 public class Tips {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE,
-            generator ="hibernate_gen" )
-    @SequenceGenerator(name = "hibernate_gen",sequenceName = "hibernate_seq",allocationSize = 1)
-    @Column(name = "id",nullable = false)
+            generator = "tips_seq")
+    @SequenceGenerator(name = "tips_seq",
+            sequenceName = "SEQ_TIPS", allocationSize = 1)
+    @Column(updatable = false, nullable = false)
     private Long id;
 
     private String text;

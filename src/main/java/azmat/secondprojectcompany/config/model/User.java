@@ -17,9 +17,11 @@ import javax.validation.constraints.Size;
 @Getter @Setter
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "hebernate_gen")
-    @SequenceGenerator(name = "hebernate_gen", sequenceName = "hebernate_seq", allocationSize = 1)
-    @Column(name = "id", nullable = false)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE,
+            generator = "user_seq")
+    @SequenceGenerator(name = "user_seq",
+            sequenceName = "SEQ_USER", allocationSize = 1)
+    @Column(updatable = false, nullable = false)
     private Long id;
 
     @NotBlank

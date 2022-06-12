@@ -15,9 +15,11 @@ import java.time.LocalDate;
 public class Kyzmatkerler {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "hibernate_gen")
-    @SequenceGenerator(name = "hibernate_gen", sequenceName = "hibernate_seq", allocationSize = 1)
-    @Column(name = "id", nullable = false)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE,
+            generator = "kyz_seq")
+    @SequenceGenerator(name = "kyz_seq",
+            sequenceName = "SEQ_KYZ", allocationSize = 1)
+    @Column(updatable = false, nullable = false)
     private Long id;
 
     private String firstName;
@@ -26,6 +28,6 @@ public class Kyzmatkerler {
     private LocalDate birthDay;
     private String positions;
     private String email;
-    private int phone;
+    private String phoneNumber;
 
 }

@@ -1,4 +1,4 @@
-package azmat.secondprojectcompany.api.aiylCharba;
+package azmat.secondprojectcompany.api.aiylCharbaApi;
 
 import azmat.secondprojectcompany.db.servise.aiylCharba.ACEventService;
 import azmat.secondprojectcompany.model.entity.aiylCharba.ACEvent;
@@ -11,11 +11,12 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @CrossOrigin(origins = "*", maxAge = 3600)
-@RequestMapping("/api")
+@RequestMapping("/api/agriculture/acEvent")
 @AllArgsConstructor
-@PreAuthorize("hasAnyRole('ROLE_ADMIN')")
+//@PreAuthorize("hasAnyRole('ROLE_ADMIN')")
 @Tag(name = "AiylCharba", description = "crud operations")
 public class ACEventApi {
+
     private ACEventService acEventService;
 
     @Operation(summary = "Save ACEvent by id ")
