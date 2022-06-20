@@ -24,6 +24,7 @@ public class Pasture {
     @Column(length = 10000000)
     private String text;
 
+    @Column(unique = true)
     private String directorFullName;
 
     @OneToOne

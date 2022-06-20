@@ -1,6 +1,6 @@
 package azmat.secondprojectcompany.config.services;
 
-import azmat.secondprojectcompany.config.model.User;
+import azmat.secondprojectcompany.config.security.model.User;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;

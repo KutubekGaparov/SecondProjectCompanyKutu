@@ -1,8 +1,8 @@
 package azmat.secondprojectcompany.api;
 
-import azmat.secondprojectcompany.config.jwt.JwtUtils;
-import azmat.secondprojectcompany.config.model.JwtResponse;
-import azmat.secondprojectcompany.config.model.LoginRequest;
+import azmat.secondprojectcompany.config.security.jwt.JwtUtils;
+import azmat.secondprojectcompany.config.security.model.JwtResponse;
+import azmat.secondprojectcompany.config.security.model.LoginRequest;
 import azmat.secondprojectcompany.config.services.UserDetailsImpl;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;

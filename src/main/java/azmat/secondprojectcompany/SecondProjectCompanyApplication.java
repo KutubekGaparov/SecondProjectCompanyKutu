@@ -1,8 +1,8 @@
 package azmat.secondprojectcompany;
 
-import azmat.secondprojectcompany.config.model.ERole;
-import azmat.secondprojectcompany.config.model.Role;
-import azmat.secondprojectcompany.config.model.User;
+import azmat.secondprojectcompany.config.security.model.ERole;
+import azmat.secondprojectcompany.config.security.model.Role;
+import azmat.secondprojectcompany.config.security.model.User;
 import azmat.secondprojectcompany.db.repository.RoleRepository;
 import azmat.secondprojectcompany.db.repository.UserRepository;
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.PostConstruct;
-import java.time.LocalDate;
 
 @RestController
 @SpringBootApplication

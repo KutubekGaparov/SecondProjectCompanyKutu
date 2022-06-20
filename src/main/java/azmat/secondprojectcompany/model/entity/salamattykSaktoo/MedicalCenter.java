@@ -22,7 +22,9 @@ public class MedicalCenter {
     @Column(updatable = false, nullable = false)
     private Long id;
 
+    @Column(unique = true)
     private String hospitalName;
+    @Column(unique = true)
     private String directorHospital;
     private String  address;
     private String phoneNumber;

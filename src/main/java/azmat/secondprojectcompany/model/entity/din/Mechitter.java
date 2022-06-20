@@ -24,8 +24,11 @@ public class Mechitter {
     @Column(updatable = false, nullable = false)
     private Long id;
 
+    @Column(unique = true)
     private String mosqueName;
+    @Column(unique = true)
     private String imamName;
+    @Column(unique = true)
     private String imamLastName;
     private LocalDate birthDay;
     private String positions;

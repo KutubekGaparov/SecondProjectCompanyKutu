@@ -1,6 +1,6 @@
 package azmat.secondprojectcompany.db.repository;
 
-import azmat.secondprojectcompany.config.model.User;
+import azmat.secondprojectcompany.config.security.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

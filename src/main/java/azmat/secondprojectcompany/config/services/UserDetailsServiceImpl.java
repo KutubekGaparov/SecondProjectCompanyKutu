@@ -1,10 +1,9 @@
 package azmat.secondprojectcompany.config.services;
 
-import azmat.secondprojectcompany.config.model.User;
+import azmat.secondprojectcompany.config.security.model.User;
 import azmat.secondprojectcompany.db.repository.UserRepository;
 import lombok.AllArgsConstructor;
 import org.modelmapper.ModelMapper;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

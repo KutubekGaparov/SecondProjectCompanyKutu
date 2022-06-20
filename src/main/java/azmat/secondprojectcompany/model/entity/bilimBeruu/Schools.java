@@ -23,7 +23,9 @@ public class Schools {
     @Column(updatable = false, nullable = false)
     private Long id;
 
+    @Column(unique = true)
     private String schoolName;
+    @Column(unique = true)
     private String directorFullName;
     private String address;
     private String phoneNumber;
