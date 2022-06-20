@@ -5,7 +5,7 @@ server:
     error:
         include-binding-errors: always
         include-message: always
-    port: 9000
+    port: 5000
 spring:
     datasource:
         password: 54321

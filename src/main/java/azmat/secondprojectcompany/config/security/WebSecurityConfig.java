@@ -1,7 +1,7 @@
 package azmat.secondprojectcompany.config.security;
 
-import azmat.secondprojectcompany.config.jwt.AuthEntryPointJwt;
-import azmat.secondprojectcompany.config.jwt.AuthTokenFilter;
+import azmat.secondprojectcompany.config.security.jwt.AuthEntryPointJwt;
+import azmat.secondprojectcompany.config.security.jwt.AuthTokenFilter;
 import azmat.secondprojectcompany.config.services.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

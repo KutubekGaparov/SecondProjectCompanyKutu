@@ -1,4 +1,4 @@
-package azmat.secondprojectcompany.config.model;
+package azmat.secondprojectcompany.config.security.model;
 
 import lombok.*;
 

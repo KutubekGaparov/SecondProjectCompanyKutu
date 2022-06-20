@@ -1,4 +1,4 @@
-package azmat.secondprojectcompany.config.jwt;
+package azmat.secondprojectcompany.config.security.jwt;
 
 import azmat.secondprojectcompany.config.services.UserDetailsImpl;
 import io.jsonwebtoken.*;
