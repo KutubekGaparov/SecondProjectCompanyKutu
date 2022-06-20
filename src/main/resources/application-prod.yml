@@ -1,0 +1,26 @@
+app:
+  jwtExpirationMs: 84600000
+  jwtSecret: SecretKey
+server:
+  error:
+    include-binding-errors: always
+    include-message: always
+  port: 5000
+spring:
+  datasource:
+    password: saddy12345
+    url: jdbc:postgresql://mydatabase.cuulkq7yoqaw.eu-central-1.rds.amazonaws.com:5432/myPostgres
+    username: saddy
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQL10Dialect
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+
+springdoc:
+  swagger-ui:
+    path: /swagger
+
+AWS:
+  bucketname: kutu-erlan-aza
+  URL: https://company-kutu-erlan-aza.s3.eu-central-1.amazonaws.com/
