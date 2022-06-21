@@ -8,13 +8,13 @@ server:
   port: 5000
 spring:
   datasource:
-    password: saddy12345
-    url: jdbc:postgresql://mydatabase.cuulkq7yoqaw.eu-central-1.rds.amazonaws.com:5432/myPostgres
-    username: saddy
+    password: postgres
+    url: jdbc:postgresql://mady.cuulkq7yoqaw.eu-central-1.rds.amazonaws.com:5432/first_test_db
+    username: postgres
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQL10Dialect
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
     show-sql: true
 
 springdoc:
@@ -23,4 +23,4 @@ springdoc:
 
 AWS:
   bucketname: kutu-erlan-aza
-  URL: https://company-kutu-erlan-aza.s3.eu-central-1.amazonaws.com/
+  URL: https://company-kutu-erlan-aza.s3.eu-central-1.amazonaws.com/z
