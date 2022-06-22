@@ -8,9 +8,9 @@ server:
   port: 5000
 spring:
   datasource:
-    password: postgres
-    url: jdbc:postgresql://mady.cuulkq7yoqaw.eu-central-1.rds.amazonaws.com:5432/first_test_db
-    username: postgres
+    password: kutubek2004
+    url: jdbc:postgresql://kutubek.cuulkq7yoqaw.eu-central-1.rds.amazonaws.com:5432/kutubek
+    username: kutubek
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQL10Dialect
     hibernate:
@@ -21,6 +21,6 @@ springdoc:
   swagger-ui:
     path: /swagger
 
-AWS:
-  bucketname: kutu-erlan-aza
-  URL: https://company-kutu-erlan-aza.s3.eu-central-1.amazonaws.com/z
+#AWS:
+#  bucketname: kutu-erlan-aza
+#  URL: https://company-kutu-erlan-aza.s3.eu-central-1.amazonaws.com/z
