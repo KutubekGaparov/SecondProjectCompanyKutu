@@ -1,0 +1,39 @@
+package azamat.api.bilimBeruuApi;
+
+import azamat.db.servise.bilimBeruu.MOEEventService;
+import azamat.model.entity.bilimBeruu.MOEEvent;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
+import lombok.AllArgsConstructor;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@CrossOrigin(origins = "*", maxAge = 3600)
+@RequestMapping("/api/education/bEvent")
+@AllArgsConstructor
+@PreAuthorize("hasAnyRole('ROLE_ADMIN')")
+@Tag(name = "BilimBeruu", description = "crud operations")
+public class BEventApi {
+
+    private MOEEventService eventService;
+
+    @Operation(summary = "Save BEEvent by id ")
+    @PostMapping("/save")
+    public MOEEvent saveBEventService(@RequestBody MOEEvent event) {
+        return eventService.saveEvent(event);
+    }
+
+    @Operation(summary = "Update BEEvent by id")
+    @PatchMapping("/{id}")
+    public MOEEvent update(@RequestBody MOEEvent event,@PathVariable Long id) {
+        return eventService.update(event,id);
+    }
+
+    @Operation(summary = "Delete BEEvent by id")
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> saveBEventService(@PathVariable Long id) {
+        return eventService.deleteById(id);
+    }
+}
