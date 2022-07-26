@@ -2,7 +2,6 @@ package azamat.api;
 
 import azamat.db.servise.kultura.*;
 import azamat.model.entity.Kultura.*;
-import azamat.secondprojectcompany.model.entity.Kultura.*;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;

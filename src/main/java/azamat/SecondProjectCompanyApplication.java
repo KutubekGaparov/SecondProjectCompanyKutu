@@ -12,6 +12,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+import javax.annotation.PostConstruct;
 
 @RestController
 @SpringBootApplication
@@ -32,7 +33,7 @@ public class SecondProjectCompanyApplication {
         return "<h1>Welcome to Mady application!!!<h1/>";
     }
 
-//    @PostConstruct
+    @PostConstruct
     public void init() {
         Role client = new Role();
         client.setId(1L);
@@ -69,7 +70,6 @@ public class SecondProjectCompanyApplication {
         a.setRole(roleRepository.getByIdRole(3L));
 
         userRepository.save(a);
-        System.out.println("Hello Elmirbek");
     }
 
 }

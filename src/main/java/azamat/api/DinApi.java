@@ -2,7 +2,6 @@ package azamat.api;
 
 import azamat.db.servise.dinService.*;
 import azamat.model.entity.din.*;
-import azamat.secondprojectcompany.model.entity.din.*;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
