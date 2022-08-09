@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/youthAffairs/offerForYouth")
 @AllArgsConstructor
 @PreAuthorize("hasAnyRole('ROLE_ADMIN')")
-@Tag(name = "JashtarIshteri", description = "crud operations")
+@Tag(name = "JashtarIshteri OfferForYouth", description = "crud operations")
 public class OfferForYouthApi {
 
     private OfferForYouthService offerForYouthService;

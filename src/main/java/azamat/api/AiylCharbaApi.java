@@ -14,7 +14,7 @@ import java.util.List;
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RequestMapping("/api/agriculture")
 @AllArgsConstructor
-@Tag(name = "AiylCharba GetApi")
+@Tag(name = "AiylCharba Client GetApi")
 public class AiylCharbaApi {
 
     private ACEventService acEventService;

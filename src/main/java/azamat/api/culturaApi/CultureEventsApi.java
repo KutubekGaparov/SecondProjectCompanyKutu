@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/culture/cultureEvents")
 @AllArgsConstructor
 @PreAuthorize("hasAnyRole('ROLE_ADMIN')")
-@Tag(name = "Cultura", description = "crud operations")
+@Tag(name = "Cultura CultureEvents", description = "crud operations")
 public class CultureEventsApi {
 
     private CultureEventsService cultureEventsService;

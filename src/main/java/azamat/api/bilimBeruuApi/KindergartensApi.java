@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/education/kindergartens")
 @AllArgsConstructor
 @PreAuthorize("hasAnyRole('ROLE_ADMIN')")
-@Tag(name = "BilimBeruu", description = "crud operations")
+@Tag(name = "BilimBeruu Kindergartens", description = "crud operations")
 public class KindergartensApi {
 
     private KindergartensService kindergartensService;

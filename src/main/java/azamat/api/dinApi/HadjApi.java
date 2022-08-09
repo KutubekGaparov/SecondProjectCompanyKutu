@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/din/hadj")
 @AllArgsConstructor
 @PreAuthorize("hasAnyRole('ROLE_ADMIN')")
-@Tag(name = "Din", description = "crud operations")
+@Tag(name = "Din Hadj", description = "crud operations")
 public class HadjApi {
 
     private HadjService hadjService;

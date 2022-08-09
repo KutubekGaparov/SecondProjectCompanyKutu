@@ -6,14 +6,15 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RequestMapping("/api/agriculture/pasture")
 @AllArgsConstructor
-//@PreAuthorize("hasAnyRole('ROLE_ADMIN')")
-@Tag(name = "AiylCharba", description = "crud operations")
+@PreAuthorize("hasAnyRole('ROLE_ADMIN')")
+@Tag(name = "AiylCharba Pasture", description = "crud operations")
 public class PastureApi {
 
     private PastureServise pastureServise;

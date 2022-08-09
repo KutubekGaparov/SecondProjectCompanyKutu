@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/din/ethics")
 @AllArgsConstructor
 @PreAuthorize("hasAnyRole('ROLE_ADMIN')")
-@Tag(name = "Din", description = "crud operations")
+@Tag(name = "Din Ethics", description = "crud operations")
 public class EthicsApi {
 
     private EthicsService ethicsService;

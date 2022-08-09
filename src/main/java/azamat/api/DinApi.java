@@ -16,7 +16,7 @@ import java.util.List;
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RequestMapping("/api/agriculture/acEvent")
 @AllArgsConstructor
-@Tag(name = "Din GetApi")
+@Tag(name = "Din, Client Get Api")
 public class DinApi {
 
     private AitService aitService;

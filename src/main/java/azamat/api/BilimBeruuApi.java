@@ -15,7 +15,7 @@ import java.util.List;
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RequestMapping("/api/agriculture/acEvent")
 @AllArgsConstructor
-@Tag(name = "BilimBeruu GetApi")
+@Tag(name = "BilimBeruu Client Get Api")
 public class BilimBeruuApi {
 
     private MOEEventService moeEventService;

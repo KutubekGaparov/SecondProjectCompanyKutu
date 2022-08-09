@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/education/bEvent")
 @AllArgsConstructor
 @PreAuthorize("hasAnyRole('ROLE_ADMIN')")
-@Tag(name = "BilimBeruu", description = "crud operations")
+@Tag(name = "BilimBeruu MOEEvent", description = "crud operations")
 public class BEventApi {
 
     private MOEEventService eventService;

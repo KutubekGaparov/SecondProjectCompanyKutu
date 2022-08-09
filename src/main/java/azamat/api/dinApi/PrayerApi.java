@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/din/prayer")
 @AllArgsConstructor
 @PreAuthorize("hasAnyRole('ROLE_ADMIN')")
-@Tag(name = "Din", description = "crud operations")
+@Tag(name = "Din Prayer", description = "crud operations")
 public class PrayerApi {
 
     private PrayerService prayerService;

@@ -22,7 +22,7 @@ import java.util.List;
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RequestMapping("/api/agriculture/acEvent")
 @AllArgsConstructor
-@Tag(name = "BashkyBet GetApi")
+@Tag(name = "BashkyBet Client GetApi")
 public class BashkyBetApi {
 
     private KyzmatkerlerService kyzmatkerlerService;

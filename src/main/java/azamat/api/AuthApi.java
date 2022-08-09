@@ -23,7 +23,7 @@ import java.util.stream.Collectors;
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RequestMapping("/api/auth")
 @AllArgsConstructor
-@Tag(name = "AuthController", description = "jwt token,")
+@Tag(name = " AuthController ", description = " jwt token,")
 public class AuthApi {
 
     AuthenticationManager authenticationManager;

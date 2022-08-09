@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/healthcare/doctorsAdvice")
 @AllArgsConstructor
 @PreAuthorize("hasAnyRole('ROLE_ADMIN')")
-@Tag(name = "SalamattykSaktoo", description = "crud operations")
+@Tag(name = "SalamattykSaktoo Doctors Advice", description = "crud operations")
 public class DoctorsAdviceApi {
 
     private DoctorsAdviceService doctorsAdviceService;
