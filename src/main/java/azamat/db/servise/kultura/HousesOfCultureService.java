@@ -1,6 +1,6 @@
 package azamat.db.servise.kultura;
 
-import azamat.model.entity.Kultura.HousesOfCulture;
+import azamat.db.model.entity.Kultura.HousesOfCulture;
 import org.springframework.http.ResponseEntity;
 
 import java.util.List;

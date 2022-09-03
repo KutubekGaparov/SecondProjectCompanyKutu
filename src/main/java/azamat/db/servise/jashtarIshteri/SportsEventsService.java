@@ -1,6 +1,6 @@
 package azamat.db.servise.jashtarIshteri;
 
-import azamat.model.entity.jashtarIshteri.SportsEvents;
+import azamat.db.model.entity.jashtarIshteri.SportsEvents;
 import org.springframework.http.ResponseEntity;
 
 import java.util.List;

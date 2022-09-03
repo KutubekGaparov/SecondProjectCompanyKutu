@@ -1,6 +1,6 @@
 package azamat.db.repository.din;
 
-import azamat.model.entity.din.Mechitter;
+import azamat.db.model.entity.din.Mechitter;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

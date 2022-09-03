@@ -1,13 +1,13 @@
 package azamat.api;
 
-import azamat.model.entity.salamattykSaktoo.Insurance;
-import azamat.model.entity.salamattykSaktoo.MedicalCenter;
+import azamat.db.model.entity.salamattykSaktoo.Insurance;
+import azamat.db.model.entity.salamattykSaktoo.MedicalCenter;
 import azamat.db.servise.salamattykdySaktoo.DoctorsAdviceService;
 import azamat.db.servise.salamattykdySaktoo.HospitalsService;
 import azamat.db.servise.salamattykdySaktoo.InsuranceService;
 import azamat.db.servise.salamattykdySaktoo.MedicalCenterService;
-import azamat.model.entity.salamattykSaktoo.DoctorsAdvice;
-import azamat.model.entity.salamattykSaktoo.Hospitals;
+import azamat.db.model.entity.salamattykSaktoo.DoctorsAdvice;
+import azamat.db.model.entity.salamattykSaktoo.Hospitals;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;

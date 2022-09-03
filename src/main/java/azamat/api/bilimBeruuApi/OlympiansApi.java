@@ -1,7 +1,7 @@
 package azamat.api.bilimBeruuApi;
 
 import azamat.db.servise.bilimBeruu.OlympiansService;
-import azamat.model.entity.bilimBeruu.Olympians;
+import azamat.db.model.entity.bilimBeruu.Olympians;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;

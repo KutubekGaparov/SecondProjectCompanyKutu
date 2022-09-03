@@ -1,6 +1,6 @@
 package azamat.db.servise.dinService;
 
-import azamat.model.entity.din.Prayer;
+import azamat.db.model.entity.din.Prayer;
 import org.springframework.http.ResponseEntity;
 
 import java.util.List;

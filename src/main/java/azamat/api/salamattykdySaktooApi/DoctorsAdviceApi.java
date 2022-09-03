@@ -1,7 +1,7 @@
 package azamat.api.salamattykdySaktooApi;
 
 import azamat.db.servise.salamattykdySaktoo.DoctorsAdviceService;
-import azamat.model.entity.salamattykSaktoo.DoctorsAdvice;
+import azamat.db.model.entity.salamattykSaktoo.DoctorsAdvice;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;

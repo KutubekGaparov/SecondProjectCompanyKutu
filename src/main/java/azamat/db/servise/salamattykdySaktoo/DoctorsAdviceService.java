@@ -1,6 +1,6 @@
 package azamat.db.servise.salamattykdySaktoo;
 
-import azamat.model.entity.salamattykSaktoo.DoctorsAdvice;
+import azamat.db.model.entity.salamattykSaktoo.DoctorsAdvice;
 import org.springframework.http.ResponseEntity;
 
 import java.util.List;

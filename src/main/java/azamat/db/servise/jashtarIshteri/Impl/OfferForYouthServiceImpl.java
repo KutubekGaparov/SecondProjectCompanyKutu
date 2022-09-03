@@ -2,7 +2,7 @@ package azamat.db.servise.jashtarIshteri.Impl;
 
 import azamat.db.repository.jashtarIshteri.OfferForYouthRepository;
 import azamat.exceptions.BadRequestException;
-import azamat.model.entity.jashtarIshteri.OfferForYouth;
+import azamat.db.model.entity.jashtarIshteri.OfferForYouth;
 import azamat.db.servise.jashtarIshteri.OfferForYouthService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;

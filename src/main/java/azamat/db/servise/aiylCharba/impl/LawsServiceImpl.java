@@ -2,7 +2,7 @@ package azamat.db.servise.aiylCharba.impl;
 
 import azamat.db.repository.aiylCharba.LawsRepository;
 import azamat.exceptions.BadRequestException;
-import azamat.model.entity.aiylCharba.Laws;
+import azamat.db.model.entity.aiylCharba.Laws;
 import azamat.db.servise.aiylCharba.LawsService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;

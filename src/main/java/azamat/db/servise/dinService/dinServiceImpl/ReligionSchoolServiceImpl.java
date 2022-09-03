@@ -1,7 +1,7 @@
 package azamat.db.servise.dinService.dinServiceImpl;
 
 import azamat.exceptions.BadRequestException;
-import azamat.model.entity.din.ReligionSchool;
+import azamat.db.model.entity.din.ReligionSchool;
 import azamat.db.repository.din.ReligionSchoolRepository;
 import azamat.db.servise.dinService.ReligionSchoolService;
 import lombok.AllArgsConstructor;

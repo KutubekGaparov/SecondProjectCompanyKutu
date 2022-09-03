@@ -1,7 +1,7 @@
 package azamat.db.servise.bilimBeruu.impl;
 
 import azamat.exceptions.BadRequestException;
-import azamat.model.entity.bilimBeruu.ORT;
+import azamat.db.model.entity.bilimBeruu.ORT;
 import azamat.db.repository.bilimPeruu.ORTRepository;
 import azamat.db.servise.bilimBeruu.ORTService;
 import lombok.AllArgsConstructor;

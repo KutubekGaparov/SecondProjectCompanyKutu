@@ -1,7 +1,7 @@
 package azamat.api.bashkyBetApi;
 
 import azamat.db.servise.bashkyBet.TazalykService;
-import azamat.model.Tazalyk;
+import azamat.db.model.Tazalyk;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;

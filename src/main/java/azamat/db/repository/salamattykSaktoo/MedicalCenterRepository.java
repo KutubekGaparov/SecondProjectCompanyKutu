@@ -1,6 +1,6 @@
 package azamat.db.repository.salamattykSaktoo;
 
-import azamat.model.entity.salamattykSaktoo.MedicalCenter;
+import azamat.db.model.entity.salamattykSaktoo.MedicalCenter;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

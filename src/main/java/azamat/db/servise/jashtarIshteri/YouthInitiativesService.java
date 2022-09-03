@@ -1,6 +1,6 @@
 package azamat.db.servise.jashtarIshteri;
 
-import azamat.model.entity.jashtarIshteri.YouthInitiatives;
+import azamat.db.model.entity.jashtarIshteri.YouthInitiatives;
 import org.springframework.http.ResponseEntity;
 
 import java.util.List;

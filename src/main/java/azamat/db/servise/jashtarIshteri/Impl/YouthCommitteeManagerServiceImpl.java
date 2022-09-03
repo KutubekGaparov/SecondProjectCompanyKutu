@@ -2,7 +2,7 @@ package azamat.db.servise.jashtarIshteri.Impl;
 
 import azamat.db.repository.jashtarIshteri.YouthCommitteeManagerRepository;
 import azamat.exceptions.BadRequestException;
-import azamat.model.entity.jashtarIshteri.YouthCommitteeManager;
+import azamat.db.model.entity.jashtarIshteri.YouthCommitteeManager;
 import azamat.db.servise.jashtarIshteri.YouthCommitteeManagerService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;

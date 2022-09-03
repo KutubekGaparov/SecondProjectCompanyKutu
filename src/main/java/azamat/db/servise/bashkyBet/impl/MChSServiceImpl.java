@@ -3,7 +3,7 @@ package azamat.db.servise.bashkyBet.impl;
 import azamat.db.repository.bashkyBet.MChSRepository;
 import azamat.db.servise.bashkyBet.MChSService;
 import azamat.exceptions.BadRequestException;
-import azamat.model.MChS;
+import azamat.db.model.MChS;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;

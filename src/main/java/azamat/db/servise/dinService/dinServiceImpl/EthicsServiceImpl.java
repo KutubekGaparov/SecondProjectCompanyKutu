@@ -2,7 +2,7 @@ package azamat.db.servise.dinService.dinServiceImpl;
 
 import azamat.db.repository.din.EthicsRepository;
 import azamat.exceptions.BadRequestException;
-import azamat.model.entity.din.Ethics;
+import azamat.db.model.entity.din.Ethics;
 import azamat.db.servise.dinService.EthicsService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;

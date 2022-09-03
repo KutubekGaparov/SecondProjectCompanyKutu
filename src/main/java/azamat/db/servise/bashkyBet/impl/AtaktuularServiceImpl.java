@@ -3,7 +3,7 @@ package azamat.db.servise.bashkyBet.impl;
 import azamat.db.repository.bashkyBet.AtaktuularRepository;
 import azamat.db.servise.bashkyBet.AtaktuularService;
 import azamat.exceptions.BadRequestException;
-import azamat.model.Ataktuular;
+import azamat.db.model.Ataktuular;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;

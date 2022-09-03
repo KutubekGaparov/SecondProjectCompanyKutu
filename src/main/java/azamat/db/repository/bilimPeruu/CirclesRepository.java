@@ -1,6 +1,6 @@
 package azamat.db.repository.bilimPeruu;
 
-import azamat.model.entity.bilimBeruu.Circles;
+import azamat.db.model.entity.bilimBeruu.Circles;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

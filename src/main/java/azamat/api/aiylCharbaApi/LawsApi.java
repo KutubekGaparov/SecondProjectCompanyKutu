@@ -1,7 +1,7 @@
 package azamat.api.aiylCharbaApi;
 
 import azamat.db.servise.aiylCharba.LawsService;
-import azamat.model.entity.aiylCharba.Laws;
+import azamat.db.model.entity.aiylCharba.Laws;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;

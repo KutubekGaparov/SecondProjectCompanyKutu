@@ -1,6 +1,6 @@
 package azamat.db.servise.aiylCharba;
 
-import azamat.model.entity.aiylCharba.Pasture;
+import azamat.db.model.entity.aiylCharba.Pasture;
 import org.springframework.http.ResponseEntity;
 
 import java.util.List;

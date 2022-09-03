@@ -1,6 +1,6 @@
 package azamat.db.repository.bashkyBet;
 
-import azamat.model.Ataktuular;
+import azamat.db.model.Ataktuular;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,6 +1,6 @@
 package azamat.db.servise.kultura;
 
-import azamat.model.entity.Kultura.Contests;
+import azamat.db.model.entity.Kultura.Contests;
 import org.springframework.http.ResponseEntity;
 
 import java.util.List;

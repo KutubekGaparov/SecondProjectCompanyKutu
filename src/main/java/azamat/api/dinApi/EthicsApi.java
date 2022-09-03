@@ -1,7 +1,7 @@
 package azamat.api.dinApi;
 
 import azamat.db.servise.dinService.EthicsService;
-import azamat.model.entity.din.Ethics;
+import azamat.db.model.entity.din.Ethics;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;

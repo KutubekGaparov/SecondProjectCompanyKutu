@@ -1,6 +1,6 @@
 package azamat.db.servise.bashkyBet;
 
-import azamat.model.Tazalyk;
+import azamat.db.model.Tazalyk;
 import org.springframework.http.ResponseEntity;
 
 import java.util.List;

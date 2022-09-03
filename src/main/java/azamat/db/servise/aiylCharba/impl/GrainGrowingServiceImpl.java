@@ -2,7 +2,7 @@ package azamat.db.servise.aiylCharba.impl;
 
 import azamat.db.repository.aiylCharba.GrainGrowingRepository;
 import azamat.exceptions.BadRequestException;
-import azamat.model.entity.aiylCharba.GrainGrowing;
+import azamat.db.model.entity.aiylCharba.GrainGrowing;
 import azamat.db.servise.aiylCharba.GrainGrowingService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;

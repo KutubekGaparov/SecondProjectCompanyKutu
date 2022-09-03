@@ -1,7 +1,7 @@
 package azamat.api.aiylCharbaApi;
 
 import azamat.db.servise.aiylCharba.ACEventService;
-import azamat.model.entity.aiylCharba.ACEvent;
+import azamat.db.model.entity.aiylCharba.ACEvent;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;

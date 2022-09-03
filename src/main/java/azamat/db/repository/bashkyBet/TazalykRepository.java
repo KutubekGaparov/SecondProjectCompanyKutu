@@ -1,6 +1,6 @@
 package azamat.db.repository.bashkyBet;
 
-import azamat.model.Tazalyk;
+import azamat.db.model.Tazalyk;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

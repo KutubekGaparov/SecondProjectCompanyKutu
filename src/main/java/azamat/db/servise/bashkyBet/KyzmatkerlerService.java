@@ -1,6 +1,6 @@
 package azamat.db.servise.bashkyBet;
 
-import azamat.model.Kyzmatkerler;
+import azamat.db.model.Kyzmatkerler;
 import org.springframework.http.ResponseEntity;
 
 import java.util.List;

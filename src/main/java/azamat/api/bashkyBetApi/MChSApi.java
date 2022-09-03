@@ -1,6 +1,6 @@
 package azamat.api.bashkyBetApi;
 
-import azamat.model.MChS;
+import azamat.db.model.MChS;
 import azamat.db.servise.bashkyBet.MChSService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;

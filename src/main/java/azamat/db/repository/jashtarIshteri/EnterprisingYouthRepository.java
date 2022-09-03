@@ -1,6 +1,6 @@
 package azamat.db.repository.jashtarIshteri;
 
-import azamat.model.entity.jashtarIshteri.EnterprisingYouth;
+import azamat.db.model.entity.jashtarIshteri.EnterprisingYouth;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

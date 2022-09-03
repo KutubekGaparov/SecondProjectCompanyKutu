@@ -1,7 +1,7 @@
 
 package azamat.db.repository.bilimPeruu;
 
-import azamat.model.entity.bilimBeruu.Kindergartens;
+import azamat.db.model.entity.bilimBeruu.Kindergartens;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

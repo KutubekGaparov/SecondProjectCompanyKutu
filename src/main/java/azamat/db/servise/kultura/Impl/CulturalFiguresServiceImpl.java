@@ -2,7 +2,7 @@ package azamat.db.servise.kultura.Impl;
 
 import azamat.db.repository.kultura.CulturalFiguresRepository;
 import azamat.exceptions.BadRequestException;
-import azamat.model.entity.Kultura.CulturalFigures;
+import azamat.db.model.entity.Kultura.CulturalFigures;
 import azamat.db.servise.kultura.CulturalFiguresService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;

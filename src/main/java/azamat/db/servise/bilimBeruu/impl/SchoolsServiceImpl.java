@@ -1,7 +1,7 @@
 package azamat.db.servise.bilimBeruu.impl;
 
 import azamat.exceptions.BadRequestException;
-import azamat.model.entity.bilimBeruu.Schools;
+import azamat.db.model.entity.bilimBeruu.Schools;
 import azamat.db.repository.bilimPeruu.SchoolsRepository;
 import azamat.db.servise.bilimBeruu.SchoolsService;
 import lombok.AllArgsConstructor;

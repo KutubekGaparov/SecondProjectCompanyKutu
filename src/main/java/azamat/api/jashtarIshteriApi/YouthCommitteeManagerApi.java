@@ -1,7 +1,7 @@
 package azamat.api.jashtarIshteriApi;
 
 import azamat.db.servise.jashtarIshteri.YouthCommitteeManagerService;
-import azamat.model.entity.jashtarIshteri.YouthCommitteeManager;
+import azamat.db.model.entity.jashtarIshteri.YouthCommitteeManager;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;

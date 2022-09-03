@@ -1,6 +1,6 @@
 package azamat.db.repository.kultura;
 
-import azamat.model.entity.Kultura.CultureEvents;
+import azamat.db.model.entity.Kultura.CultureEvents;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

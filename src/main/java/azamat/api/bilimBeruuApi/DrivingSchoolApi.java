@@ -1,7 +1,7 @@
 package azamat.api.bilimBeruuApi;
 
 import azamat.db.servise.bilimBeruu.DrivingSchoolService;
-import azamat.model.entity.bilimBeruu.DrivingSchool;
+import azamat.db.model.entity.bilimBeruu.DrivingSchool;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;

@@ -3,7 +3,7 @@ package azamat.db.servise.bilimBeruu.impl;
 import azamat.db.repository.bilimPeruu.OlympiansRepository;
 import azamat.db.servise.bilimBeruu.OlympiansService;
 import azamat.exceptions.BadRequestException;
-import azamat.model.entity.bilimBeruu.Olympians;
+import azamat.db.model.entity.bilimBeruu.Olympians;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;

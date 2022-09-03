@@ -2,7 +2,7 @@ package azamat.db.servise.bilimBeruu.impl;
 
 import azamat.db.repository.bilimPeruu.DrivingSchoolRepository;
 import azamat.exceptions.BadRequestException;
-import azamat.model.entity.bilimBeruu.DrivingSchool;
+import azamat.db.model.entity.bilimBeruu.DrivingSchool;
 import azamat.db.servise.bilimBeruu.DrivingSchoolService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;

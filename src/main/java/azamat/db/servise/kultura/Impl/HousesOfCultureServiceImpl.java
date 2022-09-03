@@ -2,7 +2,7 @@ package azamat.db.servise.kultura.Impl;
 
 import azamat.db.repository.kultura.HousesOfCultureRepository;
 import azamat.exceptions.BadRequestException;
-import azamat.model.entity.Kultura.HousesOfCulture;
+import azamat.db.model.entity.Kultura.HousesOfCulture;
 import azamat.db.servise.kultura.HousesOfCultureService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;

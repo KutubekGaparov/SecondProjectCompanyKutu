@@ -1,6 +1,6 @@
 package azamat.db.servise.bilimBeruu;
 
-import azamat.model.entity.bilimBeruu.MOEEvent;
+import azamat.db.model.entity.bilimBeruu.MOEEvent;
 import org.springframework.http.ResponseEntity;
 
 import java.util.List;

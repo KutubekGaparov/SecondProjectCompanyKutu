@@ -1,6 +1,6 @@
 package azamat.db.servise.dinService;
 
-import azamat.model.entity.din.Mechitter;
+import azamat.db.model.entity.din.Mechitter;
 import org.springframework.http.ResponseEntity;
 
 import java.util.List;

@@ -1,7 +1,7 @@
 package azamat.api.bashkyBetApi;
 
 import azamat.db.servise.bashkyBet.NewsAnnouncementService;
-import azamat.model.NewsAnnouncement;
+import azamat.db.model.NewsAnnouncement;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;

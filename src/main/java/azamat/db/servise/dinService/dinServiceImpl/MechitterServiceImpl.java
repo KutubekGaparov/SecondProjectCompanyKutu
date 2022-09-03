@@ -2,7 +2,7 @@ package azamat.db.servise.dinService.dinServiceImpl;
 
 import azamat.db.repository.din.MechitterRepository;
 import azamat.exceptions.BadRequestException;
-import azamat.model.entity.din.Mechitter;
+import azamat.db.model.entity.din.Mechitter;
 import azamat.db.servise.dinService.MechitterService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;

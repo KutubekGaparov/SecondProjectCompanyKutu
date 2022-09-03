@@ -1,6 +1,6 @@
 package azamat.db.servise.bashkyBet.impl;
 
-import azamat.model.Tazalyk;
+import azamat.db.model.Tazalyk;
 import azamat.db.repository.bashkyBet.TazalykRepository;
 import azamat.db.servise.bashkyBet.TazalykService;
 import azamat.exceptions.BadRequestException;

@@ -3,7 +3,7 @@ package azamat.db.servise.bashkyBet.impl;
 import azamat.db.repository.bashkyBet.NewsAnnouncementRepository;
 import azamat.db.servise.bashkyBet.NewsAnnouncementService;
 import azamat.exceptions.BadRequestException;
-import azamat.model.NewsAnnouncement;
+import azamat.db.model.NewsAnnouncement;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;

@@ -2,7 +2,7 @@ package azamat.db.servise.dinService.dinServiceImpl;
 
 import azamat.db.repository.din.DEventsRepository;
 import azamat.exceptions.BadRequestException;
-import azamat.model.entity.din.DEvents;
+import azamat.db.model.entity.din.DEvents;
 import azamat.db.servise.dinService.DEventService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;

@@ -2,7 +2,7 @@ package azamat.db.servise.bilimBeruu.impl;
 
 import azamat.db.repository.bilimPeruu.KindergartensRepository;
 import azamat.exceptions.BadRequestException;
-import azamat.model.entity.bilimBeruu.Kindergartens;
+import azamat.db.model.entity.bilimBeruu.Kindergartens;
 import azamat.db.servise.bilimBeruu.KindergartensService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;

@@ -2,7 +2,7 @@ package azamat.db.servise.bilimBeruu.impl;
 
 import azamat.db.repository.bilimPeruu.MOEEventRepository;
 import azamat.exceptions.BadRequestException;
-import azamat.model.entity.bilimBeruu.MOEEvent;
+import azamat.db.model.entity.bilimBeruu.MOEEvent;
 import azamat.db.servise.bilimBeruu.MOEEventService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;

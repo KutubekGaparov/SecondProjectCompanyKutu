@@ -2,7 +2,7 @@ package azamat.db.servise.kultura.Impl;
 
 import azamat.db.repository.kultura.ContestsRepository;
 import azamat.exceptions.BadRequestException;
-import azamat.model.entity.Kultura.Contests;
+import azamat.db.model.entity.Kultura.Contests;
 import azamat.db.servise.kultura.ContestsService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;

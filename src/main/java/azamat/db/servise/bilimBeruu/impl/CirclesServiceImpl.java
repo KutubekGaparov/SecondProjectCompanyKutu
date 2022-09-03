@@ -2,7 +2,7 @@ package azamat.db.servise.bilimBeruu.impl;
 
 import azamat.db.repository.bilimPeruu.CirclesRepository;
 import azamat.exceptions.BadRequestException;
-import azamat.model.entity.bilimBeruu.Circles;
+import azamat.db.model.entity.bilimBeruu.Circles;
 import azamat.db.servise.bilimBeruu.CirclesService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;

@@ -1,7 +1,7 @@
 package azamat.api.aiylCharbaApi;
 
 import azamat.db.servise.aiylCharba.GrainGrowingService;
-import azamat.model.entity.aiylCharba.GrainGrowing;
+import azamat.db.model.entity.aiylCharba.GrainGrowing;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;

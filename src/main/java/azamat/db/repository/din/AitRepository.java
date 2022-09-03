@@ -1,7 +1,7 @@
 
 package azamat.db.repository.din;
 
-import azamat.model.entity.din.Ait;
+import azamat.db.model.entity.din.Ait;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

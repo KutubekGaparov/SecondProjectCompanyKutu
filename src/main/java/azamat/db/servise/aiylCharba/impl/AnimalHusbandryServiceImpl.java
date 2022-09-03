@@ -3,7 +3,7 @@ package azamat.db.servise.aiylCharba.impl;
 import azamat.db.repository.aiylCharba.AnimalHusbandryRepository;
 import azamat.db.servise.aiylCharba.AnimalHusbandryService;
 import azamat.exceptions.BadRequestException;
-import azamat.model.entity.aiylCharba.AnimalHusbandry;
+import azamat.db.model.entity.aiylCharba.AnimalHusbandry;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;

@@ -3,7 +3,7 @@ package azamat.db.servise.jashtarIshteri.Impl;
 import azamat.db.repository.jashtarIshteri.SportsEventsRepository;
 import azamat.db.servise.jashtarIshteri.SportsEventsService;
 import azamat.exceptions.BadRequestException;
-import azamat.model.entity.jashtarIshteri.SportsEvents;
+import azamat.db.model.entity.jashtarIshteri.SportsEvents;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;

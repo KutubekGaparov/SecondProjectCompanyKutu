@@ -2,7 +2,7 @@ package azamat.db.servise.kultura.Impl;
 
 import azamat.db.repository.kultura.MuseumsRepository;
 import azamat.exceptions.BadRequestException;
-import azamat.model.entity.Kultura.Museums;
+import azamat.db.model.entity.Kultura.Museums;
 import azamat.db.servise.kultura.MuseumsService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;

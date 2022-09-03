@@ -1,7 +1,7 @@
 package azamat.api;
 
+import azamat.db.model.entity.bilimBeruu.*;
 import azamat.db.servise.bilimBeruu.*;
-import azamat.model.entity.bilimBeruu.*;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;

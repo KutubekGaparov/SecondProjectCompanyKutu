@@ -2,7 +2,7 @@ package azamat.db.servise.dinService.dinServiceImpl;
 
 import azamat.db.repository.din.PrayerRepository;
 import azamat.exceptions.BadRequestException;
-import azamat.model.entity.din.Prayer;
+import azamat.db.model.entity.din.Prayer;
 import azamat.db.servise.dinService.PrayerService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;

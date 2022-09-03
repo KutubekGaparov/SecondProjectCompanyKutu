@@ -1,7 +1,7 @@
 package azamat.api.dinApi;
 
 import azamat.db.servise.dinService.PrayerService;
-import azamat.model.entity.din.Prayer;
+import azamat.db.model.entity.din.Prayer;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;

@@ -2,7 +2,7 @@ package azamat.db.servise.kultura.Impl;
 
 import azamat.db.repository.kultura.CultureEventsRepository;
 import azamat.exceptions.BadRequestException;
-import azamat.model.entity.Kultura.CultureEvents;
+import azamat.db.model.entity.Kultura.CultureEvents;
 import azamat.db.servise.kultura.CultureEventsService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;

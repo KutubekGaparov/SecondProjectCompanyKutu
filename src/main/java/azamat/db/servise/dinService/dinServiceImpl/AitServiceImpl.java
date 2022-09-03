@@ -3,7 +3,7 @@ package azamat.db.servise.dinService.dinServiceImpl;
 import azamat.db.repository.din.AitRepository;
 import azamat.db.servise.dinService.AitService;
 import azamat.exceptions.BadRequestException;
-import azamat.model.entity.din.Ait;
+import azamat.db.model.entity.din.Ait;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;

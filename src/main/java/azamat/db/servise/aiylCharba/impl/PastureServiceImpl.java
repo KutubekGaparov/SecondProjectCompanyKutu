@@ -2,7 +2,7 @@ package azamat.db.servise.aiylCharba.impl;
 
 import azamat.db.repository.aiylCharba.PastureRepository;
 import azamat.exceptions.BadRequestException;
-import azamat.model.entity.aiylCharba.Pasture;
+import azamat.db.model.entity.aiylCharba.Pasture;
 import azamat.db.servise.aiylCharba.PastureServise;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;

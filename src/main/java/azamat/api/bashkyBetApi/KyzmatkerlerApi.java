@@ -1,7 +1,7 @@
 package azamat.api.bashkyBetApi;
 
 import azamat.db.servise.bashkyBet.KyzmatkerlerService;
-import azamat.model.Kyzmatkerler;
+import azamat.db.model.Kyzmatkerler;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;

@@ -1,7 +1,7 @@
 package azamat.api.culturaApi;
 
 import azamat.db.servise.kultura.HousesOfCultureService;
-import azamat.model.entity.Kultura.HousesOfCulture;
+import azamat.db.model.entity.Kultura.HousesOfCulture;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;

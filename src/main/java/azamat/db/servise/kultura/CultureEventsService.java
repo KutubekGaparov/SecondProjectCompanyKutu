@@ -1,6 +1,6 @@
 package azamat.db.servise.kultura;
 
-import azamat.model.entity.Kultura.CultureEvents;
+import azamat.db.model.entity.Kultura.CultureEvents;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Repository;
 

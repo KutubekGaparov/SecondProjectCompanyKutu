@@ -1,6 +1,6 @@
 package azamat.db.repository.aiylCharba;
 
-import azamat.model.entity.aiylCharba.GrainGrowing;
+import azamat.db.model.entity.aiylCharba.GrainGrowing;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

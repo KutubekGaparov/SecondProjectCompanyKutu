@@ -1,6 +1,6 @@
 package azamat.db.servise.bilimBeruu;
 
-import azamat.model.entity.bilimBeruu.Circles;
+import azamat.db.model.entity.bilimBeruu.Circles;
 import org.springframework.http.ResponseEntity;
 
 import java.util.List;

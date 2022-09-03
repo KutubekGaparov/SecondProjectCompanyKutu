@@ -1,7 +1,7 @@
 package azamat.db.servise.salamattykdySaktoo.impl;
 
 import azamat.exceptions.BadRequestException;
-import azamat.model.entity.salamattykSaktoo.Hospitals;
+import azamat.db.model.entity.salamattykSaktoo.Hospitals;
 import azamat.db.repository.salamattykSaktoo.HospitalsRepository;
 import azamat.db.servise.salamattykdySaktoo.HospitalsService;
 import lombok.AllArgsConstructor;

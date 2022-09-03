@@ -1,6 +1,6 @@
 package azamat.db.servise.aiylCharba;
 
-import azamat.model.entity.aiylCharba.GrainGrowing;
+import azamat.db.model.entity.aiylCharba.GrainGrowing;
 import org.springframework.http.ResponseEntity;
 
 import java.util.List;

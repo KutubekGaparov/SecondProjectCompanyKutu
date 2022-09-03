@@ -1,7 +1,7 @@
 package azamat.api.dinApi;
 
 import azamat.db.servise.dinService.DEventService;
-import azamat.model.entity.din.DEvents;
+import azamat.db.model.entity.din.DEvents;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;

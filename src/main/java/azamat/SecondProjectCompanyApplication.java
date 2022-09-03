@@ -28,9 +28,10 @@ public class SecondProjectCompanyApplication {
         SpringApplication.run(SecondProjectCompanyApplication.class, args);
         System.out.println("Hello world");
     }
+
     @GetMapping("/")
     public String greetingPage(){
-        return "<h1>Welcome to Mady application!!!<h1/>";
+        return " Welcome to Mady application!!! ";
     }
 
     @PostConstruct

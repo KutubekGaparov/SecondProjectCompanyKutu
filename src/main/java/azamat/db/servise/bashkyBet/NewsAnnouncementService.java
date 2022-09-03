@@ -1,6 +1,6 @@
 package azamat.db.servise.bashkyBet;
 
-import azamat.model.NewsAnnouncement;
+import azamat.db.model.NewsAnnouncement;
 import org.springframework.http.ResponseEntity;
 
 import java.util.List;

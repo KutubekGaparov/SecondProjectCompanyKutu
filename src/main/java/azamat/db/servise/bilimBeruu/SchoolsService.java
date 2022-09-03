@@ -1,6 +1,6 @@
 package azamat.db.servise.bilimBeruu;
 
-import azamat.model.entity.bilimBeruu.Schools;
+import azamat.db.model.entity.bilimBeruu.Schools;
 import org.springframework.http.ResponseEntity;
 
 import java.util.List;

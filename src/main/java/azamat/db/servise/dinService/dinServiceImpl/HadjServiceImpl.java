@@ -2,7 +2,7 @@ package azamat.db.servise.dinService.dinServiceImpl;
 
 import azamat.db.repository.din.HadjRepository;
 import azamat.exceptions.BadRequestException;
-import azamat.model.entity.din.Hadj;
+import azamat.db.model.entity.din.Hadj;
 import azamat.db.servise.dinService.HadjService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;

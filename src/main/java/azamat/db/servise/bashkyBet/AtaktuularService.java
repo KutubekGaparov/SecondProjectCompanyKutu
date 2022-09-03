@@ -1,6 +1,6 @@
 package azamat.db.servise.bashkyBet;
 
-import azamat.model.Ataktuular;
+import azamat.db.model.Ataktuular;
 import org.springframework.http.ResponseEntity;
 
 public interface AtaktuularService {
