@@ -70,6 +70,7 @@ public class SecondProjectCompanyApplication {
         a.setRole(roleRepository.getByIdRole(3L));
 
         userRepository.save(a);
+        System.out.println("erlan");
     }
 
 }
