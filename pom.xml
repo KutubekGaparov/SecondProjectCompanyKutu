@@ -8,11 +8,11 @@
         <version>2.6.6</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>kg.peaksoft</groupId>
-    <artifactId>eBook-b4</artifactId>
+    <groupId>kg.coder</groupId>
+    <artifactId>mady</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>eBook-b4</name>
-    <description>eBook-b4</description>
+    <name>mady</name>
+    <description>mady</description>
     <properties>
         <java.version>11</java.version>
     </properties>
@@ -143,6 +143,7 @@
                 </configuration>
             </plugin>
         </plugins>
+<!--        <finalName>eBook-b4</finalName>-->
     </build>
 
 </project>
