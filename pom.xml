@@ -143,7 +143,6 @@
                 </configuration>
             </plugin>
         </plugins>
-        <finalName>eBook-b4</finalName>
     </build>
 
 </project>
