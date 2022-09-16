@@ -14,7 +14,7 @@
     <name>mady</name>
     <description>mady</description>
     <properties>
-        <java.version>11</java.version>
+        <java.version>8</java.version>
     </properties>
     <dependencyManagement>
         <dependencies>
