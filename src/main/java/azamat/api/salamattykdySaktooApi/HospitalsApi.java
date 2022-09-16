@@ -8,6 +8,9 @@ import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.util.LinkedHashMap;
 
 @RestController
 @CrossOrigin(origins = "*", maxAge = 3600)
@@ -23,6 +26,13 @@ public class HospitalsApi {
     @PostMapping("/save")
     public Hospitals saveHospitalsService(@RequestBody Hospitals hospitals) {
         return hospitalsService.saveHospitals(hospitals);
+    }
+
+    @Operation(summary = "Upload files", description = "Upload files to aws")
+    @PostMapping("/upload-file/{id}")
+    public LinkedHashMap<String, String> uploadFile(@RequestBody MultipartFile firstPhoto,
+                                                    @PathVariable Long id) {
+        return hospitalsService.uploadFile(firstPhoto, id);
     }
 
     @Operation(summary = "Update Hospitals by id")

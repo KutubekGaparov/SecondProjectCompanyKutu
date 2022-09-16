@@ -1,6 +1,6 @@
 package azamat.db.model.entity.jashtarIshteri;
 
-import azamat.FileInformation.Gallery;
+import azamat.FileInformation.FileInformation;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
@@ -23,6 +23,8 @@ public class YouthCommitteeManager {
     @Column(length = 10000000)
     private String infoManager;
 
-    @OneToOne
-    private Gallery gallery;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "file_id")
+    private FileInformation fileInformation;
+
 }

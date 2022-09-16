@@ -2,7 +2,9 @@ package azamat.db.servise.bashkyBet;
 
 import azamat.db.model.Kyzmatkerler;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.util.LinkedHashMap;
 import java.util.List;
 
 public interface KyzmatkerlerService {
@@ -13,4 +15,6 @@ public interface KyzmatkerlerService {
     ResponseEntity<?> deleteById(Long id);
 
     List<Kyzmatkerler> getAll();
+    LinkedHashMap<String, String> uploadFile(MultipartFile firstPhoto, Long id);
+
 }

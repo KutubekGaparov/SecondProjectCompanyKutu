@@ -1,6 +1,6 @@
 package azamat.db.model.entity.aiylCharba;
 
-import azamat.FileInformation.Gallery;
+import azamat.FileInformation.FileInformation;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
@@ -26,7 +26,8 @@ public class GrainGrowing {
     @Column(unique = true)
     private String directorFullName;
 
-    @OneToOne
-    private Gallery gallery;
-
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "file_id")
+    private FileInformation fileInformation;
 }
+

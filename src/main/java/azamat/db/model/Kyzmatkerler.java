@@ -1,5 +1,6 @@
 package azamat.db.model;
 
+import azamat.FileInformation.FileInformation;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
@@ -30,5 +31,9 @@ public class Kyzmatkerler {
     private String phoneNumber;
 
     private String type;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "file_id")
+    private FileInformation fileInformation;
 
 }

@@ -2,7 +2,9 @@ package azamat.db.servise.salamattykdySaktoo;
 
 import azamat.db.model.entity.salamattykSaktoo.Hospitals;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.util.LinkedHashMap;
 import java.util.List;
 
 public interface HospitalsService {
@@ -13,4 +15,5 @@ public interface HospitalsService {
     ResponseEntity<?> deleteById(Long id);
 
     List<Hospitals> getAll();
+    LinkedHashMap<String, String> uploadFile(MultipartFile firstPhoto, Long id);
 }

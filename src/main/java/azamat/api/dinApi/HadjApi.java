@@ -8,6 +8,9 @@ import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.util.LinkedHashMap;
 
 @RestController
 @CrossOrigin(origins = "*", maxAge = 3600)
@@ -25,6 +28,12 @@ public class HadjApi {
         return hadjService.saveHadj(hadj);
     }
 
+    @Operation(summary = "Upload files", description = "Upload files to aws")
+    @PostMapping("/upload-file/{id}")
+    public LinkedHashMap<String, String> uploadFile(@RequestBody MultipartFile firstPhoto,
+                                                    @PathVariable Long id) {
+        return hadjService.uploadFile(firstPhoto, id);
+    }
     @Operation(summary = "Update Hadj by id")
     @PatchMapping("/{id}")
     public Hadj update(@RequestBody Hadj hadj,@PathVariable Long id) {

@@ -2,7 +2,9 @@ package azamat.db.servise.bilimBeruu;
 
 import azamat.db.model.entity.bilimBeruu.Olympians;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.util.LinkedHashMap;
 import java.util.List;
 
 public interface OlympiansService {
@@ -13,4 +15,7 @@ public interface OlympiansService {
     ResponseEntity<?> deleteById(Long id);
 
     List<Olympians> getAll();
+
+    LinkedHashMap<String, String> uploadFile(MultipartFile firstPhoto, Long id);
+
 }

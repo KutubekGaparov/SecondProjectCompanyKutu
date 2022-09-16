@@ -10,15 +10,17 @@ import javax.persistence.*;
 @Getter @Setter
 @RequiredArgsConstructor
 @Table(name = "gallery")
-public class Gallery {
+public class FileInformation {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE,
             generator = "gallery_seq")
     @SequenceGenerator(name = "gallery_seq",
             sequenceName = "SEQ_GALLERY", allocationSize = 1)
     @Column(updatable = false, nullable = false)
-    private Long id;
+    private Long fileId;
 
     private String photo;
+
+    private String keyOfPhoto;
 
 }

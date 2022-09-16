@@ -5,18 +5,17 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.7.0</version>
+        <version>2.6.6</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>azmat</groupId>
-    <artifactId>SecondProjectCompany</artifactId>
+    <groupId>kg.peaksoft</groupId>
+    <artifactId>eBook-b4</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>SecondProjectCompany</name>
-    <description>SecondProjectCompany</description>
+    <name>eBook-b4</name>
+    <description>eBook-b4</description>
     <properties>
-        <java.version>8</java.version>
+        <java.version>11</java.version>
     </properties>
-
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -28,7 +27,6 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
     <dependencies>
 
         <dependency>
@@ -36,9 +34,11 @@
             <artifactId>s3</artifactId>
         </dependency>
 
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <version>2.6.7</version>
         </dependency>
 
         <dependency>
@@ -61,12 +61,14 @@
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
+            <version>42.3.4</version>
             <scope>runtime</scope>
         </dependency>
 
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+            <version>1.18.24</version>
             <optional>true</optional>
         </dependency>
 
@@ -79,6 +81,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-configuration-processor</artifactId>
+            <version>2.6.7</version>
             <optional>true</optional>
         </dependency>
         <!--        jwt-->
@@ -90,7 +93,7 @@
         <dependency>
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt-api</artifactId>
-            <version>0.11.2</version>
+            <version>0.11.5</version>
         </dependency>
 
         <dependency>
@@ -110,6 +113,19 @@
             <artifactId>spring-boot-starter-validation</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>io.awspring.cloud</groupId>
+            <artifactId>spring-cloud-aws-autoconfigure</artifactId>
+            <version>2.4.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.awspring.cloud</groupId>
+            <artifactId>spring-cloud-aws-context</artifactId>
+            <version>2.4.1</version>
+        </dependency>
+
+
     </dependencies>
 
     <build>
@@ -127,6 +143,7 @@
                 </configuration>
             </plugin>
         </plugins>
+        <finalName>eBook-b4</finalName>
     </build>
 
 </project>

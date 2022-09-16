@@ -1,6 +1,6 @@
 package azamat.db.model.entity.jashtarIshteri;
 
-import azamat.FileInformation.Gallery;
+import azamat.FileInformation.FileInformation;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
@@ -26,6 +26,8 @@ public class EnterprisingYouth {
     private String direction;
     private String result;
 
-    @OneToOne
-    private Gallery gallery;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "file_id")
+    private FileInformation fileInformation;
+
 }

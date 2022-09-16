@@ -1,6 +1,6 @@
 package azamat.db.model.entity.din;
 
-import azamat.FileInformation.Gallery;
+import azamat.FileInformation.FileInformation;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
@@ -35,6 +35,8 @@ public class Mechitter {
     private String phone;
     private String email;
 
-    @OneToOne
-    private Gallery gallery;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "file_id")
+    private FileInformation fileInformation;
+
 }

@@ -1,6 +1,6 @@
 package azamat.db.model.entity.din;
 
-import azamat.FileInformation.Gallery;
+import azamat.FileInformation.FileInformation;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
@@ -24,5 +24,7 @@ public class Ramazan {
     private String text;
 
     @OneToOne(cascade = CascadeType.ALL)
-    private Gallery gallery;
+    @JoinColumn(name = "file_id")
+    private FileInformation fileInformation;
+
 }

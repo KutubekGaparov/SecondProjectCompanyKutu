@@ -2,7 +2,9 @@ package azamat.db.servise.kultura;
 
 import azamat.db.model.entity.Kultura.CulturalFigures;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.util.LinkedHashMap;
 import java.util.List;
 
 public interface CulturalFiguresService {
@@ -13,4 +15,6 @@ public interface CulturalFiguresService {
     ResponseEntity<?> deleteById(Long id);
 
     List<CulturalFigures> getAll();
+    LinkedHashMap<String, String> uploadFile(MultipartFile firstPhoto, Long id);
+
 }

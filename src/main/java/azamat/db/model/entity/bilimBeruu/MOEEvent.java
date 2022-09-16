@@ -1,6 +1,6 @@
 package azamat.db.model.entity.bilimBeruu;
 
-import azamat.FileInformation.Gallery;
+import azamat.FileInformation.FileInformation;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
@@ -25,6 +25,6 @@ public class MOEEvent {
     private String text;
 
     @OneToOne(cascade = CascadeType.ALL)
-    private Gallery gallery;
-
+    @JoinColumn(name = "file_id")
+    private FileInformation fileInformation;
 }

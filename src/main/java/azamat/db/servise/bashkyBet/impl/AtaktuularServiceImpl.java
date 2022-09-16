@@ -1,5 +1,6 @@
 package azamat.db.servise.bashkyBet.impl;
 
+import azamat.FileInformation.FileInformation;
 import azamat.db.repository.bashkyBet.AtaktuularRepository;
 import azamat.db.servise.bashkyBet.AtaktuularService;
 import azamat.exceptions.BadRequestException;
@@ -17,6 +18,8 @@ public class AtaktuularServiceImpl implements AtaktuularService {
 
     @Override
     public Ataktuular save(Ataktuular ataktuular) {
+        FileInformation newFileInformation = new FileInformation();
+        ataktuular.setFileInformation(newFileInformation);
         return repository.save(ataktuular);
     }
 

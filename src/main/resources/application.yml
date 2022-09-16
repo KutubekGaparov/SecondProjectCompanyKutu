@@ -20,4 +20,12 @@ springdoc:
   swagger-ui:
     path: /swagger
 
+aws:
+  access_key_id: AKIAY27HEBJN3DT2S55J
+  secret_access_key: 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
+  bucket:
+    region: eu-central-1
+    name: mady-s3
+    path: https://mady-s3.s3.eu-central-1.amazonaws.com/
+
 
