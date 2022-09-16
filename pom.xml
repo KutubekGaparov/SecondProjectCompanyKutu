@@ -9,12 +9,12 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>kg.peaksoft</groupId>
-    <artifactId>SecondProjectCompany</artifactId>
+    <artifactId>eBook-b4</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>SecondProjectCompany</name>
-    <description>SecondProjectCompany</description>
+    <name>eBook-b4</name>
+    <description>eBook-b4</description>
     <properties>
-        <java.version>8</java.version>
+        <java.version>11</java.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -28,12 +28,10 @@
         </dependencies>
     </dependencyManagement>
     <dependencies>
-
         <dependency>
             <groupId>software.amazon.awssdk</groupId>
             <artifactId>s3</artifactId>
         </dependency>
-
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -143,7 +141,7 @@
                 </configuration>
             </plugin>
         </plugins>
-        <finalName>SecondProjectCompany</finalName>
+        <finalName>eBook-b4</finalName>
     </build>
 
 </project>
