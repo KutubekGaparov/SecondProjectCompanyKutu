@@ -68,9 +68,8 @@ public class KyzmatkerlerServiceImpl implements KyzmatkerlerService {
         FileInformation newFileInformation = new FileInformation();
         kyzmatkerler.setFileInformation(newFileInformation);
 
-        if (!kyzmatkerler.getType().equals("1")) {
-            kyzmatkerlerRepository.save(kyzmatkerler);
-        }
+        kyzmatkerlerRepository.save(kyzmatkerler);
+
         return kyzmatkerler;
     }
 
