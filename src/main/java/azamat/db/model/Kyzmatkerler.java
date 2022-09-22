@@ -25,6 +25,7 @@ public class Kyzmatkerler {
     private String firstName;
     private String lastName;
     private String patronymic;
+
     private LocalDate birthDay;
     private String positions;
     private String email;
