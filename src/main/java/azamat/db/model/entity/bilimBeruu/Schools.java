@@ -25,10 +25,13 @@ public class Schools {
 
     @Column(unique = true)
     private String schoolName;
+
     @Column(unique = true)
     private String directorFullName;
+
     private String address;
     private String phoneNumber;
+
     @Column(length = 10000000)
     private String text;
 

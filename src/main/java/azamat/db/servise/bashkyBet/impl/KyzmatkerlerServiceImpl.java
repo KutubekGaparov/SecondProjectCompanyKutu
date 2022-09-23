@@ -102,7 +102,7 @@ public class KyzmatkerlerServiceImpl implements KyzmatkerlerService {
         String oldPositions = kyzmatkerler.getPositions();
         String newPositions = kyzmatkerler1.getPositions();
         if (!oldPositions.equals(newPositions)) {
-            kyzmatkerler.setPatronymic(newPositions);
+            kyzmatkerler.setPositions(newPositions);
         }
         String oldEmail = kyzmatkerler.getEmail();
         String newEmail = kyzmatkerler1.getEmail();

@@ -78,25 +78,25 @@ public class SchoolsServiceImpl implements SchoolsService {
         if (!oldText.equals(newText)) {
             moeEvent.setText(newText);
         }
-        String oldName = moeEvent.getText();
-        String newName = schools.getText();
+        String oldName = moeEvent.getSchoolName();
+        String newName = schools.getSchoolName();
         if (!oldName.equals(newName)) {
             moeEvent.setSchoolName(newName);
         }
-        String oldFullName = moeEvent.getText();
-        String newFullName = schools.getText();
+        String oldFullName = moeEvent.getDirectorFullName();
+        String newFullName = schools.getDirectorFullName();
         if (!oldFullName.equals(newFullName)) {
             moeEvent.setDirectorFullName(newFullName);
         }
-        String oldAddress = moeEvent.getText();
-        String newAddress = schools.getText();
+        String oldAddress = moeEvent.getAddress();
+        String newAddress = schools.getAddress();
         if (!oldAddress.equals(newAddress)) {
             moeEvent.setAddress(newAddress);
         }
-        String oldNum = moeEvent.getText();
-        String newNum = schools.getText();
+        String oldNum = moeEvent.getPhoneNumber();
+        String newNum = schools.getPhoneNumber();
         if (!oldNum.equals(newNum)) {
-            moeEvent.setText(newNum);
+            moeEvent.setPhoneNumber(newNum);
         }
 
         return moeEvent;
