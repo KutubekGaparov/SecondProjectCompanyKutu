@@ -26,6 +26,9 @@ public class DrivingSchool {
     private String phoneNumber;
     private String drivingCourseName;
 
+    private String address;
+    private String text;
+
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "file_id")
     private FileInformation fileInformation;

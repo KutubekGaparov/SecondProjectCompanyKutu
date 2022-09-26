@@ -29,8 +29,7 @@ public class Kindergartens {
     private String address;
     private String email;
     private String phoneNumber;
-
-
+    private String text;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "file_id")

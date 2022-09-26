@@ -26,6 +26,7 @@ public class Circles {
     private String courseTeacher;
     private String info;
     private String phoneNumber;
+    private String address;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "file_id")

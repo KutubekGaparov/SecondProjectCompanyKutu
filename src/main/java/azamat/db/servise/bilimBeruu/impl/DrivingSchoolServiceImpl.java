@@ -64,7 +64,7 @@ public class DrivingSchoolServiceImpl implements DrivingSchoolService {
     public DrivingSchool saveDrivingSchool(DrivingSchool drivingSchool) {
         FileInformation newFileInformation = new FileInformation();
         drivingSchool.setFileInformation(newFileInformation);
-        return drivingSchool;
+        return drivingSchoolRepository.save(drivingSchool);
     }
 
     @Override

@@ -24,6 +24,7 @@ public class ORT {
     private Long id;
     @Column(length = 10000000)
     private String text;
+    private String title;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "file_id")
