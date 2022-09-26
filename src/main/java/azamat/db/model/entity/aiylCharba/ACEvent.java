@@ -19,5 +19,5 @@ public class ACEvent {
     private Long id;
     @Column(length = 10000000)
     private String text;
-
+    private String title;
 }
