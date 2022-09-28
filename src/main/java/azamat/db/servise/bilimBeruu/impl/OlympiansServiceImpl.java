@@ -78,7 +78,13 @@ public class OlympiansServiceImpl implements OlympiansService {
         if (!oldText.equals(newText)) {
             moeEvent.setText(newText);
         }
-        return moeEvent;
+        String oldText1 = moeEvent.getTitle();
+        String newText1 = olympians.getTitle();
+        if (!oldText1.equals(newText1)) {
+            moeEvent.setTitle(newText1);
+        }
+
+        return olympiansRepository.save(moeEvent);
     }
 
     @Override

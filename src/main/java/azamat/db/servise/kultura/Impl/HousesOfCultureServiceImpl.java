@@ -78,7 +78,7 @@ public class HousesOfCultureServiceImpl implements HousesOfCultureService {
         if (!oldText.equals(newText)) {
             acEvent1.setText(newText);
         }
-        return acEvent1;
+        return repository.save(acEvent1);
     }
 
     @Override

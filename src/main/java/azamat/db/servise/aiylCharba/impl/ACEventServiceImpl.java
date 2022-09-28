@@ -33,7 +33,13 @@ public class ACEventServiceImpl implements ACEventService {
         if (!oldText.equals(newText)) {
             acEvent1.setText(newText);
         }
-        return acEvent1;
+        String oldText1 = acEvent1.getTitle();
+        String newText1 = acEvent.getTitle();
+        if (!oldText1.equals(newText1)) {
+            acEvent1.setTitle(newText1);
+        }
+
+        return acEventRepository.save(acEvent1);
     }
 
     @Override

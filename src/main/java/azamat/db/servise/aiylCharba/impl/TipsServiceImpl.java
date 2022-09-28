@@ -78,7 +78,7 @@ public class TipsServiceImpl implements TipsService {
         if (!oldText.equals(newText)) {
             pasture1.setText(newText);
         }
-        return pasture1;
+        return repository.save(pasture1);
     }
 
     @Override

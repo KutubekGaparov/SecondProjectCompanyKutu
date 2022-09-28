@@ -101,7 +101,7 @@ public class MedicalCenterServiceImpl implements MedicalCenterService {
             circles1.setPhoneNumber(newText4);
         }
 
-        return circles1;
+        return repository.save(circles1);
     }
     @Override
     public ResponseEntity<?> deleteById(Long id) {

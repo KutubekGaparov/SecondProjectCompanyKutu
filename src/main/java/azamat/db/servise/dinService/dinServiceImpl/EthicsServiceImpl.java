@@ -78,7 +78,7 @@ public class EthicsServiceImpl implements EthicsService {
         if (!oldText.equals(newText)) {
             circles1.setText(newText);
         }
-        return circles1;
+        return repository.save(circles1);
     }
 
     @Override

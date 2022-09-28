@@ -48,7 +48,7 @@ public class AnimalHusbandryServiceImpl implements AnimalHusbandryService {
         if (!oldText.equals(newText)) {
             animal.setText(newText);
         }
-        return animal;
+        return animalHusbandryRepository.save(animal);
     }
 
     @Override

@@ -120,7 +120,7 @@ public class KyzmatkerlerServiceImpl implements KyzmatkerlerService {
             kyzmatkerler.setType(asd);
         }
 
-        return kyzmatkerler;
+        return kyzmatkerlerRepository.save(kyzmatkerler);
     }
 
     @Override

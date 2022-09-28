@@ -21,7 +21,12 @@ public class YouthInitiatives {
     @Column(updatable = false, nullable = false)
     private Long id;
     @Column(length = 10000000)
-    private String initiatives;
+
+    private String initiativesName;
+
+    private String initiativesDirectorName;
+    private String phone;
+    private String address;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "file_id")

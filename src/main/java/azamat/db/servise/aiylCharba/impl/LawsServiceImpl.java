@@ -33,7 +33,7 @@ public class LawsServiceImpl implements LawsService {
         if (!oldText.equals(newText)) {
             laws1.setText(newText);
         }
-        return laws1;
+        return lawsRepository.save(laws1);
     }
 
     @Override

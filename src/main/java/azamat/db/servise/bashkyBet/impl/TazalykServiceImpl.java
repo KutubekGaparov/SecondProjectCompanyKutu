@@ -29,7 +29,6 @@ import java.util.UUID;
 public class TazalykServiceImpl implements TazalykService {
 
     private TazalykRepository tazalykRepository;
-    private final TazalykRepository bookRepository;
     private final AmazonS3Client awsS3Client;
 
     @Override
@@ -67,7 +66,7 @@ public class TazalykServiceImpl implements TazalykService {
         }
 
 
-        return tazalyk1;
+        return tazalykRepository.save(tazalyk1);
     }
 
 
@@ -85,7 +84,7 @@ public class TazalykServiceImpl implements TazalykService {
     @Override
     public LinkedHashMap<String, String> uploadFile(MultipartFile firstPhoto, Long bookId) {
 
-        Tazalyk bookById = bookRepository.getById(bookId);
+        Tazalyk bookById = tazalykRepository.getById(bookId);
 
         String keyOfFirstPhoto = "Images/" + UUID.randomUUID() + "." + firstPhoto.getOriginalFilename();
 
@@ -105,7 +104,7 @@ public class TazalykServiceImpl implements TazalykService {
 
         bookById.getFileInformation().setPhoto(awsS3Client.getResourceUrl(BucketName.AWS_BOOKS.getBucketName(), keyOfFirstPhoto));
 
-        bookRepository.save(bookById);
+        tazalykRepository.save(bookById);
 
         LinkedHashMap<String, String> response = new LinkedHashMap<>();
         response.put("file information Id ", String.valueOf(bookById.getFileInformation().getFileId()));

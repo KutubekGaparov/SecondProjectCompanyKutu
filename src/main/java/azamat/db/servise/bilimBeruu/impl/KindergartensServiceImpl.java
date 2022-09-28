@@ -104,7 +104,7 @@ public class KindergartensServiceImpl implements KindergartensService {
             kindergartens1.setPhoneNumber(newText5);
         }
 
-        return kindergartens1;
+        return kindergartensRepository.save(kindergartens1);
     }
 
     @Override

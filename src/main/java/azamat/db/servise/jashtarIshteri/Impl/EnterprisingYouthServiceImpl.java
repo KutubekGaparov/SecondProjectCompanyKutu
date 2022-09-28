@@ -95,7 +95,7 @@ public class EnterprisingYouthServiceImpl implements EnterprisingYouthService {
             circles1.setAge(newText1);
         }
 
-        return circles1;
+        return repository.save(circles1);
     }
 
     @Override

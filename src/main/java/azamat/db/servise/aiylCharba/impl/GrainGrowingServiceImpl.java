@@ -80,7 +80,13 @@ public class GrainGrowingServiceImpl implements GrainGrowingService{
         if (!oldText.equals(newText)) {
             grainGrowing1.setText(newText);
         }
-        return grainGrowing1;
+        String oldText1 = grainGrowing1.getDirectorFullName();
+        String newText1 = grainGrowing.getDirectorFullName();
+        if (!oldText1.equals(newText1)) {
+            grainGrowing1.setDirectorFullName(newText1);
+        }
+
+        return grainGrowingRepository.save(grainGrowing1);
     }
 
     @Override

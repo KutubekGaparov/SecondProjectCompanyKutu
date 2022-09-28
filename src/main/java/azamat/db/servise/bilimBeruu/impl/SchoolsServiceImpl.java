@@ -99,7 +99,7 @@ public class SchoolsServiceImpl implements SchoolsService {
             moeEvent.setPhoneNumber(newNum);
         }
 
-        return moeEvent;
+        return schoolsRepository.save(moeEvent);
     }
 
     @Override

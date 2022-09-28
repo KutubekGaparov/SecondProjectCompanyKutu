@@ -82,39 +82,39 @@ public class MechitterServiceImpl implements MechitterService {
         String oldName = circles1.getImamName();
         String newName = mechitter.getImamName();
         if (!oldName.equals(newName)) {
-            mechitter.setImamName(newName);
+            circles1.setImamName(newName);
         }
         String oldName2 = circles1.getImamLastName();
         String newName2 = mechitter.getImamLastName();
         if (!oldName2.equals(newName2)) {
-            mechitter.setImamLastName(newName2);
+            circles1.setImamLastName(newName2);
         }
         String oldName1 = circles1.getMosqueName();
         String newName1 = mechitter.getMosqueName();
         if (!oldName1.equals(newName1)) {
-            mechitter.setMosqueName(newName1);
+            circles1.setMosqueName(newName1);
         }
         String oldName3 = circles1.getEmail();
         String newName3 = mechitter.getEmail();
         if (!oldName3.equals(newName3)) {
-            mechitter.setEmail(newName3);
+            circles1.setEmail(newName3);
         }
         LocalDate oldName4 = circles1.getBirthDay();
         LocalDate newName4 = mechitter.getBirthDay();
         if (!oldName4.equals(newName4)) {
-            mechitter.setBirthDay(newName4);
+            circles1.setBirthDay(newName4);
         }
         String oldName5 = circles1.getPositions();
         String newName5 = mechitter.getPositions();
         if (!oldName5.equals(newName5)) {
-            mechitter.setPositions(newName5);
+            circles1.setPositions(newName5);
         }
         String oldName6 = circles1.getPhone();
         String newName6 = mechitter.getPhone();
         if (!oldName6.equals(newName6)) {
-            mechitter.setPhone(newName6);
+            circles1.setPhone(newName6);
         }
-        return circles1;
+        return repository.save(circles1);
     }
 
     @Override

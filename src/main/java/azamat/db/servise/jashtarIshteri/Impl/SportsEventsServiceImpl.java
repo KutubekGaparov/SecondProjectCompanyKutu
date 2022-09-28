@@ -73,12 +73,22 @@ public class SportsEventsServiceImpl implements SportsEventsService {
         SportsEvents circles1 = repository.findById(id).orElseThrow(() ->
                 new BadRequestException(String.format("Id = %s has not been found", id)));
 
-        String oldText = circles1.getInfoSportEvents();
-        String newText = sportsEvents.getInfoSportEvents();
+        String oldText = circles1.getSportEventsName();
+        String newText = sportsEvents.getSportEventsName();
         if (!oldText.equals(newText)) {
-            circles1.setInfoSportEvents(newText);
+            circles1.setSportEventsName(newText);
         }
-        return circles1;
+        String oldText1 = circles1.getAddress();
+        String newText1 = sportsEvents.getAddress();
+        if (!oldText1.equals(newText1)) {
+            circles1.setAddress(newText1);
+        }
+        String oldText2 = circles1.getTime();
+        String newText2 = sportsEvents.getTime();
+        if (!oldText2.equals(newText2)) {
+            circles1.setTime(newText2);
+        }
+        return repository.save(circles1);
     }
 
 

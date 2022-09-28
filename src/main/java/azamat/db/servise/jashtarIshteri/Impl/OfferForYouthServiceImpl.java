@@ -78,7 +78,12 @@ public class OfferForYouthServiceImpl implements OfferForYouthService {
         if (!oldText.equals(newText)) {
             circles1.setOffer(newText);
         }
-        return circles1;
+        String oldText1 = circles1.getTitle();
+        String newText1 = offerForYouth.getTitle();
+        if (!oldText1.equals(newText1)) {
+            circles1.setTitle(newText1);
+        }
+        return repository.save(circles1);
     }
 
 

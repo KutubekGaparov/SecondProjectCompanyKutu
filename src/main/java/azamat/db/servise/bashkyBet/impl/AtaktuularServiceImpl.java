@@ -34,7 +34,7 @@ public class AtaktuularServiceImpl implements AtaktuularService {
         if (!oldText.equals(newText)) {
             ataktuular1.setInfo(newText);
         }
-        return ataktuular1;
+        return repository.save(ataktuular1);
     }
 
     @Override

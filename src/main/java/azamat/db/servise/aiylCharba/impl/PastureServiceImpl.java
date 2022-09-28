@@ -84,7 +84,7 @@ public class PastureServiceImpl implements PastureServise {
         if (!oldName.equals(newName)) {
             pasture1.setDirectorFullName(newName);
         }
-        return pasture1;
+        return pastureRepository.save(pasture1);
     }
 
     @Override

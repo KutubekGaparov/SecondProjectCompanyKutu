@@ -21,10 +21,13 @@ public class EnterprisingYouth {
             sequenceName = "SEQ_ENTER", allocationSize = 1)
     @Column(updatable = false, nullable = false)
     private Long id;
+
     private String fullName;
     private LocalDate age;
     private String direction;
     private String result;
+
+
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "file_id")

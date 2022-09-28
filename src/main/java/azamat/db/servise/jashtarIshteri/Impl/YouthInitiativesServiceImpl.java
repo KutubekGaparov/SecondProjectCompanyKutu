@@ -73,12 +73,28 @@ public class YouthInitiativesServiceImpl implements YouthInitiativesService {
         YouthInitiatives circles1 = repository.findById(id).orElseThrow(() ->
                 new BadRequestException(String.format("Id = %s has not been found", id)));
 
-        String oldText = circles1.getInitiatives();
-        String newText = youthInitiatives.getInitiatives();
+        String oldText = circles1.getInitiativesName();
+        String newText = youthInitiatives.getInitiativesName();
         if (!oldText.equals(newText)) {
-            circles1.setInitiatives(newText);
+            circles1.setInitiativesName(newText);
         }
-        return circles1;
+        String oldText1 = circles1.getInitiativesDirectorName();
+        String newText1 = youthInitiatives.getInitiativesDirectorName();
+        if (!oldText1.equals(newText1)) {
+            circles1.setInitiativesDirectorName(newText1);
+        }
+        String oldText11 = circles1.getAddress();
+        String newText11 = youthInitiatives.getAddress();
+        if (!oldText11.equals(newText11)) {
+            circles1.setAddress(newText11);
+        }
+        String oldText12 = circles1.getPhone();
+        String newText12 = youthInitiatives.getPhone();
+        if (!oldText12.equals(newText12)) {
+            circles1.setPhone(newText12);
+        }
+
+        return repository.save(circles1);
     }
 
 

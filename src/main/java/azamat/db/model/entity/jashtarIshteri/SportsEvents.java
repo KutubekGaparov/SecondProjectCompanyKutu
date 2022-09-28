@@ -21,7 +21,10 @@ public class SportsEvents {
     @Column(updatable = false, nullable = false)
     private Long id;
     @Column(length = 10000000)
-    private String infoSportEvents;
+    private String sportEventsName;
+    private String address;
+    private String time;
+
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "file_id")

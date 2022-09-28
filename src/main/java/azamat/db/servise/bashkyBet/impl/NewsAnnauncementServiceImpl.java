@@ -78,7 +78,7 @@ public class NewsAnnauncementServiceImpl implements NewsAnnouncementService {
         if (!oldText.equals(newText)) {
             newsAnnouncement1.setText(newText);
         }
-        return newsAnnouncement1;
+        return repository.save(newsAnnouncement1);
     }
 
     @Override

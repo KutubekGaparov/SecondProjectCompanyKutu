@@ -78,7 +78,7 @@ public class AitServiceImpl implements AitService {
         if (!oldText.equals(newText)) {
             circles1.setText(newText);
         }
-        return circles1;
+        return aitRepository.save(circles1);
     }
 
     @Override

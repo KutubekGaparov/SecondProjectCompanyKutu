@@ -106,7 +106,7 @@ public class ReligionSchoolServiceImpl implements ReligionSchoolService {
         if (!oldName6.equals(newName6)) {
             circles1.setPhone(newName6);
         }
-        return circles1;
+        return repository.save(circles1);
     }
     @Override
     public ResponseEntity<?> deleteById(Long id) {

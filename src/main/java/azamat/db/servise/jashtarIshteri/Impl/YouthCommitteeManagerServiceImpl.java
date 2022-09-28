@@ -60,6 +60,7 @@ public class YouthCommitteeManagerServiceImpl implements YouthCommitteeManagerSe
 
         return response;
     }
+
     @Override
     public YouthCommitteeManager saveYouthCommitteeManager(YouthCommitteeManager committeeManager) {
 
@@ -74,12 +75,28 @@ public class YouthCommitteeManagerServiceImpl implements YouthCommitteeManagerSe
         YouthCommitteeManager circles1 = repository.findById(id).orElseThrow(() ->
                 new BadRequestException(String.format("Id = %s has not been found", id)));
 
-        String oldText = circles1.getInfoManager();
-        String newText = committeeManager.getInfoManager();
+        String oldText = circles1.getManagerName();
+        String newText = committeeManager.getManagerName();
         if (!oldText.equals(newText)) {
-            circles1.setInfoManager(newText);
+            circles1.setManagerName(newText);
         }
-        return circles1;
+        String oldText1 = circles1.getAddress();
+        String newText1 = committeeManager.getAddress();
+        if (!oldText1.equals(newText1)) {
+            circles1.setAddress(newText1);
+        }
+         String oldText2 = circles1.getManagerDirectorName();
+        String newText2 = committeeManager.getManagerDirectorName();
+        if (!oldText2.equals(newText2)) {
+            circles1.setManagerDirectorName(newText2);
+        }
+         String oldText11 = circles1.getPhone();
+        String newText11 = committeeManager.getPhone();
+        if (!oldText11.equals(newText11)) {
+            circles1.setPhone(newText11);
+        }
+
+        return repository.save(circles1);
     }
 
 

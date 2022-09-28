@@ -89,7 +89,7 @@ public class DrivingSchoolServiceImpl implements DrivingSchoolService {
             drivingSchool1.setDrivingCourseName(newText1);
         }
 
-        return drivingSchool1;
+        return drivingSchoolRepository.save(drivingSchool1);
     }
     @Override
     public ResponseEntity<?> deleteById(Long id) {

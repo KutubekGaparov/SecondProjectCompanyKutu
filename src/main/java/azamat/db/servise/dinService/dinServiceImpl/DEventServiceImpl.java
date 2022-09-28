@@ -78,7 +78,7 @@ public class DEventServiceImpl implements DEventService {
         if (!oldText.equals(newText)) {
             circles1.setInfo(newText);
         }
-        return circles1;
+        return dEventsRepository.save(circles1);
     }
 
     @Override

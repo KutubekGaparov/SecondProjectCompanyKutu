@@ -78,7 +78,23 @@ public class CirclesServiceImpl implements CirclesService {
         if (!oldText.equals(newText)) {
             circles1.setInfo(newText);
         }
-        return circles1;
+        String oldText1 = circles.getCourseName();
+        String newText1 = circles1.getCourseName();
+        if (!oldText1.equals(newText1)) {
+            circles1.setCourseName(newText1);
+        }
+        String oldText2 = circles.getCourseTeacher();
+        String newText2 = circles1.getCourseTeacher();
+        if (!oldText2.equals(newText2)) {
+            circles1.setCourseTeacher(newText2);
+        }
+        String oldText3 = circles.getAddress();
+        String newText3 = circles1.getAddress();
+        if (!oldText3.equals(newText3)) {
+            circles1.setAddress(newText3);
+        }
+
+        return circlesRepository.save(circles1);
     }
 
     @Override

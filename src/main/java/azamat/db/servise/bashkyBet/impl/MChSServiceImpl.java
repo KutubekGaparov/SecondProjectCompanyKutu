@@ -96,7 +96,7 @@ public class MChSServiceImpl implements MChSService {
             mChS1.setBirthDay(newBirthDay);
         }
 
-        return mChS1;
+        return mChSRepository.save(mChS1);
     }
 
 

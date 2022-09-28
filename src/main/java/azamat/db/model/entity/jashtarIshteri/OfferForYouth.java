@@ -23,6 +23,8 @@ public class OfferForYouth {
     @Column(length = 10000000)
     private String offer;
 
+    private String title;
+
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "file_id")
     private FileInformation fileInformation;

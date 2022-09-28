@@ -78,7 +78,13 @@ public class ORTServiceImpl implements ORTService {
         if (!oldText.equals(newText)) {
             moeEvent.setText(newText);
         }
-        return moeEvent;
+        String oldText1 = moeEvent.getTitle();
+        String newText1 = ort.getTitle();
+        if (!oldText1.equals(newText1)) {
+            moeEvent.setTitle(newText1);
+        }
+
+        return repository.save(moeEvent);
     }
 
     @Override
