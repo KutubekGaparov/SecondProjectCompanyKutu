@@ -94,7 +94,11 @@ public class EnterprisingYouthServiceImpl implements EnterprisingYouthService {
         if (!oldText1.equals(newText1)) {
             circles1.setAge(newText1);
         }
-
+        String oldText32 = circles1.getInfo();
+        String newText32 = enterprisingYouth.getInfo();
+        if (!oldText32.equals(newText32)) {
+            circles1.setInfo(newText32);
+        }
         return repository.save(circles1);
     }
 

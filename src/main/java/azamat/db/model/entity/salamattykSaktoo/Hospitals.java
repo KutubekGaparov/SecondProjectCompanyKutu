@@ -30,6 +30,7 @@ public class Hospitals {
     private String  address;
     private String phoneNumber;
     private String email;
+    private String info;
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "file_id")
     private FileInformation fileInformation;

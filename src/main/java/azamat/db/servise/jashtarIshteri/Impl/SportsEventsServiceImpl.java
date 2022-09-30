@@ -88,6 +88,12 @@ public class SportsEventsServiceImpl implements SportsEventsService {
         if (!oldText2.equals(newText2)) {
             circles1.setTime(newText2);
         }
+          String oldText22 = circles1.getInfo();
+        String newText22 = sportsEvents.getInfo();
+        if (!oldText22.equals(newText22)) {
+            circles1.setInfo(newText22);
+        }
+
         return repository.save(circles1);
     }
 

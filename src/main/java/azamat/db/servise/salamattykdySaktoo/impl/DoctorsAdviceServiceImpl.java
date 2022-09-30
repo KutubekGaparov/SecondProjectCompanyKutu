@@ -73,11 +73,22 @@ public class DoctorsAdviceServiceImpl implements DoctorsAdviceService {
         DoctorsAdvice circles1 = repository.findById(id).orElseThrow(() ->
                 new BadRequestException(String.format("Id = %s has not been found", id)));
 
-        String oldText = circles1.getText();
-        String newText = doctorsAdvice.getText();
+        String oldText = circles1.getNameDoctors();
+        String newText = doctorsAdvice.getNameDoctors();
         if (!oldText.equals(newText)) {
-            circles1.setText(newText);
+            circles1.setNameDoctors(newText);
         }
+           String oldText2 = circles1.getPhone();
+        String newText2 = doctorsAdvice.getPhone();
+        if (!oldText2.equals(newText2)) {
+            circles1.setPhone(newText2);
+        }
+           String oldText1 = circles1.getInfo();
+        String newText1 = doctorsAdvice.getInfo();
+        if (!oldText1.equals(newText1)) {
+            circles1.setInfo(newText1);
+        }
+
         return repository.save(circles1);
     }
     @Override

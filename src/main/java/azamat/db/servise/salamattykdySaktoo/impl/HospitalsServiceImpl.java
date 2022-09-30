@@ -98,6 +98,11 @@ public class HospitalsServiceImpl implements HospitalsService {
         if (!oldText4.equals(newText4)) {
             circles1.setPhoneNumber(newText4);
         }
+      String oldText44 = circles1.getInfo();
+        String newText44 = hospitals.getInfo();
+        if (!oldText44.equals(newText44)) {
+            circles1.setInfo(newText44);
+        }
 
         return repository.save(circles1);
     }

@@ -24,6 +24,7 @@ public class SportsEvents {
     private String sportEventsName;
     private String address;
     private String time;
+    private String info;
 
 
     @OneToOne(cascade = CascadeType.ALL)

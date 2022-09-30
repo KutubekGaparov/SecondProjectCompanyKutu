@@ -95,6 +95,11 @@ public class YouthCommitteeManagerServiceImpl implements YouthCommitteeManagerSe
         if (!oldText11.equals(newText11)) {
             circles1.setPhone(newText11);
         }
+       String oldText111 = circles1.getInfo();
+        String newText111 = committeeManager.getInfo();
+        if (!oldText111.equals(newText111)) {
+            circles1.setInfo(newText111);
+        }
 
         return repository.save(circles1);
     }

@@ -73,10 +73,10 @@ public class InsuranceServiceImpl implements InsuranceService {
         Insurance circles1 = repository.findById(id).orElseThrow(() ->
                 new BadRequestException(String.format("Id = %s has not been found", id)));
 
-        String oldText = circles1.getText();
-        String newText = insurance.getText();
+        String oldText = circles1.getInfo();
+        String newText = insurance.getInfo();
         if (!oldText.equals(newText)) {
-            circles1.setText(newText);
+            circles1.setInfo(newText);
         }
         return repository.save(circles1);
     }

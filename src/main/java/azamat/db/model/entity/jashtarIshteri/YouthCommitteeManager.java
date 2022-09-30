@@ -25,6 +25,7 @@ public class YouthCommitteeManager {
     private String managerDirectorName;
     private String phone;
     private String address;
+    private String info;
 
 
     @OneToOne(cascade = CascadeType.ALL)

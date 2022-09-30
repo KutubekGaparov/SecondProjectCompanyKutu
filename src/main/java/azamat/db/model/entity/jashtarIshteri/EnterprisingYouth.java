@@ -26,6 +26,7 @@ public class EnterprisingYouth {
     private LocalDate age;
     private String direction;
     private String result;
+    private String info;
 
 
 

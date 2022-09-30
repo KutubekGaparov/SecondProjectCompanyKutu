@@ -93,6 +93,11 @@ public class YouthInitiativesServiceImpl implements YouthInitiativesService {
         if (!oldText12.equals(newText12)) {
             circles1.setPhone(newText12);
         }
+        String oldText122 = circles1.getInfo();
+        String newText122 = youthInitiatives.getInfo();
+        if (!oldText122.equals(newText122)) {
+            circles1.setInfo(newText122);
+        }
 
         return repository.save(circles1);
     }
