@@ -69,32 +69,32 @@ public class CirclesServiceImpl implements CirclesService {
 
     @Override
     @Transactional
-    public Circles update(Circles circles, Long id) {
-        Circles circles1 = circlesRepository.findById(id).orElseThrow(() ->
+    public Circles update(Circles circles1, Long id) {
+        Circles circles = circlesRepository.findById(id).orElseThrow(() ->
                 new BadRequestException(String.format("Id = %s has not been found", id)));
 
         String oldText = circles.getInfo();
         String newText = circles1.getInfo();
         if (!oldText.equals(newText)) {
-            circles1.setInfo(newText);
+            circles.setInfo(newText);
         }
         String oldText1 = circles.getCourseName();
         String newText1 = circles1.getCourseName();
         if (!oldText1.equals(newText1)) {
-            circles1.setCourseName(newText1);
+            circles.setCourseName(newText1);
         }
         String oldText2 = circles.getCourseTeacher();
         String newText2 = circles1.getCourseTeacher();
         if (!oldText2.equals(newText2)) {
-            circles1.setCourseTeacher(newText2);
+            circles.setCourseTeacher(newText2);
         }
         String oldText3 = circles.getAddress();
         String newText3 = circles1.getAddress();
         if (!oldText3.equals(newText3)) {
-            circles1.setAddress(newText3);
+            circles.setAddress(newText3);
         }
 
-        return circlesRepository.save(circles1);
+        return circlesRepository.save(circles);
     }
 
     @Override

@@ -60,6 +60,7 @@ public class DrivingSchoolServiceImpl implements DrivingSchoolService {
 
         return response;
     }
+
     @Override
     public DrivingSchool saveDrivingSchool(DrivingSchool drivingSchool) {
         FileInformation newFileInformation = new FileInformation();
@@ -69,28 +70,29 @@ public class DrivingSchoolServiceImpl implements DrivingSchoolService {
 
     @Override
     @Transactional
-    public DrivingSchool update(DrivingSchool drivingSchool, Long id) {
-        DrivingSchool drivingSchool1 = drivingSchoolRepository.findById(id).orElseThrow(() ->
+    public DrivingSchool update(DrivingSchool drivingSchool1, Long id) {
+        DrivingSchool drivingSchool = drivingSchoolRepository.findById(id).orElseThrow(() ->
                 new BadRequestException(String.format("Id = %s has not been found", id)));
 
         String oldText = drivingSchool.getDirector();
         String newText = drivingSchool1.getDirector();
         if (!oldText.equals(newText)) {
-            drivingSchool1.setDirector(newText);
+            drivingSchool.setDirector(newText);
         }
-          String oldText2 = drivingSchool.getPhoneNumber();
+        String oldText2 = drivingSchool.getPhoneNumber();
         String newText2 = drivingSchool1.getPhoneNumber();
         if (!oldText2.equals(newText2)) {
-            drivingSchool1.setPhoneNumber(newText2);
+            drivingSchool.setPhoneNumber(newText2);
         }
-          String oldText1 = drivingSchool.getDrivingCourseName();
+        String oldText1 = drivingSchool.getDrivingCourseName();
         String newText1 = drivingSchool1.getDrivingCourseName();
         if (!oldText1.equals(newText1)) {
-            drivingSchool1.setDrivingCourseName(newText1);
+            drivingSchool.setDrivingCourseName(newText1);
         }
 
-        return drivingSchoolRepository.save(drivingSchool1);
+        return drivingSchoolRepository.save(drivingSchool);
     }
+
     @Override
     public ResponseEntity<?> deleteById(Long id) {
         drivingSchoolRepository.deleteById(id);

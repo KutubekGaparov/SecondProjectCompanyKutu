@@ -21,6 +21,7 @@ import java.io.IOException;
 import java.time.LocalDate;
 import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Objects;
 import java.util.UUID;
 
 @Service
@@ -89,11 +90,13 @@ public class EnterprisingYouthServiceImpl implements EnterprisingYouthService {
         if (!oldText3.equals(newText3)) {
             circles1.setResult(newText3);
         }
-        LocalDate oldText1 = circles1.getAge();
-        LocalDate newText1 = enterprisingYouth.getAge();
+
+        String oldText1 = circles1.getAge();
+        String newText1 = enterprisingYouth.getAge();
         if (!oldText1.equals(newText1)) {
             circles1.setAge(newText1);
         }
+
         String oldText32 = circles1.getInfo();
         String newText32 = enterprisingYouth.getInfo();
         if (!oldText32.equals(newText32)) {

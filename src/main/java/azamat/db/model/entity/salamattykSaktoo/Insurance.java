@@ -23,6 +23,8 @@ public class Insurance {
     private Long id;
     @Column(length = 10000000)
     private String info;
+    private String title;
+    private String phone;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "file_id")

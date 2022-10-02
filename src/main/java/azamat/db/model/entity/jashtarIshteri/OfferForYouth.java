@@ -25,6 +25,7 @@ public class OfferForYouth {
 
     private String title;
     private String info;
+    private String phone;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "file_id")

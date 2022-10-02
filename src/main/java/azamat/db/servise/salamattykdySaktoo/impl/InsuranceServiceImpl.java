@@ -78,6 +78,16 @@ public class InsuranceServiceImpl implements InsuranceService {
         if (!oldText.equals(newText)) {
             circles1.setInfo(newText);
         }
+        String oldText1 = circles1.getPhone();
+        String newText1 = insurance.getPhone();
+        if (!oldText1.equals(newText1)) {
+            circles1.setPhone(newText1);
+        }
+        String oldText2 = circles1.getTitle();
+        String newText2 = insurance.getTitle();
+        if (!oldText2.equals(newText2)) {
+            circles1.setTitle(newText2);
+        }
         return repository.save(circles1);
     }
     @Override

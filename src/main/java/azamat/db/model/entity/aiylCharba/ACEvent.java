@@ -20,4 +20,5 @@ public class ACEvent {
     @Column(length = 10000000)
     private String text;
     private String title;
+    private String phone;
 }

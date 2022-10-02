@@ -88,11 +88,14 @@ public class OfferForYouthServiceImpl implements OfferForYouthService {
         if (!oldText11.equals(newText11)) {
             circles1.setInfo(newText11);
         }
+        String oldText111 = circles1.getPhone();
+        String newText111 = offerForYouth.getPhone();
+        if (!oldText111.equals(newText111)) {
+            circles1.setPhone(newText111);
+        }
 
         return repository.save(circles1);
     }
-
-
     @Override
     public ResponseEntity<?> deleteById(Long id) {
         repository.deleteById(id);

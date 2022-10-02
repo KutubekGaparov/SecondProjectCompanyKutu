@@ -23,7 +23,7 @@ public class EnterprisingYouth {
     private Long id;
 
     private String fullName;
-    private LocalDate age;
+    private String age;
     private String direction;
     private String result;
     private String info;
