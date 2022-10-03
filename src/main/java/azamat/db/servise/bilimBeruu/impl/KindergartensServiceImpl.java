@@ -60,6 +60,7 @@ public class KindergartensServiceImpl implements KindergartensService {
 
         return response;
     }
+
     @Override
     public Kindergartens saveKindergartens(Kindergartens kindergartens) {
         FileInformation newFileInformation = new FileInformation();
@@ -102,6 +103,16 @@ public class KindergartensServiceImpl implements KindergartensService {
         String newText5 = kindergartens1.getPhoneNumber();
         if (!oldText5.equals(newText5)) {
             kindergartens.setPhoneNumber(newText5);
+        }
+        String oldText55 = kindergartens.getAddress();
+        String newText55 = kindergartens1.getAddress();
+        if (!oldText55.equals(newText55)) {
+            kindergartens.setAddress(newText55);
+        }
+        String oldText51 = kindergartens.getText();
+        String newText51 = kindergartens1.getText();
+        if (!oldText51.equals(newText51)) {
+            kindergartens.setText(newText51);
         }
 
         return kindergartensRepository.save(kindergartens);

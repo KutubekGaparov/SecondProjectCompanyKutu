@@ -1,5 +1,6 @@
 package azamat.db.model.entity.aiylCharba;
 
+import azamat.FileInformation.FileInformation;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
@@ -21,4 +22,8 @@ public class ACEvent {
     private String text;
     private String title;
     private String phone;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "file_id")
+    private FileInformation fileInformation;
 }

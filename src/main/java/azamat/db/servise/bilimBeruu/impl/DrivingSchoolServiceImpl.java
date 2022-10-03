@@ -89,6 +89,16 @@ public class DrivingSchoolServiceImpl implements DrivingSchoolService {
         if (!oldText1.equals(newText1)) {
             drivingSchool.setDrivingCourseName(newText1);
         }
+        String oldText11 = drivingSchool.getText();
+        String newText11 = drivingSchool1.getText();
+        if (!oldText11.equals(newText11)) {
+            drivingSchool.setText(newText11);
+        }
+        String oldText111 = drivingSchool.getAddress();
+        String newText111 = drivingSchool1.getAddress();
+        if (!oldText111.equals(newText111)) {
+            drivingSchool.setAddress(newText111);
+        }
 
         return drivingSchoolRepository.save(drivingSchool);
     }
