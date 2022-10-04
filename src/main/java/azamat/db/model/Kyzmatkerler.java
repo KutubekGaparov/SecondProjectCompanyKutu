@@ -32,6 +32,7 @@ public class Kyzmatkerler {
     private String phoneNumber;
 
     private String type;
+    private String text;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "file_id")

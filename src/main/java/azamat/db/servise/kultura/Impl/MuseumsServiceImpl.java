@@ -78,6 +78,31 @@ public class MuseumsServiceImpl implements MuseumsService {
         if (!oldText.equals(newText)) {
             circles1.setText(newText);
         }
+
+        String oldText1 = circles1.getAddress();
+        String newText1 = museums.getAddress();
+        if (!oldText1.equals(newText1)) {
+            circles1.setAddress(newText1);
+        }
+
+        String oldText11 = circles1.getPhone();
+        String newText11 = museums.getPhone();
+        if (!oldText11.equals(newText11)) {
+            circles1.setPhone(newText11);
+        }
+
+        String oldText2 = circles1.getDirectorFullName();
+        String newText2 = museums.getDirectorFullName();
+        if (!oldText2.equals(newText2)) {
+            circles1.setDirectorFullName(newText2);
+        }
+
+        String oldText3 = circles1.getTitleMuseum();
+        String newText3 = museums.getTitleMuseum();
+        if (!oldText3.equals(newText3)) {
+            circles1.setTitleMuseum(newText3);
+        }
+
         return repository.save(circles1);
     }
     @Override

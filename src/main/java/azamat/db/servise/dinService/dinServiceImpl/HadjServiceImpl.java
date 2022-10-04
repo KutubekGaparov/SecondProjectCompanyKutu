@@ -78,6 +78,13 @@ public class HadjServiceImpl implements HadjService {
         if (!oldText.equals(newText)) {
             circles1.setText(newText);
         }
+
+        String oldText1 = circles1.getFullName();
+        String newText1 = hadj.getFullName();
+        if (!oldText1.equals(newText1)) {
+            circles1.setFullName(newText1);
+        }
+
         return repository.save(circles1);
     }
 

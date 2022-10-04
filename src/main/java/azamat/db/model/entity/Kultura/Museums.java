@@ -22,6 +22,11 @@ public class Museums {
     private Long id;
     @Column(length = 10000000)
     private String text;
+    private String titleMuseum;
+    private String directorFullName;
+    private String phone;
+    private String address;
+
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "file_id")

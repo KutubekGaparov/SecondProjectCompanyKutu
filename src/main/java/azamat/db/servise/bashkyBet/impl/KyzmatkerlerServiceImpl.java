@@ -109,6 +109,12 @@ public class KyzmatkerlerServiceImpl implements KyzmatkerlerService {
         if (!oldEmail.equals(newEmail)) {
             kyzmatkerler.setEmail(newEmail);
         }
+        String oldEmail1 = kyzmatkerler.getText();
+        String newEmail1 = kyzmatkerler1.getText();
+        if (!oldEmail1.equals(newEmail1)) {
+            kyzmatkerler.setText(newEmail1);
+        }
+
         String oldPhone = kyzmatkerler.getPhoneNumber();
         String newPhone = kyzmatkerler1.getPhoneNumber();
         if (!Objects.equals(oldPhone, newPhone)) {
