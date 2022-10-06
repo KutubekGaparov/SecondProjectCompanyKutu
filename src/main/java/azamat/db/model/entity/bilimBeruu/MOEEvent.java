@@ -25,7 +25,9 @@ public class MOEEvent {
     private String text;
     private String title;
 
+
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "file_id")
     private FileInformation fileInformation;
+
 }

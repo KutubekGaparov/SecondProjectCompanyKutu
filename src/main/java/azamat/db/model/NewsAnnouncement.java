@@ -23,6 +23,7 @@ public class NewsAnnouncement {
     private Long id;
     @Column(length = 10000000)
     private String text;
+    private String dateOfNewAnnouncement;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "file_id")
