@@ -24,6 +24,7 @@ public class OfferForYouth {
     private String offer;
 
     private String title;
+    @Column(length = 10000000)
     private String info;
     private String phone;
 

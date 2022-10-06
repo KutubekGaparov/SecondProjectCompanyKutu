@@ -26,6 +26,7 @@ public class EnterprisingYouth {
     private String age;
     private String direction;
     private String result;
+    @Column(length = 10000000)
     private String info;
 
 

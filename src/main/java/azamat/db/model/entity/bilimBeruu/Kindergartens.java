@@ -29,6 +29,7 @@ public class Kindergartens {
     private String address;
     private String email;
     private String phoneNumber;
+    @Column(length = 10000000)
     private String text;
 
     @OneToOne(cascade = CascadeType.ALL)

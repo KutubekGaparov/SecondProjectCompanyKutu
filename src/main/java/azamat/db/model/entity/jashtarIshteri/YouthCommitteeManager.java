@@ -25,6 +25,7 @@ public class YouthCommitteeManager {
     private String managerDirectorName;
     private String phone;
     private String address;
+    @Column(length = 10000000)
     private String info;
 
 

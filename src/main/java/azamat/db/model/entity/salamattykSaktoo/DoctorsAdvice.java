@@ -24,6 +24,7 @@ public class DoctorsAdvice {
     @Column(length = 10000000)
     private String nameDoctors;
     private String phone;
+    @Column(length = 10000000)
     private String info;
 
     @OneToOne(cascade = CascadeType.ALL)

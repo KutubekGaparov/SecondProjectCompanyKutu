@@ -29,6 +29,7 @@ public class MedicalCenter {
     private String  address;
     private String phoneNumber;
     private String email;
+    @Column(length = 10000000)
     private String info;
 
     @OneToOne(cascade = CascadeType.ALL)

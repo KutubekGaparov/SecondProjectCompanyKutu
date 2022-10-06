@@ -27,6 +27,7 @@ public class YouthInitiatives {
     private String initiativesDirectorName;
     private String phone;
     private String address;
+    @Column(length = 10000000)
     private String info;
 
     @OneToOne(cascade = CascadeType.ALL)

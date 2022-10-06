@@ -24,6 +24,7 @@ public class SportsEvents {
     private String sportEventsName;
     private String address;
     private String time;
+    @Column(length = 10000000)
     private String info;
 
 
