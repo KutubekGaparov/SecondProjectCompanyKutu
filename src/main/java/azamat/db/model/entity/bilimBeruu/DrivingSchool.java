@@ -27,6 +27,8 @@ public class DrivingSchool {
     private String drivingCourseName;
 
     private String address;
+
+    @Column(length = 100000000)
     private String text;
 
     @OneToOne(cascade = CascadeType.ALL)

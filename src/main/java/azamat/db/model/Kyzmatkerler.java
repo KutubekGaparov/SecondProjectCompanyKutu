@@ -32,7 +32,8 @@ public class Kyzmatkerler {
     private String phoneNumber;
 
     private String type;
-    @Column(length = 10000000)
+
+    @Column(length = 100000000)
     private String text;
 
     @OneToOne(cascade = CascadeType.ALL)

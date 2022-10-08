@@ -24,7 +24,7 @@ public class Circles {
 
     private String courseName;
     private String courseTeacher;
-    @Column(length = 10000000)
+    @Column(length = 100000000)
     private String info;
     private String phoneNumber;
     private String address;

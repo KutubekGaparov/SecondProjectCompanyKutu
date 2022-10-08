@@ -21,9 +21,13 @@ public class NewsAnnouncement {
             sequenceName = "SEQ_NEW", allocationSize = 1)
     @Column(updatable = false, nullable = false)
     private Long id;
+
+    private String dateOfNewAnnouncement;
+
     @Column(length = 10000000)
     private String text;
-    private String dateOfNewAnnouncement;
+
+    private String title;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "file_id")

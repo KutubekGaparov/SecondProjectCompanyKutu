@@ -83,6 +83,11 @@ public class NewsAnnauncementServiceImpl implements NewsAnnouncementService {
         if (!oldText2.equals(newText2)) {
             newsAnnouncement1.setDateOfNewAnnouncement(newText2);
         }
+        String oldText22 = newsAnnouncement.getTitle();
+        String newText22 = newsAnnouncement1.getTitle();
+        if (!oldText22.equals(newText22)) {
+            newsAnnouncement1.setTitle(newText22);
+        }
 
         return repository.save(newsAnnouncement1);
     }
