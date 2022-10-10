@@ -28,6 +28,7 @@ public class ReligionSchool {
     private String address;
     private String phone;
     private String email;
+    private String text;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "file_id")
