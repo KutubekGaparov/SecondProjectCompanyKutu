@@ -39,6 +39,7 @@ public class PastureApi {
     public ResponseEntity<?> savePastureService(@PathVariable Long id) {
         return pastureServise.deleteById(id);
     }
+
     @Operation(summary = "Upload files", description = "Upload files to aws")
     @PostMapping("/upload-file/{id}")
     public LinkedHashMap<String, String> uploadFile(@RequestBody MultipartFile firstPhoto,
