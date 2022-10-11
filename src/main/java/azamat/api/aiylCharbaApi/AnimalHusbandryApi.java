@@ -50,9 +50,9 @@ public class AnimalHusbandryApi {
 
 //    @CrossOrigin
 //    @Operation(summary = "Delete files", description = "Delete files with key name")
-//    @DeleteMapping("/delete/{keyName}")
+//    @PostMapping("/delete-file/{keyName}")
 //    public ResponseEntity<?> deleteFile(@PathVariable String keyName) {
-//        animalHusbandryService.deleteFile(keyName);
+//        animalHusbandryService.deleteFile2(keyName);
 //        return ResponseEntity.ok("File successfully deleted");
 //    }
 

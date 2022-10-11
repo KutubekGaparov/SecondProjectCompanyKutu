@@ -61,6 +61,7 @@ public class AnimalHusbandryServiceImpl implements AnimalHusbandryService {
     public List<AnimalHusbandry> getAll() {
         return animalHusbandryRepository.findAll();
     }
+
     private final AmazonS3Client awsS3Client;
 
     @Override
@@ -101,8 +102,12 @@ public class AnimalHusbandryServiceImpl implements AnimalHusbandryService {
                 DeleteObjectRequest(BucketName.AWS_BOOKS.getBucketName(), keyName);
         awsS3Client.deleteObject(deleteObjectRequest);
     }
+
+    @Transactional
+    @Override
     public String deleteFile2(final String fileName) {
         awsS3Client.deleteObject(BucketName.AWS_BOOKS.getBucketName(), fileName);
+        animalHusbandryRepository.deleteByName(fileName);
         return "Deleted File: " + fileName;
     }
 }

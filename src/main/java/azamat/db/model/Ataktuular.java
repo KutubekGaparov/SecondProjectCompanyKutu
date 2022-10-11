@@ -23,7 +23,8 @@ public class Ataktuular {
     private Long id;
     @Column(length = 10000000)
     private String info;
-
+    private String fullName;
+    private String birthday;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "file_id")
