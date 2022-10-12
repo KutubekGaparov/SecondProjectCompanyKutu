@@ -1,5 +1,6 @@
 package azamat.db.model;
 
+import azamat.FileInformation.AnnouncementEnum;
 import azamat.FileInformation.FileInformation;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
@@ -25,6 +26,9 @@ public class NewsAnnouncement {
     private String text;
     private String dateOfNewAnnouncement;
     private String title;
+
+    @Enumerated(value = EnumType.STRING)
+    private AnnouncementEnum enumType;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "file_id")

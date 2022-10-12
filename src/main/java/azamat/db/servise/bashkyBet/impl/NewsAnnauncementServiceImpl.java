@@ -1,6 +1,8 @@
 package azamat.db.servise.bashkyBet.impl;
 
+import azamat.FileInformation.AnnouncementEnum;
 import azamat.FileInformation.BucketName;
+import azamat.FileInformation.CustomPageRequest;
 import azamat.FileInformation.FileInformation;
 import azamat.db.repository.bashkyBet.NewsAnnouncementRepository;
 import azamat.db.servise.bashkyBet.NewsAnnouncementService;
@@ -10,6 +12,10 @@ import com.amazonaws.services.s3.AmazonS3Client;
 import com.amazonaws.services.s3.model.CannedAccessControlList;
 import com.amazonaws.services.s3.model.ObjectMetadata;
 import lombok.AllArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -21,6 +27,8 @@ import java.io.IOException;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.UUID;
+
+import static azamat.FileInformation.AnnouncementEnum.NEWSOFTHEWORLD;
 
 @Service
 @AllArgsConstructor
@@ -99,7 +107,27 @@ public class NewsAnnauncementServiceImpl implements NewsAnnouncementService {
     }
 
     @Override
-    public List<NewsAnnouncement> getAll() {
-        return repository.findAll();
+    public List<NewsAnnouncement> getAllStateNews(int offset, int pageSize) {
+        List<NewsAnnouncement> books = repository.findAllBySort(AnnouncementEnum.STATENEWS);
+
+        Pageable paging = PageRequest.of(offset, pageSize);
+        int start = Math.min((int) paging.getOffset(), books.size());
+        int end = Math.min((start + paging.getPageSize()), books.size());
+        Page<NewsAnnouncement> pages = new PageImpl<>(books.subList(start, end), paging, books.size());
+        System.out.println(new CustomPageRequest<>(pages).getContent().size());
+
+        return new CustomPageRequest<>(pages).getContent();
+    }
+    @Override
+    public List<NewsAnnouncement> getAllNewsOfTheWorld(int offset, int pageSize) {
+        List<NewsAnnouncement> books = repository.findAllBySort(NEWSOFTHEWORLD);
+
+        Pageable paging = PageRequest.of(offset, pageSize);
+        int start = Math.min((int) paging.getOffset(), books.size());
+        int end = Math.min((start + paging.getPageSize()), books.size());
+        Page<NewsAnnouncement> pages = new PageImpl<>(books.subList(start, end), paging, books.size());
+        System.out.println(new CustomPageRequest<>(pages).getContent().size());
+
+        return new CustomPageRequest<>(pages).getContent();
     }
 }

@@ -1,5 +1,6 @@
 package azamat.db.servise.bashkyBet;
 
+import azamat.FileInformation.AnnouncementEnum;
 import azamat.db.model.NewsAnnouncement;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.multipart.MultipartFile;
@@ -14,7 +15,9 @@ public interface NewsAnnouncementService {
 
     ResponseEntity<?> deleteById(Long id);
 
-    List<NewsAnnouncement> getAll();
+    List<NewsAnnouncement> getAllStateNews(int offset, int pageSize);
+    List<NewsAnnouncement> getAllNewsOfTheWorld(int offset, int pageSize);
+
     LinkedHashMap<String, String> uploadFile(MultipartFile firstPhoto, Long id);
 
 }

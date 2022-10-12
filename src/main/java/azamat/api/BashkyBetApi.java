@@ -38,10 +38,16 @@ public class BashkyBetApi {
         return mChSService.getAll();
     }
 
-    @Operation(summary = "Get all newsAnnouncement")
-    @GetMapping("/newsAnnouncement")
-    public List<NewsAnnouncement> getAll() {
-        return newsAnnouncementService.getAll();
+    @Operation(summary = "Get all newsOfTheWorldAnnouncement")
+    @GetMapping("/newsOfTheWorldAnnouncement/{offset}")
+    public List<NewsAnnouncement> getAll(@PathVariable Integer offset) {
+        return newsAnnouncementService.getAllNewsOfTheWorld(--offset,8);
+    }
+
+    @Operation(summary = "Get all stateNewsAnnouncement")
+    @GetMapping("/stateNewsAnnouncement/{offset}")
+    public List<NewsAnnouncement> getAllStateNews(@PathVariable Integer offset) {
+        return newsAnnouncementService.getAllStateNews(--offset,8);
     }
 
     @Operation(summary = "Get all Cleanliness")
