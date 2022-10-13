@@ -110,6 +110,7 @@ public class NewsAnnauncementServiceImpl implements NewsAnnouncementService {
     public List<NewsAnnouncement> getAllStateNews(int offset, int pageSize) {
         List<NewsAnnouncement> books = repository.findAllBySort(AnnouncementEnum.STATENEWS);
 
+
         Pageable paging = PageRequest.of(offset, pageSize);
         int start = Math.min((int) paging.getOffset(), books.size());
         int end = Math.min((start + paging.getPageSize()), books.size());
@@ -118,6 +119,7 @@ public class NewsAnnauncementServiceImpl implements NewsAnnouncementService {
 
         return new CustomPageRequest<>(pages).getContent();
     }
+
     @Override
     public List<NewsAnnouncement> getAllNewsOfTheWorld(int offset, int pageSize) {
         List<NewsAnnouncement> books = repository.findAllBySort(NEWSOFTHEWORLD);

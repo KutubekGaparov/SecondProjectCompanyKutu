@@ -60,6 +60,7 @@ public class RamazanServiceImpl implements RamazanService {
 
         return response;
     }
+
     @Override
     public Ramazan saveRamazan(Ramazan ramazan) {
         FileInformation newFileInformation = new FileInformation();

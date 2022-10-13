@@ -60,6 +60,7 @@ public class HadjServiceImpl implements HadjService {
 
         return response;
     }
+
     @Override
     public Hadj saveHadj(Hadj hadj) {
         FileInformation newFileInformation = new FileInformation();

@@ -65,7 +65,6 @@ public class TazalykServiceImpl implements TazalykService {
             tazalyk1.setBirthday(newBirthDay);
         }
 
-
         return tazalykRepository.save(tazalyk1);
     }
 

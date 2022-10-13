@@ -3,6 +3,7 @@ package azamat.db.servise.bashkyBet.impl;
 import azamat.FileInformation.BucketName;
 import azamat.FileInformation.FileInformation;
 import azamat.db.model.Ataktuular;
+import azamat.db.model.Kyzmatkerler;
 import azamat.db.repository.bashkyBet.AtaktuularRepository;
 import azamat.db.servise.bashkyBet.AtaktuularService;
 import azamat.exceptions.BadRequestException;
@@ -19,6 +20,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 import java.io.IOException;
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.UUID;
 
 @Service
@@ -66,6 +68,11 @@ public class AtaktuularServiceImpl implements AtaktuularService {
     public ResponseEntity<?> deleteById(Long id) {
         repository.deleteById(id);
         return ResponseEntity.ok("Delete successfully");
+    }
+
+    @Override
+    public List<Ataktuular> getAll() {
+        return repository.findAll();
     }
 
 

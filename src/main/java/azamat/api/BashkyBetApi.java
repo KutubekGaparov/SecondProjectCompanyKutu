@@ -1,13 +1,7 @@
 package azamat.api;
 
-import azamat.db.servise.bashkyBet.NewsAnnouncementService;
-import azamat.db.servise.bashkyBet.TazalykService;
-import azamat.db.model.Kyzmatkerler;
-import azamat.db.model.MChS;
-import azamat.db.model.NewsAnnouncement;
-import azamat.db.model.Tazalyk;
-import azamat.db.servise.bashkyBet.KyzmatkerlerService;
-import azamat.db.servise.bashkyBet.MChSService;
+import azamat.db.model.*;
+import azamat.db.servise.bashkyBet.*;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
@@ -25,11 +19,17 @@ public class BashkyBetApi {
     private MChSService mChSService;
     private NewsAnnouncementService newsAnnouncementService;
     private TazalykService tazalykService;
+    private AtaktuularService ataktuularService;
 
     @Operation(summary = "Get all employees")
     @GetMapping("/employees")
     public List<Kyzmatkerler> getAllKyzmatkerler() {
         return kyzmatkerlerService.getAll();
+    }
+    @Operation(summary = "Get all Ataktuular")
+    @GetMapping("/celebrities")
+    public List<Ataktuular> getAllAtaktuular() {
+        return ataktuularService.getAll();
     }
 
     @Operation(summary = "Get all MChS")

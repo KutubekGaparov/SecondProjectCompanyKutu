@@ -60,6 +60,7 @@ public class PrayerServiceImpl implements PrayerService {
 
         return response;
     }
+
     @Override
     public Prayer savePrayer(Prayer prayer) {
         FileInformation newFileInformation = new FileInformation();

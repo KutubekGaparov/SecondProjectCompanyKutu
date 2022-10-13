@@ -60,6 +60,7 @@ public class EthicsServiceImpl implements EthicsService {
 
         return response;
     }
+
     @Override
     public Ethics saveEthics(Ethics ethics) {
         FileInformation newFileInformation = new FileInformation();

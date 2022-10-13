@@ -61,6 +61,7 @@ public class ReligionSchoolServiceImpl implements ReligionSchoolService {
 
         return response;
     }
+
     @Override
     public ReligionSchool saveReligionSchool(ReligionSchool religionSchool) {
         FileInformation newFileInformation = new FileInformation();
