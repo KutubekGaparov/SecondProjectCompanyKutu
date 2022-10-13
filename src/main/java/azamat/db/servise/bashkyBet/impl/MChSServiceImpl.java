@@ -80,18 +80,18 @@ public class MChSServiceImpl implements MChSService {
         if (!oldText.equals(newText)) {
             mChS1.setFullName(newText);
         }
-        String oldEmail = mChS.getEmail();
+        String oldEmail = mChS1.getEmail();
         String newEmail = mChS.getEmail();
         if (!oldEmail.equals(newEmail)) {
             mChS1.setEmail(newEmail);
         }
-        String oldPhone = mChS.getPhone();
-        String newPhone = mChS1.getPhone();
+        String oldPhone = mChS1.getPhone();
+        String newPhone = mChS.getPhone();
         if (!Objects.equals(oldPhone, newPhone)) {
             mChS1.setPhone(newPhone);
         }
-        LocalDate oldBirthDay = mChS.getBirthDay();
-        LocalDate newBirthDay = mChS1.getBirthDay();
+        LocalDate oldBirthDay = mChS1.getBirthDay();
+        LocalDate newBirthDay = mChS.getBirthDay();
         if (!oldBirthDay.equals(newBirthDay)) {
             mChS1.setBirthDay(newBirthDay);
         }
