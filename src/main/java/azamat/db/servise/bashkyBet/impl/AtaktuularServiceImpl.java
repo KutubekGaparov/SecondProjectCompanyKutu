@@ -39,29 +39,29 @@ public class AtaktuularServiceImpl implements AtaktuularService {
 
     @Override
     @Transactional
-    public Ataktuular update(Ataktuular ataktuular1, Long id) {
-        Ataktuular ataktuular = repository.findById(id).orElseThrow(() ->
+    public Ataktuular update(Ataktuular ataktuular, Long id) {
+        Ataktuular ataktuular1 = repository.findById(id).orElseThrow(() ->
                 new BadRequestException(String.format("Id = %s has not been found", id)));
 
-        String oldText = ataktuular.getInfo();
-        String newText = ataktuular1.getInfo();
+        String oldText = ataktuular1.getInfo();
+        String newText = ataktuular.getInfo();
         if (!oldText.equals(newText)) {
             ataktuular1.setInfo(newText);
         }
 
-        String oldText1 = ataktuular.getBirthday();
-        String newText1 = ataktuular1.getBirthday();
+        String oldText1 = ataktuular1.getBirthday();
+        String newText1 = ataktuular.getBirthday();
         if (!oldText1.equals(newText1)) {
             ataktuular1.setBirthday(newText1);
         }
 
-        String oldText2 = ataktuular.getFullName();
-        String newText2 = ataktuular1.getFullName();
+        String oldText2 = ataktuular1.getFullName();
+        String newText2 = ataktuular.getFullName();
         if (!oldText2.equals(newText2)) {
             ataktuular1.setFullName(newText2);
         }
 
-        return repository.save(ataktuular);
+        return repository.save(ataktuular1);
     }
 
     @Override

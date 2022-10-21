@@ -44,24 +44,24 @@ public class TazalykServiceImpl implements TazalykService {
         Tazalyk tazalyk1 = tazalykRepository.findById(id).orElseThrow(() ->
                 new BadRequestException(String.format("Id = %s has not been found", id)));
 
-        String oldText = tazalyk.getFullName();
-        String newText = tazalyk1.getFullName();
+        String oldText = tazalyk1.getFullName();
+        String newText = tazalyk.getFullName();
         if (!oldText.equals(newText)) {
             tazalyk1.setFullName(newText);
         }
-        String oldEmail = tazalyk.getEmail();
-        String newEmail = tazalyk1.getEmail();
+        String oldEmail = tazalyk1.getEmail();
+        String newEmail = tazalyk.getEmail();
         if (!oldEmail.equals(newEmail)) {
             tazalyk1.setEmail(newEmail);
         }
-        String oldPhone = tazalyk.getPhoneNumber();
-        String newPhone = tazalyk1.getPhoneNumber();
+        String oldPhone = tazalyk1.getPhoneNumber();
+        String newPhone = tazalyk.getPhoneNumber();
         if (!Objects.equals(oldPhone, newPhone)) {
             tazalyk1.setPhoneNumber(newPhone);
         }
-        LocalDate oldBirthDay = tazalyk.getBirthday();
-        LocalDate newBirthDay = tazalyk1.getBirthday();
-        if (!oldBirthDay.equals(newBirthDay)) {
+        LocalDate oldBirthDay = tazalyk1.getBirthday();
+        LocalDate newBirthDay = tazalyk.getBirthday();
+        if (!Objects.equals(oldBirthDay, newBirthDay)) {
             tazalyk1.setBirthday(newBirthDay);
         }
 

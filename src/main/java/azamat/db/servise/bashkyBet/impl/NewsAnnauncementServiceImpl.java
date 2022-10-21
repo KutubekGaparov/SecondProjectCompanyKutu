@@ -81,18 +81,18 @@ public class NewsAnnauncementServiceImpl implements NewsAnnouncementService {
         NewsAnnouncement newsAnnouncement1 = repository.findById(id).orElseThrow(() ->
                 new BadRequestException(String.format("Id = %s has not been found", id)));
 
-        String oldText = newsAnnouncement.getText();
-        String newText = newsAnnouncement1.getText();
+        String oldText = newsAnnouncement1.getText();
+        String newText = newsAnnouncement.getText();
         if (!oldText.equals(newText)) {
             newsAnnouncement1.setText(newText);
         }
-        String oldText2 = newsAnnouncement.getDateOfNewAnnouncement();
-        String newText2 = newsAnnouncement1.getDateOfNewAnnouncement();
+        String oldText2 = newsAnnouncement1.getDateOfNewAnnouncement();
+        String newText2 = newsAnnouncement.getDateOfNewAnnouncement();
         if (!oldText2.equals(newText2)) {
             newsAnnouncement1.setDateOfNewAnnouncement(newText2);
         }
-        String oldText22 = newsAnnouncement.getTitle();
-        String newText22 = newsAnnouncement1.getTitle();
+        String oldText22 = newsAnnouncement1.getTitle();
+        String newText22 = newsAnnouncement.getTitle();
         if (!oldText22.equals(newText22)) {
             newsAnnouncement1.setTitle(newText22);
         }
