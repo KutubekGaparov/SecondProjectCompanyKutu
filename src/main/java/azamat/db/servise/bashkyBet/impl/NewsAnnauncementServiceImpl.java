@@ -26,6 +26,7 @@ import java.util.List;
 import java.util.UUID;
 
 import static azamat.FileInformation.AnnouncementEnum.NEWSOFTHEWORLD;
+import static azamat.FileInformation.AnnouncementEnum.STATENEWS;
 
 @Service
 @AllArgsConstructor
@@ -135,10 +136,16 @@ public class NewsAnnauncementServiceImpl implements NewsAnnouncementService {
     @Override
     public CountOfPage getCountOfPage() {
       List<NewsAnnouncement> newsAnnouncements = repository.findAll();
+      List<NewsAnnouncement> newsAnnouncementsWorld = repository.findAllBySort(NEWSOFTHEWORLD);
+      List<NewsAnnouncement> newsAnnouncementsState = repository.findAllBySort(STATENEWS);
       Integer integer = newsAnnouncements.size();
+      Integer integerWorld = newsAnnouncementsWorld.size();
+      Integer integerState = newsAnnouncementsState.size();
       CountOfPage count = new CountOfPage();
       count.setCountOfPage(countOfPages(integer));
       count.setAll(integer);
+      count.setWorld(integerWorld);
+      count.setState(integerState);
       return count;
     }
 
