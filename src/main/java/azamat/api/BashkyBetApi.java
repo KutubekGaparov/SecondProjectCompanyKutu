@@ -1,5 +1,6 @@
 package azamat.api;
 
+import azamat.FileInformation.CountOfPage;
 import azamat.db.model.*;
 import azamat.db.servise.bashkyBet.*;
 import io.swagger.v3.oas.annotations.Operation;
@@ -42,6 +43,11 @@ public class BashkyBetApi {
     @GetMapping("/newsOfTheWorldAnnouncement/{offset}")
     public List<NewsAnnouncement> getAll(@PathVariable Integer offset) {
         return newsAnnouncementService.getAllNewsOfTheWorld(--offset,8);
+    }
+    @Operation(summary = "Get count of page")
+    @GetMapping("/count-page")
+    public CountOfPage getAllCount() {
+        return newsAnnouncementService.getCountOfPage();
     }
 
     @Operation(summary = "Get all stateNewsAnnouncement")

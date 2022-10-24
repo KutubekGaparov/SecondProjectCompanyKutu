@@ -1,6 +1,7 @@
 package azamat.db.servise.bashkyBet;
 
 import azamat.FileInformation.AnnouncementEnum;
+import azamat.FileInformation.CountOfPage;
 import azamat.db.model.NewsAnnouncement;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.multipart.MultipartFile;
@@ -20,4 +21,5 @@ public interface NewsAnnouncementService {
 
     LinkedHashMap<String, String> uploadFile(MultipartFile firstPhoto, Long id);
 
+    CountOfPage getCountOfPage();
 }

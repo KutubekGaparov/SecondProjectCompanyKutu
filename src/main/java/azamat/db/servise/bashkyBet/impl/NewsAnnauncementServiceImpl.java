@@ -1,9 +1,6 @@
 package azamat.db.servise.bashkyBet.impl;
 
-import azamat.FileInformation.AnnouncementEnum;
-import azamat.FileInformation.BucketName;
-import azamat.FileInformation.CustomPageRequest;
-import azamat.FileInformation.FileInformation;
+import azamat.FileInformation.*;
 import azamat.db.repository.bashkyBet.NewsAnnouncementRepository;
 import azamat.db.servise.bashkyBet.NewsAnnouncementService;
 import azamat.exceptions.BadRequestException;
@@ -68,6 +65,7 @@ public class NewsAnnauncementServiceImpl implements NewsAnnouncementService {
 
         return response;
     }
+
     @Override
     public NewsAnnouncement saveNewsAnnouncement(NewsAnnouncement newsAnnouncement) {
         FileInformation newFileInformation = new FileInformation();
@@ -122,6 +120,7 @@ public class NewsAnnauncementServiceImpl implements NewsAnnouncementService {
 
     @Override
     public List<NewsAnnouncement> getAllNewsOfTheWorld(int offset, int pageSize) {
+
         List<NewsAnnouncement> books = repository.findAllBySort(NEWSOFTHEWORLD);
 
         Pageable paging = PageRequest.of(offset, pageSize);
@@ -131,5 +130,27 @@ public class NewsAnnauncementServiceImpl implements NewsAnnouncementService {
         System.out.println(new CustomPageRequest<>(pages).getContent().size());
 
         return new CustomPageRequest<>(pages).getContent();
+    }
+
+    @Override
+    public CountOfPage getCountOfPage() {
+      List<NewsAnnouncement> newsAnnouncements = repository.findAll();
+      Integer integer = newsAnnouncements.size();
+      CountOfPage count = new CountOfPage();
+      count.setCountOfPage(countOfPages(integer));
+      count.setAll(integer);
+      return count;
+    }
+
+    public Integer countOfPages(Integer books) {
+        int count = 1;
+        int size = books;
+        for (int i = 0; i < size; i++) {
+            if (size - 8 >= 0) {
+                size -= 8;
+                count++;
+            }
+        }
+        return count;
     }
 }
