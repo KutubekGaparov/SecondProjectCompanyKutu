@@ -22,6 +22,7 @@ public class Pasture {
     private Long id;
     @Column(length = 10000000)
     private String text;
+    private Integer sss;
 
     @Column(unique = true)
     private String directorFullName;

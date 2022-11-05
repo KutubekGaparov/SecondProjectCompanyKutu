@@ -6,7 +6,7 @@ import lombok.Getter;
 public enum BucketName {
 
 
-    AWS_BOOKS("mady-s3");
+    AWS_BOOKS("kuttubek");
 
     private final String bucketName;
 

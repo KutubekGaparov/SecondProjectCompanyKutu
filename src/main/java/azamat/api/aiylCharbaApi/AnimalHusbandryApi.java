@@ -55,7 +55,7 @@ public class AnimalHusbandryApi {
 //        animalHusbandryService.deleteFile2(keyName);
 //        return ResponseEntity.ok("File successfully deleted");
 //    }
-
+//
 //    @DeleteMapping(value = "/delete2/{filename}")
 //    public ResponseEntity<String> deleteFile2(@PathVariable("filename") String filename) {
 //        return new ResponseEntity<>(animalHusbandryService.deleteFile2(filename), HttpStatus.OK);
