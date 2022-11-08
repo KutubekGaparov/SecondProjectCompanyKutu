@@ -6,12 +6,17 @@ import azamat.db.repository.aiylCharba.AnimalHusbandryRepository;
 import azamat.db.servise.aiylCharba.AnimalHusbandryService;
 import azamat.exceptions.BadRequestException;
 import azamat.db.model.entity.aiylCharba.AnimalHusbandry;
+import com.amazonaws.AmazonClientException;
+import com.amazonaws.AmazonServiceException;
+import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3Client;
 import com.amazonaws.services.s3.model.CannedAccessControlList;
 import com.amazonaws.services.s3.model.DeleteObjectRequest;
 import com.amazonaws.services.s3.model.ObjectMetadata;
 import lombok.AllArgsConstructor;
 import lombok.Value;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -62,7 +67,9 @@ public class AnimalHusbandryServiceImpl implements AnimalHusbandryService {
         return animalHusbandryRepository.findAll();
     }
 
-    private final AmazonS3Client awsS3Client;
+    @Autowired
+    @Qualifier("s3client")
+    private AmazonS3 amazonS3Client;
 
     @Override
     public LinkedHashMap<String, String> uploadFile(MultipartFile firstPhoto, Long id) {
@@ -71,27 +78,19 @@ public class AnimalHusbandryServiceImpl implements AnimalHusbandryService {
 
         String keyOfFirstPhoto = "Images/" + UUID.randomUUID() + "." + firstPhoto.getOriginalFilename();
 
-        ObjectMetadata metaDataForFirstPhoto = new ObjectMetadata();
-        metaDataForFirstPhoto.setContentLength(firstPhoto.getSize());
-        metaDataForFirstPhoto.setContentType(firstPhoto.getContentType());
 
+            ObjectMetadata metadata = new ObjectMetadata();
+            metadata.setContentLength(firstPhoto.getSize());
         try {
-            awsS3Client.putObject(BucketName.AWS_BOOKS.getBucketName(), keyOfFirstPhoto, firstPhoto.getInputStream(), metaDataForFirstPhoto);
-
+            amazonS3Client.putObject(BucketName.AWS_BOOKS.getBucketName(),
+                    keyOfFirstPhoto, firstPhoto.getInputStream(), metadata);
         } catch (IOException e) {
-            throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "An exception occurred while uploading the file");
+            e.printStackTrace();
         }
-        awsS3Client.setObjectAcl(BucketName.AWS_BOOKS.getBucketName(), keyOfFirstPhoto, CannedAccessControlList.PublicRead);
-
-        byId.getFileInformation().setKeyOfPhoto(keyOfFirstPhoto);
-
-        byId.getFileInformation().setPhoto(awsS3Client.getResourceUrl(BucketName.AWS_BOOKS.getBucketName(), keyOfFirstPhoto));
-
-        animalHusbandryRepository.save(byId);
 
         LinkedHashMap<String, String> response = new LinkedHashMap<>();
         response.put("file information Id ", String.valueOf(byId.getFileInformation().getFileId()));
-        response.put("first image", awsS3Client.getResourceUrl(BucketName.AWS_BOOKS.getBucketName(), keyOfFirstPhoto));
+        response.put("first image", String.valueOf(amazonS3Client.getUrl(BucketName.AWS_BOOKS.getBucketName(), keyOfFirstPhoto)));
 
         return response;
     }
@@ -99,14 +98,14 @@ public class AnimalHusbandryServiceImpl implements AnimalHusbandryService {
     @Override
     public void deleteFile(String keyName) {
         final DeleteObjectRequest deleteObjectRequest = new
-                DeleteObjectRequest(BucketName.AWS_BOOKS.getBucketName(), keyName);
-        awsS3Client.deleteObject(deleteObjectRequest);
+                DeleteObjectRequest(BucketName.AWS_BOOKS.getBucketName(), "Images/"+keyName);
+        amazonS3Client.deleteObject(deleteObjectRequest);
     }
 
     @Transactional
     @Override
     public String deleteFile2(final String fileName) {
-        awsS3Client.deleteObject(BucketName.AWS_BOOKS.getBucketName(), fileName);
+        amazonS3Client.deleteObject(BucketName.AWS_BOOKS.getBucketName(), "Images/"+fileName);
         animalHusbandryRepository.deleteByName(fileName);
         return "Deleted File: " + fileName;
     }

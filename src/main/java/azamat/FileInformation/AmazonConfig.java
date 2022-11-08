@@ -1,14 +1,16 @@
 package azamat.FileInformation;
 
+import com.amazonaws.auth.AWSStaticCredentialsProvider;
+import com.amazonaws.auth.BasicAWSCredentials;
+import com.amazonaws.regions.Regions;
+import com.amazonaws.services.s3.AmazonS3;
+import com.amazonaws.services.s3.AmazonS3ClientBuilder;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import software.amazon.awssdk.auth.credentials.AwsBasicCredentials;
-import software.amazon.awssdk.auth.credentials.StaticCredentialsProvider;
-import software.amazon.awssdk.regions.Region;
-import software.amazon.awssdk.services.s3.S3Client;
+import org.springframework.context.annotation.Primary;
 
 @Configuration
 @Getter @Setter
@@ -24,14 +26,14 @@ public class AmazonConfig {
     private String REGION;
 
     @Bean
-    S3Client s3Client() {
-        Region region = Region.of(REGION);
+    @Primary
+    public AmazonS3 s3client() {
 
-        final AwsBasicCredentials credentials = AwsBasicCredentials.create(AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY);
-
-        return S3Client.builder()
-                .region(region)
-                .credentialsProvider(StaticCredentialsProvider.create(credentials))
+        BasicAWSCredentials awsCredentials = new BasicAWSCredentials(AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY);
+        return AmazonS3ClientBuilder.standard()
+                .withRegion(Regions.fromName(REGION))
+                .withCredentials(new AWSStaticCredentialsProvider(awsCredentials))
                 .build();
+
     }
 }
