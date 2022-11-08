@@ -19,8 +19,4 @@ public interface AnimalHusbandryService {
 
     LinkedHashMap<String, String> uploadFile(MultipartFile firstPhoto, Long id);
 
-    void deleteFile(String keyName);
-
-    String deleteFile2(final String fileName);
-
 }

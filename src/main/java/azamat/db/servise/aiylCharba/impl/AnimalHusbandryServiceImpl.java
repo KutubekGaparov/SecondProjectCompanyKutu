@@ -67,9 +67,7 @@ public class AnimalHusbandryServiceImpl implements AnimalHusbandryService {
         return animalHusbandryRepository.findAll();
     }
 
-    @Autowired
-    @Qualifier("s3client")
-    private AmazonS3 amazonS3Client;
+    private final AmazonS3Client awsS3Client;
 
     @Override
     public LinkedHashMap<String, String> uploadFile(MultipartFile firstPhoto, Long id) {
@@ -78,35 +76,30 @@ public class AnimalHusbandryServiceImpl implements AnimalHusbandryService {
 
         String keyOfFirstPhoto = "Images/" + UUID.randomUUID() + "." + firstPhoto.getOriginalFilename();
 
+        ObjectMetadata metaDataForFirstPhoto = new ObjectMetadata();
+        metaDataForFirstPhoto.setContentLength(firstPhoto.getSize());
+        metaDataForFirstPhoto.setContentType(firstPhoto.getContentType());
 
-            ObjectMetadata metadata = new ObjectMetadata();
-            metadata.setContentLength(firstPhoto.getSize());
         try {
-            amazonS3Client.putObject(BucketName.AWS_BOOKS.getBucketName(),
-                    keyOfFirstPhoto, firstPhoto.getInputStream(), metadata);
+            awsS3Client.putObject(BucketName.AWS_BOOKS.getBucketName(), keyOfFirstPhoto, firstPhoto.getInputStream(), metaDataForFirstPhoto);
+
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "An exception occurred while uploading the file");
         }
+
+        awsS3Client.setObjectAcl(BucketName.AWS_BOOKS.getBucketName(), keyOfFirstPhoto, CannedAccessControlList.PublicRead);
+
+        byId.getFileInformation().setKeyOfPhoto(keyOfFirstPhoto);
+
+        byId.getFileInformation().setPhoto(awsS3Client.getResourceUrl(BucketName.AWS_BOOKS.getBucketName(), keyOfFirstPhoto));
+
+        animalHusbandryRepository.save(byId);
 
         LinkedHashMap<String, String> response = new LinkedHashMap<>();
         response.put("file information Id ", String.valueOf(byId.getFileInformation().getFileId()));
-        response.put("first image", String.valueOf(amazonS3Client.getUrl(BucketName.AWS_BOOKS.getBucketName(), keyOfFirstPhoto)));
+        response.put("first image", awsS3Client.getResourceUrl(BucketName.AWS_BOOKS.getBucketName(), keyOfFirstPhoto));
 
         return response;
     }
 
-    @Override
-    public void deleteFile(String keyName) {
-        final DeleteObjectRequest deleteObjectRequest = new
-                DeleteObjectRequest(BucketName.AWS_BOOKS.getBucketName(), "Images/"+keyName);
-        amazonS3Client.deleteObject(deleteObjectRequest);
-    }
-
-    @Transactional
-    @Override
-    public String deleteFile2(final String fileName) {
-        amazonS3Client.deleteObject(BucketName.AWS_BOOKS.getBucketName(), "Images/"+fileName);
-        animalHusbandryRepository.deleteByName(fileName);
-        return "Deleted File: " + fileName;
-    }
 }

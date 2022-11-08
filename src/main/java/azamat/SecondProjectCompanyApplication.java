@@ -36,17 +36,15 @@ public class SecondProjectCompanyApplication {
 
     @PostConstruct
     public void init() {
-        Role client = new Role();
-        client.setId(1L);
-        client.setName(ERole.ROLE_ADMIN);
-        Role vendor = new Role();
-        vendor.setId(2L);
-        vendor.setName(ERole.ROLE_VENDOR);
         Role admin = new Role();
-        admin.setId(3L);
-        admin.setName(ERole.ROLE_CLIENT);
+        admin.setId(1L);
+        admin.setName(ERole.ROLE_ADMIN);
+
+        Role client = new Role();
+        client.setId(2L);
+        client.setName(ERole.ROLE_CLIENT);
+
         roleRepository.save(client);
-        roleRepository.save(vendor);
         roleRepository.save(admin);
 
         User c = new User();
@@ -56,19 +54,11 @@ public class SecondProjectCompanyApplication {
         c.setRole(roleRepository.getByIdRole(1L));
         userRepository.save(c);
 
-        User v = new User();
-        v.setEmail("vendor@gmail.com");
-        v.setFullName("Vendor");
-        v.setPassword(encoder.encode("vendor"));
-        v.setRole(roleRepository.getByIdRole(2L));
-
-        userRepository.save(v);
-
         User a = new User();
         a.setEmail("client@gmail.com");
         a.setFullName("Client");
         a.setPassword(encoder.encode("client"));
-        a.setRole(roleRepository.getByIdRole(3L));
+        a.setRole(roleRepository.getByIdRole(2L));
 
         userRepository.save(a);
     }

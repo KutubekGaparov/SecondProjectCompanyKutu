@@ -1,7 +1,10 @@
 package azamat.config.services;
 
+import azamat.FileInformation.BucketName;
 import azamat.config.security.model.User;
 import azamat.db.repository.UserRepository;
+import com.amazonaws.services.s3.AmazonS3Client;
+import com.amazonaws.services.s3.model.DeleteObjectRequest;
 import lombok.AllArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
@@ -30,4 +33,5 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     public ModelMapper modelMapper() {
         return new ModelMapper();
     }
+
 }

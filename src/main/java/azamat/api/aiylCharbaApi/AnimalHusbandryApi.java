@@ -47,16 +47,4 @@ public class AnimalHusbandryApi {
                                                     @PathVariable Long id) {
         return animalHusbandryService.uploadFile(firstPhoto, id);
     }
-
-    @Operation(summary = "Delete files", description = "Delete files with key name")
-    @PostMapping("/delete-file/{keyName}")
-    public ResponseEntity<?> deleteFile(@PathVariable String keyName) {
-        animalHusbandryService.deleteFile(keyName);
-        return ResponseEntity.ok("File successfully deleted");
-    }
-//
-//    @DeleteMapping(value = "/delete2/{filename}")
-//    public ResponseEntity<String> deleteFile2(@PathVariable("filename") String filename) {
-//        return new ResponseEntity<>(animalHusbandryService.deleteFile2(filename), HttpStatus.OK);
-//    }
 }
