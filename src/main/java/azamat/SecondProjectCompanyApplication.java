@@ -34,7 +34,7 @@ public class SecondProjectCompanyApplication {
         return " Welcome to Mady application!!! ";
     }
 
-    @PostConstruct
+//    @PostConstruct
     public void init() {
         Role admin = new Role();
         admin.setId(1L);
